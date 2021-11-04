@@ -1,0 +1,92 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #444444;
+  }
+
+
+
+  /*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+
+.navbar {
+    background-color: white;
+}/*color de fondo de la barra de navegación*/
+
+
+#nav a {
+    color: #FF0404;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}/*estilo de letras de la navbar*/
+
+
+#navbarNav li {
+    padding-left: 2em;
+} /* espacio entre items del navbar*/
+
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer {
+    text-align: center;
+    background: #000000;
+    color: #fff;
+    font-size: 15px;    
+    padding: 10px 0;
+  }  
+
+  
+  #footer .social-links {
+    text-align: center;
+    margin: 3 3 40px 1;
+  }
+  
+  #footer .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #d60f08;
+    color: #fff;
+    line-height: 1;
+    padding: 10px 0;
+    margin-right: 20px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+  }
+
+  #footer .social-links a:hover {
+    background: #02bdad;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 0;
+  }
+  
+  #footer .copyright {
+    text-align: center;
+    margin: 0 0 5px 0;
+  }
+
+  .bxl-twitter{
+    content: url('https://api.iconify.design/bx/bxl-twitter.svg?color=white');
+  } 
+
+  .bxl-instagram{
+    content: url('https://api.iconify.design/fontisto/instagram.svg?color=white');
+  }
+  
+  .bxl-facebook{
+    content: url('https://api.iconify.design/cib/facebook-f.svg?color=white');
+  }
+
+  .bxl-admi{
+    content: url('https://api.iconify.design/ri/admin-fill.svg?color=%23535151');
+  }
