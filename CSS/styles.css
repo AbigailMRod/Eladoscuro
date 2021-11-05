@@ -90,10 +90,11 @@ Collage Image
 }
 /* Estilo de la parte trasera */
 .flip-card-back {
-  background-color: rgb(98, 108, 117);
+  background-color: #000000;
   /* color: white; */
   transform: rotateY(180deg);
 }
+
 /*Posicionamiento de las imagenes */
 .gallery__item:nth-child(2){
   grid-column-start: span 2;
