@@ -4,16 +4,17 @@ btnEnviar.addEventListener("submit", function(evento) {
         evento.preventDefault();
 
         let nombre = document.getElementById("nombre").value;
-        
+        console.log(nombre);
 
         let correo = document.getElementById("email").value;
-        
+        console.log(correo);
 
         let tel = document.getElementById("tel").value;
-        
+        console.log(tel);
 
         let mensaje = document.getElementById("message").value;
-        
+        console.log(mensaje);
+
 
         let newMsg = {
                 "nombre": nombre,
@@ -25,13 +26,13 @@ btnEnviar.addEventListener("submit", function(evento) {
 
         //almacenamiento en local storage
         localStorage.setItem("newmsg", JSON.stringify(newMsg));
-        
+        console.info("save in local storage")
         send(); //almacenamiento en local storage
 
 
         new Swal({ //sweetAlert
                 icon: 'success',
-                title: 'Enviado exitosamente',
+                title: 'Success...',
                 text: 'Enviado exitosamente!',
             }) //sweetAlert
 
