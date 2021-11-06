@@ -12,8 +12,7 @@
 
 #container {
     /*imagen de fondo*/
-    background-image: url(./../img/Index/max-bohme-sogOxlp9ZGU-unsplash.jpg);
-    height: 100vh;
+    background-image: url(/img/Index/max-bohme-sogOxlp9ZGU-unsplash.jpg);
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -31,11 +30,13 @@
     color: white;
 }
 
+:invalid{
+    color: red;
+}
+
 .form {
     /* cuadro de negro de fondo  */
     font-size: 24px;
-    /* border-radius: 30px; */
-    /* font-weight: bold; */
     letter-spacing: 0.1em;
     line-height: 28.13px;
     font-style: normal;
@@ -44,113 +45,26 @@
     padding: 4%;
     width: 871px;
     height: 580px;
-    left: 285px;
-    top: 174px;
 }
 
 .row {
     /*centrado del cuadro en la pantallass*/
     margin-right: 0px;
     margin-left: 0px;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
-    padding-top: 5%;
+    padding:4%;
 }
 
-.btn {
+#send {
     /*boton enviar */
-    font-size: 24px;
     color: #FF0404;
     width: 283px;
-    border-radius: 0px;
     font-weight: bold;
+    border-radius: 0px; 
+    font-size: 24px;
 }
 
 #cbtn {
     color: #FF0404;
-}
-
-
-/*--------------------------------------------------------------
-# Navbar
---------------------------------------------------------------*/
-
-.navbar {
-    background-color: white;
-}
-
-
-/*color de fondo de la barra de navegación*/
-
-#nav a {
-    color: #FF0404;
-    font-weight: 600;
-    letter-spacing: 0.3em;
-}
-
-
-/*estilo de letras de la navbar*/
-
-#navbarNav li {
-    padding-left: 2em;
-}
-
-
-/* espacio entre items del navbar*/
-
-
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-
-#footer {
-    text-align: center;
-    background: #000000;
-    color: #fff;
-    font-size: 15px;
-    padding: 10px 0;
-}
-
-#footer .social-links {
-    text-align: center;
-    margin: 3 3 40px 1;
-}
-
-#footer .social-links a {
-    font-size: 18px;
-    display: inline-block;
-    background: #d60f08;
-    color: #fff;
-    line-height: 1;
-    padding: 10px 0;
-    margin-right: 20px;
-    border-radius: 50%;
-    text-align: center;
-    width: 36px;
-    height: 36px;
-    transition: 0.3s;
-}
-
-#footer .social-links a:hover {
-    background: #02bdad;
-    color: #fff;
-    text-decoration: none;
-    padding: 8px 0;
-}
-
-#footer .copyright {
-    text-align: center;
-    margin: 0 0 5px 0;
-}
-
-.bxl-twitter {
-    content: url('https://api.iconify.design/bx/bxl-twitter.svg?color=white');
-}
-
-.bxl-instagram {
-    content: url('https://api.iconify.design/fontisto/instagram.svg?color=white');
-}
-
-.bxl-facebook {
-    content: url('https://api.iconify.design/cib/facebook-f.svg?color=white');
 }
