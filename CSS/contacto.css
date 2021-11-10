@@ -1,0 +1,70 @@
+.body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#logo {
+    /* position: absolute; */
+    width: 187px;
+    height: 101.31px;
+    left: 41px;
+    top: 7.51px;
+}
+
+#container {
+    /*imagen de fondo*/
+    background-image: url(/img/Index/max-bohme-sogOxlp9ZGU-unsplash.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form p {
+    text-align: center;
+    letter-spacing: 0.35em;
+}
+
+.form-control {
+    /*cuadros de introduccion de datos */
+    background-color: rgba(0, 0, 0, .5);
+    border-color: rgba(0, 0, 0, .5);
+    color: white;
+}
+
+:invalid{
+    color: red;
+}
+
+.form {
+    /* cuadro de negro de fondo  */
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    line-height: 28.13px;
+    font-style: normal;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    padding: 4%;
+    width: 871px;
+    height: 580px;
+}
+
+.row {
+    /*centrado del cuadro en la pantallass*/
+    margin-right: 0px;
+    margin-left: 0px;
+    /* display: flex; */
+    justify-content: center;
+    padding:4%;
+}
+
+#send {
+    /*boton enviar */
+    color: #FF0404;
+    width: 283px;
+    font-weight: bold;
+    border-radius: 0px; 
+    font-size: 24px;
+}
+
+#cbtn {
+    color: #FF0404;
+}
