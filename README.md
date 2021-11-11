@@ -3,7 +3,7 @@
 
 # <p style="text-align: center;"> Eladoscuro </p>
 
->         ¡Por amor a México!
+> 💚❤💗 ¡Por amor a México! 💚❤💗
 
 
 Tienda e-commerce basada en la venta online de souvenirs mexicanas con diseños originales, enfocada a un nicho de mercado: extranjeros con gusto por la cultura mexicana.
@@ -44,7 +44,17 @@ Nuestro proyecto es un repositorio público, por lo que si quisieras contribuir 
 git clone https://github.com/AbigailMRod/Eladoscuro.git
 cd Eladoscuro/
 ```
+<img src="./img/Index/chiles.jpg" width="40%" alt="Logo of the project" align="right">
 
-# 
 Hecho con 💗 por 
+- Abigail Muñoz
+- Bernardo Fernández
+- Paulyna Campuzano
+- Arturo Islas
+- Christian Neri
+- Luis Hernández
+- Armando Arciniega
+- Iram Monarres
+- Edwin Mendez
+
 
