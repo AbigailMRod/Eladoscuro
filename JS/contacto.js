@@ -136,4 +136,4 @@ function borrar() {
     document.getElementById("grupo__telefono").classList.remove('formulario__grupo-correcto');
     document.getElementById("grupo__telefono").classList.remove('fa-times-circle');
     document.getElementById("grupo__telefono").classList.remove('fa-check-circle');
-} //función borrar
+} //función borra
