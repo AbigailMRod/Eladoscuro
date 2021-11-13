@@ -12,11 +12,12 @@
 
 #container {
     /*imagen de fondo*/
-    background-image: url(/img/Index/max-bohme-sogOxlp9ZGU-unsplash.jpg);
-    background-position:center;
-    background-size: cover;
+    background-image: url(/img/Index/mexicoMiAmor.jpg);
+    background-position:calc(100%);
+    background-size:cover;
     background-repeat: no-repeat;
 }
+
 
 .form p {
     text-align: center;
@@ -42,11 +43,14 @@
     font-style: normal;
     background-color: rgba(0, 0, 0, .5);
     color: #fff;
-    padding: 4%;
+    /* padding: 4%; */
     width: 871px;
     height: 580px;
 }
 
+#iniciar{
+    color:rgba(255, 255, 255, 0.651);
+}
 .row {
     /*centrado del cuadro en la pantallass*/
     margin-right: 0px;
@@ -69,11 +73,11 @@
     color: #FF0404;
 }
 
-.form-group{
-    display: flex;
-    justify-content: left;
+.containerSect{
+    font-style: 1rem;
 
 }
-#cuenta{
-    text-decoration: underline rgb(255, 255, 255);
+
+.form-group{
+    justify-content: left;
 }
