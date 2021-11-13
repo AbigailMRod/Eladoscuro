@@ -3,7 +3,7 @@
 
 # <p style="text-align: center;"> Eladoscuro </p>
 
-> 💚❤💗 ¡Por amor a México! 💚❤💗
+> 💚🤍❤ ¡Por amor a México! 💚🤍❤
 
 
 Tienda e-commerce basada en la venta online de souvenirs mexicanas con diseños originales, enfocada a un nicho de mercado: extranjeros con gusto por la cultura mexicana.
@@ -32,9 +32,9 @@ Para la creación de nuestro proyecto utilizamos
 
 
 ### Características
-Nuestra línea de diseño se enfoca en el gusto por la cultura mexicana, incluyendo idioma, colores, lugares y frases...
+Nuestra línea de diseño se enfoca en el gusto por la cultura mexicana
 
-<img src="./img/Index/carrusel_2.png" width="50%" alt="Logo of the project" align="center">
+<img src="./img/Index/carrusel_3.png" width="50%" alt="Logo of the project" align="center">
 
 ### Configurando
 
@@ -46,7 +46,7 @@ cd Eladoscuro/
 ```
 <img src="./img/Index/chiles.jpg" width="40%" alt="Logo of the project" align="right">
 
-Hecho con 💗 por 
+Hecho con ❤ por 
 - Abigail Muñoz
 - Bernardo Fernández
 - Paulyna Campuzano
