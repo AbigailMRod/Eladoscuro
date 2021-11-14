@@ -161,7 +161,7 @@ btnEnviar.addEventListener('submit',function(e){
 
 
 
-// //Carga de nuevo producto
+//Carga de nuevo producto
 
 // const btnAddProduct= document.getElementById("add-product")
 // btnAddProduct.addEventListener("submit", function(evento){
