@@ -7,7 +7,7 @@ function addItem(item){
             '   <div class="card-body">\n'+
             '   <h5 class="card-title">'+item.model+'</h5>\n'+
             '   <p class="card-text">'+item.description +'</p>\n'+
-            '   <p class="card-text">'+item.price +' MX </p>\n'+
+            '   <p class="card-text">'+item.price +' MXN </p>\n'+
             '   <p class="card-text"> Tallas: XS, S, M, L XL </p>\n'+
             '   <button type="button" class="btn btn-outline-dark">Comprar</button>\n'+
             '   </div>\n'+
@@ -26,7 +26,7 @@ function addItem2(item){
             '   <div class="card-body">\n'+
             '   <h5 class="card-title">'+item.name+'</h5>\n'+
             '   <p class="card-text">'+item.description +'</p>\n'+
-            '   <p class="card-text">'+item.price +' MX </p>\n'+
+            '   <p class="card-text">'+item.price +' MXN </p>\n'+
             '   <button type="button" class="btn btn-outline-dark">Comprar</button>\n'+
             '   </div>\n'+
             '   </div>\n'+
@@ -44,7 +44,7 @@ function addItem3(item){
             '   <div class="card-body">\n'+
             '   <h5 class="card-title">'+item.name+'</h5>\n'+
             '   <p class="card-text">'+item.description +'</p>\n'+
-            '   <p class="card-text">'+item.price +' MX </p>\n'+
+            '   <p class="card-text">'+item.price +' MXN </p>\n'+
             '   <button type="button" class="btn btn-outline-dark">Comprar</button>\n'+
             '   </div>\n'+
             '   </div>\n'+
