@@ -20,19 +20,17 @@
 
  <!-- Styles CSS -->
  <link rel="stylesheet" href="./../admin/admin.css">
-
  
 
-<section  id="container">  
+ <section  id="container">  
   <div class="row">
-      <form action="#" class="form" id="formulario" class="needs-validation" novalidate >
+      <form action="#" class="form" id="formulario">
         <p>- ADMINISTRADOR -</p>
         <div class="form-group" id="grupo-nombre">
           <label for="categoria" class="form-label">Categoría:</label>
-          <select id="categoria" name="categoria" class="form-control">
+          <select id="categoria" name="categoria" class="form-control" onchange="VerificarMenu()">
             <option selected >Elegir. . .</option>
-            <option>Sudaderas</option>
-            <option>Playeras</option>
+            <option>Playeras & Sudaderas</option>            
             <option>Stickers</option>
             <option>Posters</option>            
           </select>                       
@@ -40,9 +38,7 @@
 
           <div class="form-group">
             <label for="nombre">Nombre del producto:</label>
-            <input type="text" class="form-control" name="telefono" id="nombre" required> 
-            <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
-            <div class="alert alert-danger invalid-feedback"  role="alert">por favor solo ingresa 10 números</div>    
+            <input type="text" class="form-control" name="telefono" id="nombre" required>            
           </div><!-- Nombre -->
         
           <div class="form-group">
@@ -53,12 +49,9 @@
           <div class="form-group">
               <label for="precio">Precio:</label>
               <input type="number" class="form-control" id="precio"  required>
-            </div> <!-- Precio -->   
+            </div> <!-- Precio -->  
 
-          <div class="form-group">
-              <label for="talla">Talla:</label>
-              <input type="text" class="form-control" id="talla" value="UNITALLA" readonly>             
-          </div><!-- Talla -->
+      
           
           <div class="form-group" >
                  <label for="imagen">Imágen:</label>
@@ -67,11 +60,15 @@
           <button  id="btn_enviar" type="submit" class="btn btn-primary">Guardar</button>     
           <input type="button" id="btn2" class="btn btn-primary" value="Inicio" onclick="inicio()">                
         </form>  <!-- form -->         
-      </div><!-- row-->       
+      </div><!-- row-->   
+      
+     
+
     </section>   
 
+    
 
-
+    
     
     
     <footer id="footer">
@@ -81,7 +78,6 @@
           </div>
       </div> <!-- container -->
   </footer><!-- End Footer -->   
-
 
    <!--Scripts -->    
    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
