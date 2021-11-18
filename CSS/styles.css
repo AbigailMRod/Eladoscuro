@@ -40,14 +40,13 @@ Collage Image
 /*Estilos de galeria Inicio*/
 
 /*The gallery-container:se usa la propiedad grid para hacer las columnas todo lo demas es para crear los espacios */
-.gallery-container{
+ .gallery-container{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 150px;
   padding: 20px;
-  grid-gap: 15px;
-  grid-auto-flow: dense;
-}
+  grid-auto-rows: 200px;
+  grid-gap: 20px;
+  
+} 
 /*Es necesario para que la imagen ocupe el 100% de su contenedor */
 .gallery__img{
   width: 100%;
@@ -94,27 +93,74 @@ Collage Image
   /* color: white; */
   transform: rotateY(180deg);
 }
+@media screen and  (min-width:350px){
+  .gallery-container{
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: dense;
+    width: 90%;
+    margin: auto; 
+  }
+  .gallery__item:nth-child(1){
+      grid-column-start: span 1;
+      grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(2){
+      grid-column-start: span 2;
+      grid-row-start: span 1;
+  }
+  .gallery__item:nth-child(3){
+      grid-column-start: span 1;
+      grid-row-start: span 1;
+  }
+  .gallery__item:nth-child(4){
+      grid-column-start: span 1;
+      grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(5){
+      grid-column-start: span 1;
+      grid-row-start: span 1;
+  }
+  .gallery__item:nth-child(6){
+      grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(7){
+      grid-column-start: span 1;
+      grid-row-start: span 1;
+  }
+  .gallery__item:nth-child(8){
+      grid-column-start: span 1;
+      grid-row-start: span 1;
+  }
+}
+@media screen and  (min-width:800px){
+  .gallery-container{
+      grid-template-columns: repeat(3, 1fr);
+      width: 90%;
+      margin: auto; 
+      
+  }
+  .gallery__item:nth-child(1){
+    grid-column-start: span 1;
+    grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(2){
+    grid-row-start: span 2;
+    grid-row-start: span 1;
+  }
+  .gallery__item:nth-child(4){
+    grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(6){
+    grid-row-start: span 2;
+  }
+}
 
-/*Posicionamiento de las imagenes */
-.gallery__item:nth-child(2){
-  grid-column-start: span 2;
-}
-.gallery__item:nth-child(1){
-  grid-row-start: span 2;
-}
-.gallery__item:nth-child(4){
-  grid-row-start: span 2;
-}
-.gallery__item:nth-child(6){
-  grid-row-start: span 2;
-}
-/* responsive  */
-
-@media (min-width:1024px){
+@media screen and  (min-width:1200px){
   .gallery-container{
       grid-template-columns: repeat(4, 1fr);
       width: 90%;
-      margin: auto;
+      margin: auto; 
+      
   }
   .gallery__item:nth-child(1){
       grid-column-start: span 2;
@@ -148,6 +194,8 @@ Collage Image
       grid-row-start: span 1;
   }
 }
+
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
