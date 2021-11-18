@@ -32,6 +32,9 @@ const validarFormulario = (e) =>{
             break;
         case "password":
             validarCampo(expresiones.password, e.target, 'password');
+
+        case "password2":
+            validarPassword2();
             break;
     }//switch
 };//validarFormulario
@@ -43,14 +46,32 @@ const validarCampo = (expresion, input, campo) => {
     if(expresion.test(input.value)){
         document.getElementById(`grupo-${campo}`).classList.remove('was-invalidated')
         document.getElementById(`grupo-${campo}`).classList.add('was-validated')
-        campo[campo] = true;
+        campos[campo] = true;
         
     }else{
         document.getElementById(`grupo-${campo}`).classList.remove('was-validated');
         document.getElementById(`grupo-${campo}`).classList.add('was-invalidated');
-        campo[campo] = false;
+        campos[campo] = false;
     }//if else
 };//validarCampo
+
+
+//Función para validar que el password coincida en ambos campos
+const validarPassword2 = () =>{
+    const inputPassword1 = document.getElementById('password');
+    const inputPassword2 = document.getElementById('password2');
+
+    if(inputPassword1.value !== inputPassword2.value){
+        document.getElementById(`grupo-password2`).classList.remove('was-validated');
+        document.getElementById(`grupo-password2`).classList.add('was-invalidated');
+        campos['password'] = false;
+    } else {
+        document.getElementById(`grupo-password2`).classList.add('was-validated');
+        document.getElementById(`grupo-password2`).classList.remove('was-invalidated');
+        campos['password'] = true;
+    }// if password
+}//validarPassword
+
 
 //Ejecucion por cada input
 inputs.forEach((input) =>{
@@ -74,8 +95,8 @@ btnEnviar.addEventListener('submit',function(e){
     console.log(e.preventDefault());
     if(campos.nombre && campos.telefono && campos.email && campos.password){
         formulario.reset();
-        
+    
     } //else {
-        
+    //     document.getElementById('grupo-enviar').classList.add('was-validated');
     // }
 });//formulario
