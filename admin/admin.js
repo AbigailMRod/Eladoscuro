@@ -18,7 +18,6 @@ function inicio(){
 // }//clase expresiones
 
 // const validarFormulario = (e) =>{
-   
 //     switch (e.target.name){       
 //         case "telefono":
 //             validarCampo(expresiones.nombre, e.target, 'nombre');
@@ -74,80 +73,79 @@ function inicio(){
 
 
 
-const formulario = document.getElementById('formulario')
-const inputs = document.querySelectorAll('#formulario input');
-const btnEnviar = document.getElementById('btn_enviar');
+// const formulario = document.getElementById('formulario')
+// const inputs = document.querySelectorAll('#formulario input');
+// const btnEnviar = document.getElementById('btn_enviar');
 
-const expresiones = {
+// const expresiones = {
     
-    nombre: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios, pueden llevar acentos.
-    password: /^.{8,50}$/, // 8 a 50 caracteres.
-    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    telefono: /^\d{10,10}$/, // 7 a 14 numeros.   
-}//clase expresiones
+//     nombre: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios, pueden llevar acentos.
+//     password: /^.{8,50}$/, // 8 a 50 caracteres.
+//     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+//     telefono: /^\d{10,10}$/, // 7 a 14 numeros.   
+// }//clase expresiones
 
 
 
-//Validar form
-const validarFormulario = (e) =>{
-   
-    switch (e.target.name){
-        case "nombre":
-            validarCampo(expresiones.nombre, e.target, 'nombre');
-            break;
-        case "telefono":
-            validarCampo(expresiones.telefono, e.target, 'telefono');
-            break;
-        case "email":
-            validarCampo(expresiones.email, e.target, 'email');
-            break;
-        case "password":
-            validarCampo(expresiones.password, e.target, 'password');
-            break;
-    }//switch
-};//validarFormulario
+// //Validar form
+// const validarFormulario = (e) =>{
+//     switch (e.target.name){
+//         case "nombre":
+//             validarCampo(expresiones.nombre, e.target, 'nombre');
+//             break;
+//         case "telefono":
+//             validarCampo(expresiones.telefono, e.target, 'telefono');
+//             break;
+//         case "email":
+//             validarCampo(expresiones.email, e.target, 'email');
+//             break;
+//         case "password":
+//             validarCampo(expresiones.password, e.target, 'password');
+//             break;
+//     }//switch
+// };//validarFormulario
 
 
-const validarCampo = (expresion, input, campo) => {
-    if(expresion.test(input.value)){
-        document.getElementById(`grupo-${campo}`).classList.remove('was-invalidated')
-        document.getElementById(`grupo-${campo}`).classList.add('was-validated')
-        campo[campo] = true;
+// const validarCampo = (expresion, input, campo) => {
+//     if(expresion.test(input.value)){
+//         document.getElementById(`grupo-${campo}`).classList.remove('was-invalidated')
+//         document.getElementById(`grupo-${campo}`).classList.add('was-validated')
+//         campo[campo] = true;
         
-    }else{
-        document.getElementById(`grupo-${campo}`).classList.remove('was-validated');
-        document.getElementById(`grupo-${campo}`).classList.add('was-invalidated');
-        campo[campo] = false;
-    }//if else
-};//validarCampo
+//     }else{
+//         document.getElementById(`grupo-${campo}`).classList.remove('was-validated');
+//         document.getElementById(`grupo-${campo}`).classList.add('was-invalidated');
+//         campo[campo] = false;
+//     }//if else
+// };//validarCampo
 
-//Ejecucion por cada input
-inputs.forEach((input) =>{
-    input.addEventListener('keyup', validarFormulario);
-    input.addEventListener('blur', validarFormulario);
-});//inputs
+// //Ejecucion por cada input
+// inputs.forEach((input) =>{
+//     input.addEventListener('keyup', validarFormulario);
+//     input.addEventListener('blur', validarFormulario);
+// });//inputs
 
 
-//validacion para verificar si un campo esta llenado 
-const campos ={
-    nombre: false,
-    telefono: false,
-    email: false,
-    password: false
+// //validacion para verificar si un campo esta llenado 
+// const campos ={
+//     nombre: false,
+//     telefono: false,
+//     email: false,
+//     password: false
     
-};//clase campos
-//Envio de formulario
+// };//clase campos
+// //Envio de formulario
 
 
-btnEnviar.addEventListener('submit',function(e){
-    console.log(e.preventDefault());
-    if(campos.nombre && campos.telefono && campos.email && campos.password){
-        formulario.reset();
+// btnEnviar.addEventListener('submit',function(e){
+//     console.log(e.preventDefault());
+//     if(campos.nombre && campos.telefono && campos.email && campos.password){
+//         formulario.reset();
         
-    } //else {
+//     } //else {
         
-    // }
-});//formulario
+//     // }
+// });//formulario
 
 
 // let categoria = document.getElementById ('categoria');
@@ -161,18 +159,20 @@ btnEnviar.addEventListener('submit',function(e){
 
 
 
-//Carga de nuevo producto
+// //Carga de nuevo producto
 
-// const btnAddProduct= document.getElementById("add-product")
-// btnAddProduct.addEventListener("submit", function(evento){
+// const btnAddProduct= document.getElementById("formulario")
+// btnAddProduct.addEventListener("submit", function (evento) {
 //     evento.preventDefault(); //cancelar el envío
-//     let categoria = document.getElementById("categoria").value; 
-//     console.log(categoria);
-    
-//     let nombre= document.getElementById("nombre").value;
-//     let descripcion= document.getElementById("descripcion").value;
-//     let precio= document.getElementById("precio").value;
-//     let image= document.getElementById("imagen").value;
+//     let categoria = document.getElementById("categoria").value,
+//         nombre= document.getElementById("nombre").value,
+//         descripcion= document.getElementById("descripcion").value,
+//         precio= document.getElementById("precio").value,
+//         talla= document.getElementById("talla").value,
+//         image= document.getElementById("imagen").value;
+
+//         console.log(categoria);
+//         console.log(nombre);
 
 
 //     let newProduct={
@@ -215,7 +215,6 @@ btnEnviar.addEventListener('submit',function(e){
     
 
 // });
-
 
 
 
