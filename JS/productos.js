@@ -7,12 +7,13 @@ function addItem(item){
             '   <div class="card-body">\n'+
             '   <h5 class="card-title">'+item.model+'</h5>\n'+
             '   <p class="card-text">'+item.description +'</p>\n'+
-            '   <p class="card-text">'+item.price +' MX </p>\n'+
+            '   <p class="card-text">'+item.price +' MXN </p>\n'+
             '   <p class="card-text"> Tallas: XS, S, M, L XL </p>\n'+
-            '   <button type="button" class="btn btn-outline-dark">Comprar</button>\n'+
+            '   <button type="button" class="btn btn-outline-dark">Agregar</button>\n'+
             '   </div>\n'+
             '   </div>\n'+
-            '   </div>';
+            '   </div>\n'+
+            '   <br/>';
     const itemsContainer = document.getElementById("list-items");    
     itemsContainer.innerHTML += itemHTML;   
 }
@@ -26,11 +27,12 @@ function addItem2(item){
             '   <div class="card-body">\n'+
             '   <h5 class="card-title">'+item.name+'</h5>\n'+
             '   <p class="card-text">'+item.description +'</p>\n'+
-            '   <p class="card-text">'+item.price +' MX </p>\n'+
-            '   <button type="button" class="btn btn-outline-dark">Comprar</button>\n'+
+            '   <p class="card-text">'+item.price +' MXN </p>\n'+
+            '   <button type="button" class="btn btn-outline-dark">Agregar</button>\n'+
             '   </div>\n'+
             '   </div>\n'+
-            '   </div>';
+            '   </div>\n'+
+            '   <br/>';
     const itemsContainer = document.getElementById("list-items2");    
     itemsContainer.innerHTML += itemHTML;   
 }
@@ -44,11 +46,12 @@ function addItem3(item){
             '   <div class="card-body">\n'+
             '   <h5 class="card-title">'+item.name+'</h5>\n'+
             '   <p class="card-text">'+item.description +'</p>\n'+
-            '   <p class="card-text">'+item.price +' MX </p>\n'+
-            '   <button type="button" class="btn btn-outline-dark">Comprar</button>\n'+
+            '   <p class="card-text">'+item.price +' MXN </p>\n'+
+            '   <button type="button" class="btn btn-outline-dark">Agregar</button>\n'+
             '   </div>\n'+
             '   </div>\n'+
-            '   </div>';
+            '   </div>\n'+
+            '   <br/>';
     const itemsContainer = document.getElementById("list-items3");    
     itemsContainer.innerHTML += itemHTML;   
 }
@@ -80,6 +83,8 @@ addItem({'model':'Lucha libre',
     'description':'Playera para mujer',
     'price' : '$400.00'});
 
+
+ 
 //********* STICKERS  *******//
 addItem2({'name':'Logo',
     'img':'./../img/Index/sticker_1.jpg',        
