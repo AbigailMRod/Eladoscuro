@@ -1,0 +1,57 @@
+/*--------------------------------------------------------------
+# Form
+--------------------------------------------------------------*/
+
+body{
+    background-image: url(/img/admin/background-admin.svg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding:6%;
+
+}
+
+  .form p {
+    text-align: center;
+    letter-spacing: 0.35em;  
+  }
+  
+  
+  .form {    
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    line-height: 28.13px;
+    font-style: normal;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    padding: 4%;
+    width: 871px;
+    height: 260px;
+    margin-top: 30px;
+    
+  }
+  
+  
+  .row {  
+    margin-right: 0px;
+    margin-left: 0px;    
+    justify-content: center;
+    padding:10%;
+  }
+  
+  #boton {
+    background-color: rgba(0, 0, 0, .5);
+    width: 140px;
+    margin-top: 300px;
+    font-weight: bold;
+    border-radius: 6px; 
+    font-size: 15px;     
+    position: absolute;
+    
+  }
+  
+
+
+  
+  
