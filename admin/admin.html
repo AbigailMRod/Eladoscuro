@@ -14,63 +14,69 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
 
+  <!-- Styles CSS -->
+<link rel="stylesheet" href="./../admin/admin.css">
+
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
 
- <!-- Styles CSS -->
- <link rel="stylesheet" href="./../admin/admin.css">
- 
+<title> Administrador </title>
+</head>
 
- <section  id="container">  
-  <div class="row">
-      <form action="#" class="form" id="formulario">
-        <p>- ADMINISTRADOR -</p>
-        <div class="form-group" id="grupo-nombre">
-          <label for="categoria" class="form-label">Categoría:</label>
-          <select id="categoria" name="categoria" class="form-control" onchange="VerificarMenu()">
-            <option selected >Elegir. . .</option>
-            <option>Playeras & Sudaderas</option>            
-            <option>Stickers</option>
-            <option>Posters</option>            
-          </select>                       
-        </div><!-- Categoria --> 
+<body>
 
-          <div class="form-group">
-            <label for="nombre">Nombre del producto:</label>
-            <input type="text" class="form-control" name="telefono" id="nombre" required>            
-          </div><!-- Nombre -->
-        
-          <div class="form-group">
-            <label for="descripcion">Descripción:</label>
-            <textarea class="form-control" id="descripcion" required></textarea>
-          </div>  <!-- Descripción -->
+  <section  id="container">  
+    <div class="row">
+        <form action="#" class="form" id="formulario" method="post">
+          <p>- ADMINISTRADOR -</p>
+          <div class="form-group" id="grupo-nombre">
+            <label for="categoria" class="form-label">Categoría:</label>
+            <select id="categoria" name="categoria" class="form-control" onchange="VerificarMenu()">
+              <option selected >Elegir. . .</option>
+              <option>Playeras & Sudaderas</option>            
+              <option>Stickers</option>
+              <option>Posters</option>            
+            </select>                       
+          </div><!-- Categoria --> 
 
-          <div class="form-group">
-              <label for="precio">Precio:</label>
-              <input type="number" class="form-control" id="precio"  required>
-            </div> <!-- Precio -->  
-
-      
+            <div class="form-group">
+              <label for="nombre">Nombre del producto:</label>
+              <input type="text" class="form-control" id="nombre" required>            
+            </div><!-- Nombre -->
           
-          <div class="form-group" >
-                 <label for="imagen">Imágen:</label>
-                <input  type="file" class="form-control-file" id="imagen"  required>
-          </div><!-- Carga imágen -->
-          <button  id="btn_enviar" type="submit" class="btn btn-primary">Guardar</button>     
-          <input type="button" id="btn2" class="btn btn-primary" value="Inicio" onclick="inicio()">                
-        </form>  <!-- form -->         
-      </div><!-- row-->   
-      
-     
+            <div class="form-group">
+              <label for="descripcion">Descripción:</label>
+              <textarea class="form-control" id="descripcion" required></textarea>
+            </div>  <!-- Descripción -->
 
-    </section>   
+            <div class="form-group">
+                <label for="precio">Precio:</label>
+                <input type="number" class="form-control" id="precio"  required>
+              </div> <!-- Precio -->  
 
-    
+              <div class="form-group" id="grupo-nombre">
+                <label for="imagen" class="form-label">Imagen:</label>
+                <select id="imagen" name="imagen" class="form-control">
+                  <option selected >Elegir. . .</option>
+                  <option value="./../img/Index/playera_1.jpg">Playera 1</option>            
+                  <option value="./../img/Index/playera_2.jpg"> Playera 2</option>
+                  <option value="./../img/Index/playera_3.jpg"> Playera 3</option>   
+                  <option value="./../img/Index/sticker_1.jpg"> Sticker 1</option>   
+                  <option value="./../img/Index/sticker_2.jpg"> Sticker 2</option>   
+                  <option value="./../img/Index/sticker_3.jpg"> Sticker 3</option>   
+                  <option value="./../img/Index/poster_1.jpg"> Poster 1</option>   
+                  <option value="./../img/Index/poster_2.jpg"> Poster 2</option>   
+                  <option value="./../img/Index/poster_3.jpg"> Poster 3</option>           
+                </select>                       
+              </div><!-- imagen -->           
 
-    
-    
-    
+            <button  id="btn_enviar" type="submit" class="btn btn-primary">Guardar</button>     
+            <input type="button" id="btn2" class="btn btn-primary" value="Inicio" onclick="inicio()">                
+          </form>  <!-- form -->         
+        </div><!-- row-->   
+  </section>   
+
     <footer id="footer">
       <div class="container">                   
           <div class="copyright">
@@ -79,9 +85,9 @@
       </div> <!-- container -->
   </footer><!-- End Footer -->   
 
-   <!--Scripts -->    
-   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-   <script src="./../admin/admin.js"></script>
-</body>
+  <!--Scripts -->    
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+  <script src="./../admin/admin.js"></script>
+  </body>
 </html>
