@@ -1,5 +1,5 @@
 // Inicialización de constantes
-const formulario = document.getElementById('formulario')
+const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
 const btnEnviar = document.getElementById('btn_enviar');
 
@@ -44,8 +44,12 @@ const validarFormulario = (e) =>{
 // *****campo manda a llamar al ultimo elemtno de validarCampo en el switch****
 const validarCampo = (expresion, input, campo) => {
     if(expresion.test(input.value)){
-        document.getElementById(`grupo-${campo}`).classList.remove('was-invalidated')
-        document.getElementById(`grupo-${campo}`).classList.add('was-validated')
+        document.getElementById(`grupo-${campo}`).classList.remove('was-invalidated');
+        document.getElementById(`grupo-${campo}`).classList.add('was-validated');
+        console.log('Aqui ando');
+        setTimeout( () => {
+            document.getElementById(`grupo-${campo}`).classList.remove('was-validated');
+        }, 5000);
         campos[campo] = true;
         
     }else{
@@ -67,6 +71,9 @@ const validarPassword2 = () =>{
         campos['password'] = false;
     } else {
         document.getElementById(`grupo-password2`).classList.add('was-validated');
+        setTimeout( () => {
+            document.getElementById(`grupo-password2`).classList.remove('was-validated');
+        }, 5000);
         document.getElementById(`grupo-password2`).classList.remove('was-invalidated');
         campos['password'] = true;
     }// if password
@@ -91,12 +98,32 @@ const campos ={
 //Envio de formulario
 
 
-btnEnviar.addEventListener('submit',function(e){
-    console.log(e.preventDefault());
-    if(campos.nombre && campos.telefono && campos.email && campos.password){
-        formulario.reset();
+formulario.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let nombre = document.getElementById('nombre').value;
+    let telefono = document.getElementById('telefono').value;
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+    let password2 = document.getElementById('password2').value;
+
+    let nuevoUsusario = {
+        "nombre":nombre,
+        "telefono":telefono,
+        "email":email,
+        "password":password,
+        "password2":password2
+    };//nuevoUsuario
+
+   
     
-    } //else {
+
+    if(campos.nombre && campos.telefono && campos.email && campos.password){
+        localStorage.setItem("nuevoUsusario", JSON.stringify(nuevoUsusario));
+        console.info("Save");
+        formulario.reset();
+        
+    } else {
     //     document.getElementById('grupo-enviar').classList.add('was-validated');
-    // }
+        
+    }
 });//formulario
