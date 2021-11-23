@@ -65,69 +65,69 @@ function addItem3(item){
 //******************************** LISTADO DE ARTICULOS (FORMATO JSON) **************************************//
 
 //********* PLAYERAS  *******//
-addItem({'model':'Amor a la mexicana',
-    'img':'./../img/Index/playera_1.jpg',         
-    'description':'Sudadera para hombre',
-    'price' : '$800.00'});
+// addItem({'model':'Amor a la mexicana',
+//     'img':'./../img/Index/playera_1.jpg',         
+//     'description':'Sudadera para hombre',
+//     'price' : '$800.00'});
 
-addItem({'model':'Amor a la mexicana',
-    'img':'./../img/Index/playera_2.jpg', 
-    'description':'Playera para mujer',
-    'price' : '$400.00'});
+// addItem({'model':'Amor a la mexicana',
+//     'img':'./../img/Index/playera_2.jpg', 
+//     'description':'Playera para mujer',
+//     'price' : '$400.00'});
 
-addItem({'model':'Lucha libre',
-    'img':'./../img/Index/playera_3.jpg',
-    'description':'Playera para hombre',
-    'price' : '$400.00'});
+// addItem({'model':'Lucha libre',
+//     'img':'./../img/Index/playera_3.jpg',
+//     'description':'Playera para hombre',
+//     'price' : '$400.00'});
 
-addItem({'model':'Lucha libre',
-    'img':'./../img/Index/playera_4.jpg',
-    'description':'Playera para mujer',
-    'price' : '$400.00'});
+// addItem({'model':'Lucha libre',
+//     'img':'./../img/Index/playera_4.jpg',
+//     'description':'Playera para mujer',
+//     'price' : '$400.00'});
 
 
  
 //********* STICKERS  *******//
-addItem2({'name':'Logo',
-    'img':'./../img/Index/sticker_1.jpg',        
-    'description':'Juego de stickers 1', 
-    'price' : '$100.00'});
+// addItem2({'name':'Logo',
+//     'img':'./../img/Index/sticker_1.jpg',        
+//     'description':'Juego de stickers 1', 
+//     'price' : '$100.00'});
 
-addItem2({'name':'Logo + amor ',
-    'img':'./../img/Index/sticker_2.jpg', 
-    'description':'Juego de stickers 2', 
-    'price' : '$100.00'});
+// addItem2({'name':'Logo + amor ',
+//     'img':'./../img/Index/sticker_2.jpg', 
+//     'description':'Juego de stickers 2', 
+//     'price' : '$100.00'});
 
-addItem2({'name':'Lucha libre',
-    'img':'./../img/Index/sticker_3.jpg',
-    'description':'Juego de stickers 3', 
-    'price' : '$100.00'});
+// addItem2({'name':'Lucha libre',
+//     'img':'./../img/Index/sticker_3.jpg',
+//     'description':'Juego de stickers 3', 
+//     'price' : '$100.00'});
 
-addItem2({'name':'Amor a la mexicana',
-    'img':'./../img/Index/sticker_4.jpg',
-    'description':'Juego de stickers 4', 
-    'price' : '$100.00'}); 
+// addItem2({'name':'Amor a la mexicana',
+//     'img':'./../img/Index/sticker_4.jpg',
+//     'description':'Juego de stickers 4', 
+//     'price' : '$100.00'}); 
  
 //********* POSTERS  *******//
-addItem3({'name':'Lucha libre',
-    'img':'./../img/Index/poster_1.jpg',        
-    'description':'Poster tamaño carta', 
-    'price' : '$50.00'});
+// addItem3({'name':'Lucha libre',
+//     'img':'./../img/Index/poster_1.jpg',        
+//     'description':'Poster tamaño carta', 
+//     'price' : '$50.00'});
 
-addItem3({'name':'Lucha libre + amor',
-    'img':'./../img/Index/poster_2.jpg', 
-    'description':'Poster decorativo', 
-    'price' : '$75.00'});
+// addItem3({'name':'Lucha libre + amor',
+//     'img':'./../img/Index/poster_2.jpg', 
+//     'description':'Poster decorativo', 
+//     'price' : '$75.00'});
 
-addItem3({'name':'Lucha libre',
-    'img':'./../img/Index/poster_3.jpg',
-    'description':'Poster decorativo', 
-    'price' : '$75.00'});
+// addItem3({'name':'Lucha libre',
+//     'img':'./../img/Index/poster_3.jpg',
+//     'description':'Poster decorativo', 
+//     'price' : '$75.00'});
 
-addItem3({'name':'Amor a la mexicana',
-    'img':'./../img/Index/poster_4.jpg',
-    'description':'Poster decorativo', 
-    'price' : '$75.00'});
+// addItem3({'name':'Amor a la mexicana',
+//     'img':'./../img/Index/poster_4.jpg',
+//     'description':'Poster decorativo', 
+//     'price' : '$75.00'});
  
 
 
