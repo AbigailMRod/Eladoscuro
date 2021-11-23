@@ -59,61 +59,58 @@
 
             <form class="form" id="formulario" >
                 <div class="containerSect">
-                            <div class="row" id="about">
-                                <div style="padding: 0%;" class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6;" id="iniciar" >
-                                    <p>INICIAR SESIÓN</p>
+                    <div class="row" id="about">
+                        <div style="padding: 0%;" class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6;" id="iniciar" >
+                            <p>INICIAR SESIÓN</p>
                         </div> <!-- col1 -->   
                         
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" id="cuenta" >
-                                <p>CREAR CUENTA</p>
-                    </div> <!-- col2 -->
-                </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" id="cuenta" >
+                            <p>CREAR CUENTA</p>
+                        </div> <!-- col2 -->
+                    </div>
 
-    <div class="form-group" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-        <form action="#" id="formulario" class="needs-validation"  novalidate>
-            <div class="container-name" id="grupo-nombre">
-                <label for="nombre" class="form-label"> Nombre *</label>
-                <input id="nombre" name="nombre" type="text" class="form-control" placeholder="" required>
-                <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
-                <div class="alert alert-danger invalid-feedback"  role="alert">Este campo requiere puras letras y mínimo 3</div>
-            </div>
-            <div class="container-telefono" id="grupo-telefono">
-                <label for="telefono" class="form-label"> Télefono *</label>
-                <input id="telefono" name="telefono" type="text" class="form-control" placeholder=""required>
-                <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
-                <div class="alert alert-danger invalid-feedback"  role="alert">por favor solo ingresa 10 números</div>
-            </div>
-            <div class="container-email" id="grupo-email">
-                <label for="email" class="form-label"> Correo electrónico *</label>
-                <input id="email" name="email" type="text" class="form-control" placeholder="ejemplo@correo.com" required>
-                <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
-                <div class="alert alert-danger invalid-feedback"  role="alert">Ingresa un correo válido</div>
-            </div>
-            <div class="container-pswd" id="grupo-password">
-                <label for="password" class="form-label"> Contraseña *</label>
-                <input id="password" name="password" type="password" class="form-control" placeholder=""required>
-                <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
-                <div class="alert alert-danger invalid-feedback"  role="alert">Completa este campo</div>
-            </div>
-            <div class="container-pswd" id="grupo-password">
-                <label for="password" class="form-label"> Repetir contraseña *</label>
-                <input id="password" name="password" type="password" class="form-control" placeholder="" required>
-                <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
-                <div class="alert alert-danger invalid-feedback"  role="alert">Completa este campo</div>
-            </div>
-
+                    <div class="form-group" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <form action="#" id="formulario" class="needs-validation"  novalidate>
+                            <div class="container-name" id="grupo-nombre">
+                                <label for="nombre" class="form-label"> Nombre *</label>
+                                <input id="nombre" name="nombre" type="text" class="form-control" placeholder="" required>
+                                <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
+                                <div class="alert alert-danger invalid-feedback"  role="alert">Este campo requiere mínimo 3 letras</div>
+                            </div> <!-- container-name -->
+                            <div class="container-telefono" id="grupo-telefono">
+                                <label for="telefono" class="form-label"> Teléfono *</label>
+                                <input id="telefono" name="telefono" type="text" class="form-control" placeholder=""required>
+                                <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
+                                <div class="alert alert-danger invalid-feedback"  role="alert">por favor solo ingresa 10 números</div>
+                            </div> <!-- container-telefono -->
+                            <div class="container-email" id="grupo-email">
+                                <label for="email" class="form-label"> Correo electrónico *</label>
+                                <input id="email" name="email" type="text" class="form-control" placeholder="ejemplo@correo.com" required>
+                                <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
+                                <div class="alert alert-danger invalid-feedback"  role="alert">Ingresa un correo válido</div>
+                            </div> <!-- container-email -->
+                            <div class="container-pswd" id="grupo-password">
+                                <label for="password" class="form-label"> Contraseña *</label>
+                                <input id="password" name="password" type="password" class="form-control" placeholder=""required>
+                                <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
+                                <div class="alert alert-danger invalid-feedback"  role="alert">Completa este campo (mín 8 caracteres)</div>
+                            </div> <!-- container-pswd -->
+                            <div class="container-pswd" id="grupo-password2">
+                                <label for="password2" class="form-label"> Repetir contraseña *</label>
+                                <input id="password2" name="password2" type="password" class="form-control" placeholder="" required>
+                                <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
+                                <div class="alert alert-danger invalid-feedback"  role="alert">La contraseña debe de coincidir</div>
+                            </div> <!-- container-pswd -->
+                            <br>
+                            <div>
+                                <button id="btn_enviar" type="submit" class="btn btn-light">Registrarse <i class="bi bi-arrow-right" style="height: 10px;"></i></button>
+                            </div>
             
-            <br>
-            <div>
-                <button id="send" type="submit" class="btn btn-light">Registrarse <i class="bi bi-arrow-right" style="height: 10px;"></i></button>
-            </div>
-             <!-- class="alert alert-primary" -->
-            
-    </div> <!-- form-group -->
-             
-        </form>
-    </div> <!--row-->
-
+                    
+                    </div> <!-- form-group -->
+                </div> <!--container-->
+            </form>
+        </div> <!--row-->
     </section>
 
     <!--Footer-->
