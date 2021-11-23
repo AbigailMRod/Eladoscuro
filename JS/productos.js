@@ -10,6 +10,7 @@ function addItem(item){
             '   <p class="card-text">'+item.price +' MXN </p>\n'+
             '   <p class="card-text"> Tallas: XS, S, M, L XL </p>\n'+
             '   <button type="button" class="btn btn-outline-dark">Agregar</button>\n'+
+            '   <a class="add-cart cart1" href="#">Agregar al carrito</a>\n'+
             '   </div>\n'+
             '   </div>\n'+
             '   </div>\n'+
@@ -55,6 +56,7 @@ function addItem3(item){
     const itemsContainer = document.getElementById("list-items3");    
     itemsContainer.innerHTML += itemHTML;   
 }
+
 
 
 
@@ -127,4 +129,62 @@ addItem3({'name':'Amor a la mexicana',
     'description':'Poster decorativo', 
     'price' : '$75.00'});
  
-    
+
+
+
+
+//********************** CARRITO *********************/
+
+
+    console.log("corriendo");
+
+let carts = document.querySelectorAll('.add-cart');
+let products = [
+    {
+        name: "Amor a la mexicana",
+        price: 256,
+        inCart: 0
+
+    },
+    {
+        name: "Lucha libre",
+        price: 215,
+        inCart: 0
+    }
+]
+
+
+
+
+
+for (let i = 0; i < carts.length; i++){
+    carts[i].addEventListener('click', () => {
+        cartNumbers();  
+          })
+}//for
+
+
+
+
+function onLoadcartNumbers(){
+    let productNumbers = localStorage.getItem("cartNumbers");
+    if (productNumbers) {
+        document.querySelector('.cart span').textContent = productNumbers;
+        
+    }//if
+}//onLoadcartNumbers
+
+function cartNumbers(){
+    let productNumbers = localStorage.getItem('cartNumbers');
+    productNumbers = parseInt(productNumbers);
+
+    if (productNumbers){
+        localStorage.setItem('cartNumbers', productNumbers + 1);
+        document.querySelector('.cart span').textContent = productNumbers + 1;
+    } else{
+        localStorage.setItem('cartNumbers', 1);
+        document.querySelector('.cart span').textContent = 1;
+    }//else
+}//cartNumbers function
+
+onLoadcartNumbers();
