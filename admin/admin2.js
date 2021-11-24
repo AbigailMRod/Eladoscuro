@@ -30,7 +30,6 @@ function drawProducts(arrayProducts){
     spinner.remove();
     
 }//  Products 
-// Products();
 
 
     function addProductsoSystem(nombre, descripcion, precio, image){
@@ -51,7 +50,6 @@ function drawProducts(arrayProducts){
         localStorage.setItem("localProduct", JSON.stringify(Productlist));
     }// local Storage Product
 
-    console.log("Hola mundo");
 
 
 window.onload= function(){
