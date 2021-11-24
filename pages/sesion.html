@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- Favicons -->
+      <link rel="icon" type="image/png" href="./../img/logoPag.svg">
+        
+    <!-- link botstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="./../CSS/sesion.css">
+    <link rel="stylesheet" href="./../CSS/styles.css">
+
+     <!-- Fuente Roboto-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+
+    <title> ELADOSCURO </title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
+    
+</head>
+<body>
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+        <img src="./../img/Navbar/LOGO.svg" class="d-inline-block align-top" alt="image logo">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button> <!-- burger -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" id="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./../index.html">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./../pages/nosotros.html">NOSOTROS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./../pages/productos.html">PRODUCTOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./../pages/cuenta.html">CUENTA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./../pages/contacto.html">CONTACTO</a>
+                </li>
+            </ul>
+        </div>
+    </nav> <!-- nav bar -->
+
+       <!--formulario-->
+    <section id="container">
+        <div class="row">
+
+            <form class="form" id="formulario" >
+                <div class="containerSect">
+                    <div class="row" id="about">
+                        <div style="padding: 0%;" class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6;" id="iniciar" >
+                            <p>INICIAR SESIÓN</p>
+                            <a  href="./../pages/sesion.html"></a>  
+                </div> <!-- col1 -->   
+                
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" id="crear" >
+                        <p>CREAR CUENTA</p>
+                        <a  href="./../pages/cuenta.html"></a>   
+            </div> <!-- col2 -->
+        </div>
+
+        
+
+    <div class="form-group" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"> 
+        <form action="#" id="formulario" class="needs-validation"  novalidate>
+            <div class="container-email" id="grupo-email">
+                <label for="email" class="form-label"> Correo electrónico *</label>
+                <input id="email" name="email" type="text" class="form-control" placeholder="ejemplo@correo.com" required>
+                <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
+                <div class="alert alert-danger invalid-feedback"  role="alert">Ingresa un correo válido</div>
+            </div>
+            <br>
+            <div class="container-pswd" id="grupo-password">
+                <label for="password" class="form-label"> Contraseña *</label>
+                <input id="password" name="password" type="password" class="form-control" placeholder=""required>
+                <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
+                <div class="alert alert-danger invalid-feedback"  role="alert">Completa este campo</div>
+            </div>
+            <!-- class="alert alert-primary" -->        
+            <br>
+    <div class="containerSect" id="botones">
+
+        <div class="row" id="about">
+            <div style="padding: 0%;" class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6;" id="iniciar" >
+            <button id="send" type="submit" class="btn btn-light">Iniciar sesión <i class="bi bi-arrow-right" style="height: 10px;"></i></button>
+            
+        </div> <!-- col1 -->   
+    
+        <div  class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" id="forgot" >
+            <p>?Olvidé mi contraseña</p>   
+            <p>Consultar pedido</p>                     
+        </div> <!-- col2 -->
+
+    </div> <!-- botones -->
+       
+    </div> <!-- form-group -->
+             
+        </form>
+    </div> <!--row-->
+
+    </section>
+
+    <!--Footer-->
+<footer id="footer">
+    <div class="container">
+      <div class="social-links">
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+      </div>             
+      <div class="copyright">
+          &copy; Copyright <strong><span>ELADOSCURO</span></strong>. All Rights Reserved
+      </div>
+  </div> <!-- container footer -->
+  </footer>
+    
+    <!--Scripts -->    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="./../JS/.js"></script>
+</body>
+</html>
