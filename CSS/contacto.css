@@ -13,7 +13,7 @@
 #container {
     /*imagen de fondo*/
     background-image: url(/img/Index/max-bohme-sogOxlp9ZGU-unsplash.jpg);
-    background-position: top;
+    background-position:center;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -167,7 +167,7 @@
     /*centrado del cuadro en la pantallass*/
     margin-right: 0px;
     margin-left: 0px;
-    /* display: flex; */
+    display: flex;
     justify-content: center;
     padding: 4%;
 }
@@ -191,6 +191,7 @@
     color: #fff;
     font-size: 15px;
     padding: 10px 0;
+    
 }
 
 #footer .social-links {

@@ -1,0 +1,83 @@
+/*--------------------------------------------------------------
+# Form
+--------------------------------------------------------------*/
+
+#container {
+   
+  background-image: url(/img/admin/background-admin.svg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.form p {
+  text-align: center;
+  letter-spacing: 0.35em;  
+}
+
+
+.form {    
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  line-height: 28.13px;
+  font-style: normal;
+  background-color: rgba(0, 0, 0, .5);
+  color: #fff;
+  padding: 4%;
+  width: 871px;
+  height: 620px;
+}
+
+
+.row {  
+  margin-right: 0px;
+  margin-left: 0px;    
+  justify-content: center;
+  padding:10%;
+}
+
+#btn_enviar {
+  background-color: rgba(25, 113, 196, 0.623);
+  width: 140px;
+  font-weight: bold;
+  border-radius: 6px; 
+  font-size: 15px; 
+  
+  
+}
+
+#btn2 {
+  background-color: rgba(123, 206, 16, 0.589);    
+  width: 140px;
+  font-weight: bold;
+  border-radius: 6px; 
+  font-size: 15px; 
+  
+  
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+
+
+#footer {
+  text-align: center;
+  background: #000000;
+  color: #fff;
+  font-size: 15px;    
+  padding: 10px 0;
+  height: 50px; 
+  background:black; 
+  width:100%; 
+  position:absolute;   
+    
+}  
+
+#footer .copyright {
+  text-align: center;
+  margin: 0 0 5px 0;
+}
+
