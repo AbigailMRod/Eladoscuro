@@ -1,7 +1,6 @@
 
 function drawProducts(arrayProducts){
 // function Products (){
-    
     let spinner =document.getElementById("spinner");
     // let cardllena= "";
     arrayProducts.forEach(function (element) {
@@ -19,7 +18,7 @@ function drawProducts(arrayProducts){
         '   <div class="card-body">\n'+
         '   <h6 class="card-title" style= "font-weight: bold; ">'+element.model+'</h6>\n'+
         '   <p class="card-text">'+element.description +'</p>\n'+
-        '   <p class="card-text" style="text-align: center;"> $'+element.price +' MX </p>\n'+
+        '   <p class="card-text" > $'+element.price +' MX </p>\n'+
         '   <p class="card-text"> Tallas: XS, S, M, L XL </p>\n'+
         '   <button type="button" class="btn btn-outline-dark" >Agregar</button>\n'+
         '   </div>\n'+
@@ -102,6 +101,104 @@ window.onload= function(){
 
 }//window.onload
 
+
+
+
+//************************* CARRITO **************************/
+
+
+let carts = document.querySelectorAll('.btn');
+console.log(carts.length);  //aquí me da 0
+
+let products =[
+    // playeras y sudaderas
+    {model:"Amor a la mexicana ", img:'./../img/Index/playera_1.jpg', description:'Sudadera para hombre',price : 800.00, category:"Playeras & Sudaderas", inCart: 0},
+    {model:'Amor a la mexicana ', img:'./../img/Index/playera_2.jpg', description:'Playera para mujer', price : 400.00, category:"Playeras & Sudaderas", inCart: 0},
+    {model:'Lucha libre', img:'./../img/Index/playera_3.jpg', description:'Playera para hombre', price : 400.00, category:"Playeras & Sudaderas", inCart: 0},
+    {model:'Lucha libre', img:'./../img/Index/playera_4.jpg', description:'Playera para mujer', price : 400.00, category:"Playeras & Sudaderas", inCart: 0}]
+
+
+
+for (let i = 0; i < carts.length; i++){
+    carts[i].addEventListener('click', () => {
+        cartNumbers(products[i]);  
+        totalCost(products[i]);
+          })
+}//for
+
+
+
+function onLoadcartNumbers(){
+    let productNumbers = localStorage.getItem("cartNumbers");
+    if (productNumbers) {
+        document.querySelector('.cart span').textContent = productNumbers;
+        
+    }//if
+}//onLoadcartNumbers
+
+function cartNumbers(product){
+    //console.log("El producto elegido es:", product);   
+    let productNumbers = localStorage.getItem('cartNumbers');
+    productNumbers = parseInt(productNumbers);
+
+    if (productNumbers){
+        localStorage.setItem('cartNumbers', productNumbers + 1);
+        document.querySelector('.cart span').textContent = productNumbers + 1;
+    } else{
+        localStorage.setItem('cartNumbers', 1);
+        document.querySelector('.cart span').textContent = 1;
+    }//else
+    setItems(product);    
+}//cartNumbers function
+
+
+function setItems(product){
+    let cartItems = localStorage.getItem("productosEnCarrito");
+    cartItems = JSON.parse(cartItems);
+    console.log("Mis productos en carrito son:" , cartItems);
+    if(cartItems != null){
+        if(cartItems[product.img] == undefined ){
+            cartItems = {
+                ...cartItems,
+                [product.img]: product
+            }
+        }//if para contar un producto distinto
+        cartItems[product.img].inCart += 1;
+    }else{   
+    product.inCart = 1;
+    cartItems = {
+        [product.img]: product
+    }
+    }//ifElse agrega un +1 al inCart del mismo producto
+
+
+    localStorage.setItem("productosEnCarrito", JSON.stringify(cartItems));
+}//setItems fija productos en el localstorage
+
+
+function totalCost(product){
+    // console.log("El precio del producto es", product.price);
+    let cartCost = localStorage.getItem("totalCost");
+    // console.log("Mi cart cost es", cartCost);
+    // console.log(typeof cartCost);
+    if (cartCost != null) {
+        cartCost = parseInt(cartCost);
+        localStorage.setItem("totalCost", cartCost + product.price)
+    } else {
+        localStorage.setItem("totalCost", product.price);
+    }//ifElse suma de productos diferentes
+
+}//totalCost para calcular costo Total
+
+
+function displayCart(){
+    let cartItems  = localStorage.getItem("productosEnCarrito");
+    cartItems = JSON.parse(cartItems); 
+}//displayCart
+
+
+onLoadcartNumbers();
+displayCart();
 
 
 

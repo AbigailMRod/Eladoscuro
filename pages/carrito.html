@@ -8,9 +8,9 @@
   
 
 <!--Style-->
-<link rel="stylesheet" href="./../CSS/productos.css">
+<link rel="stylesheet" href="./../CSS/carrrito.css">
 <link rel="stylesheet" href="./../CSS/styles.css">
-<link href="./boxicons/css/." rel="stylesheet">
+<!-- <link href="./boxicons/css/." rel="stylesheet"> -->
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
@@ -45,14 +45,25 @@
                <li class="nav-item">
                    <a class="nav-link" href="./../pages/contacto.html">CONTACTO</a>
                </li>
-               <li class="cart">
-                <a href="./../pages/carrito.html"> <ion-icon name="cart-outline"></ion-icon> <span>0</span></a>
-               </li>
-           </ul>
-       </div>
-     </nav> <!-- nav bar -->
-   
+               <i class="cart">
+                    <a href="./../pages/carrito.html"><ion-icon name="cart-outline"></ion-icon>  <span>0</span></a>
+               </i>
+            </ul>
+        </div>
+      </nav> <!-- nav bar -->
 
+
+     <div class="products-container">
+         <div class="products-header">
+             <h5 class="product-tittle"> PRODUCTO </h5>
+             <h5 class="price"> PRODUCTO </h5>
+             <h5 class="quantity"> CANTIDAD </h5>
+             <h5 class="total"> TOTAL </h5>
+         </div>
+         <div class="products">
+
+         </div>
+     </div>
 
 
 
@@ -79,12 +90,14 @@
   </footer>    
 
 
-     
+
+
+
+<script src="./../JS/productos.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script type="text/Javascript" src="./../JS/productos.js"></script>
 </body>
 </html>
 

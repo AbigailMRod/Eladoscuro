@@ -13,10 +13,9 @@ function addItem(item){
             '   <div class="card-body">\n'+
             '   <h5 class="card-title">'+item.model+'</h5>\n'+
             '   <p class="card-text">'+item.description +'</p>\n'+
-            '   <p class="card-text">'+item.price +' MXN </p>\n'+
+            '   <p class="card-text"> $'+item.price +' MXN </p>\n'+
             '   <p class="card-text"> Tallas: XS, S, M, L XL </p>\n'+
             '   <button type="button" class="btn btn-outline-dark">Agregar</button>\n'+
-            '   <a class="add-cart cart1" href="#">Agregar al carrito</a>\n'+ 
             '   </div>\n'+
             '   </div>\n'+
             '   </div>\n'+
@@ -74,22 +73,22 @@ function addItem3(item){
 addItem({'model':'Amor a la mexicana',
     'img':'./../img/Index/playera_1.jpg',         
     'description':'Sudadera para hombre',
-    'price' : '$800.00'});
+    'price' : '800.00'});
 
 addItem({'model':'Amor a la mexicana',
     'img':'./../img/Index/playera_2.jpg', 
     'description':'Playera para mujer',
-    'price' : '$400.00'});
+    'price' : '400.00'});
 
 addItem({'model':'Lucha libre',
     'img':'./../img/Index/playera_3.jpg',
     'description':'Playera para hombre',
-    'price' : '$400.00'});
+    'price' : '400.00'});
 
 addItem({'model':'Lucha libre',
     'img':'./../img/Index/playera_4.jpg',
     'description':'Playera para mujer',
-    'price' : '$400.00'});
+    'price' : '400.00'});
 
 
  
@@ -97,43 +96,43 @@ addItem({'model':'Lucha libre',
 addItem2({'name':'Logo',
     'img':'./../img/Index/sticker_1.jpg',        
     'description':'Juego de stickers 1', 
-    'price' : '$100.00'});
+    'price' : '100.00'});
 
 addItem2({'name':'Logo + amor ',
     'img':'./../img/Index/sticker_2.jpg', 
     'description':'Juego de stickers 2', 
-    'price' : '$100.00'});
+    'price' : '100.00'});
 
 addItem2({'name':'Lucha libre',
     'img':'./../img/Index/sticker_3.jpg',
     'description':'Juego de stickers 3', 
-    'price' : '$100.00'});
+    'price' : '100.00'});
 
 addItem2({'name':'Amor a la mexicana',
     'img':'./../img/Index/sticker_4.jpg',
     'description':'Juego de stickers 4', 
-    'price' : '$100.00'}); 
+    'price' : '100.00'}); 
  
 // ********* POSTERS  *******//
 addItem3({'name':'Lucha libre',
     'img':'./../img/Index/poster_1.jpg',        
     'description':'Poster tamaño carta', 
-    'price' : '$50.00'});
+    'price' : '50.00'});
 
 addItem3({'name':'Lucha libre + amor',
     'img':'./../img/Index/poster_2.jpg', 
     'description':'Poster decorativo', 
-    'price' : '$75.00'});
+    'price' : '75.00'});
 
 addItem3({'name':'Lucha libre',
     'img':'./../img/Index/poster_3.jpg',
     'description':'Poster decorativo', 
-    'price' : '$75.00'});
+    'price' : '75.00'});
 
 addItem3({'name':'Amor a la mexicana',
     'img':'./../img/Index/poster_4.jpg',
     'description':'Poster decorativo', 
-    'price' : '$75.00'});
+    'price' : '75.00'});
  
 
 
@@ -142,11 +141,13 @@ addItem3({'name':'Amor a la mexicana',
 //************************* CARRITO **************************/
 
 
-let carts = document.querySelectorAll('.add-cart');
+let carts = document.querySelectorAll('.btn');
+console.log(carts.length);   //aquí da 12
+
 let products =[
     // playeras y sudaderas
-    {model:"Amor a la mexicana", img:'./../img/Index/playera_1.jpg', description:'Sudadera para hombre',price : 800.00, category:"Playeras & Sudaderas", inCart: 0},
-    {model:'Amor a la mexicana', img:'./../img/Index/playera_2.jpg', description:'Playera para mujer', price : 400.00, category:"Playeras & Sudaderas", inCart: 0},
+    {model:"Amor a la mexicana ", img:'./../img/Index/playera_1.jpg', description:'Sudadera para hombre',price : 800.00, category:"Playeras & Sudaderas", inCart: 0},
+    {model:'Amor a la mexicana ', img:'./../img/Index/playera_2.jpg', description:'Playera para mujer', price : 400.00, category:"Playeras & Sudaderas", inCart: 0},
     {model:'Lucha libre', img:'./../img/Index/playera_3.jpg', description:'Playera para hombre', price : 400.00, category:"Playeras & Sudaderas", inCart: 0},
     {model:'Lucha libre', img:'./../img/Index/playera_4.jpg', description:'Playera para mujer', price : 400.00, category:"Playeras & Sudaderas", inCart: 0}]
 
@@ -155,6 +156,7 @@ let products =[
 for (let i = 0; i < carts.length; i++){
     carts[i].addEventListener('click', () => {
         cartNumbers(products[i]);  
+        totalCost(products[i]);
           })
 }//for
 
@@ -165,9 +167,8 @@ function onLoadcartNumbers(){
     let productNumbers = localStorage.getItem("cartNumbers");
     if (productNumbers) {
         document.querySelector('.cart span').textContent = productNumbers;
-        
     }//if
-}//onLoadcartNumbers
+}//onLoadcartNumbers  numero de articulos en carrito
 
 function cartNumbers(product){
     //console.log("El producto elegido es:", product);   
@@ -189,15 +190,42 @@ function setItems(product){
     let cartItems = localStorage.getItem("productosEnCarrito");
     cartItems = JSON.parse(cartItems);
     console.log("Mis productos en carrito son:" , cartItems);
+    if(cartItems != null){
+        if(cartItems[product.img] == undefined ){
+            cartItems = {
+                ...cartItems,
+                [product.img]: product
+            }
+        }//if para contar un producto distinto
+        cartItems[product.img].inCart += 1;
+    }else{   
     product.inCart = 1;
     cartItems = {
-        [product.model]: product
+        [product.img]: product
     }
-    localStorage.setItem("productosEnCarrito", JSON.stringify(cartItems));
-}//setItems
+    }//ifElse agrega un +1 al inCart del mismo producto
 
+
+    localStorage.setItem("productosEnCarrito", JSON.stringify(cartItems));
+}//setItems fija productos en el localstorage
+
+
+function totalCost(product){
+    // console.log("El precio del producto es", product.price);
+    let cartCost = localStorage.getItem("totalCost");
+    // console.log("Mi cart cost es", cartCost);
+    // console.log(typeof cartCost);
+    if (cartCost != null) {
+        cartCost = parseInt(cartCost);
+        localStorage.setItem("totalCost", cartCost + product.price)
+    } else {
+        localStorage.setItem("totalCost", product.price);
+    }//ifElse suma de productos diferentes
+
+}//totalCost para calcular costo Total
 
 
 
 
 onLoadcartNumbers();
+//displayCart();
