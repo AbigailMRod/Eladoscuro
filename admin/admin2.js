@@ -103,3 +103,7 @@ window.onload= function(){
     drawProducts(storeList);
 
 }//window.onload
+
+
+
+
