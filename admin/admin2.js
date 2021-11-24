@@ -13,15 +13,15 @@ function drawProducts(arrayProducts){
             etiqueta="list-items2";
         }
         let ancla = document.getElementById(etiqueta);
-        let card= ' <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">\n'+ 
+        let card= ' <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" style="padding-bottom: 3%;">\n'+ 
         '   <div class="card">\n' +
         '   <img src="'+element.img+'" class="card-img-top" alt="  "> \n'+
         '   <div class="card-body">\n'+
-        '   <h5 class="card-title">'+element.model+'</h5>\n'+
+        '   <h6 class="card-title" style= "font-weight: bold; ">'+element.model+'</h6>\n'+
         '   <p class="card-text">'+element.description +'</p>\n'+
-        '   <p class="card-text"> $'+element.price +' MX </p>\n'+
+        '   <p class="card-text" style="text-align: center;"> $'+element.price +' MX </p>\n'+
         '   <p class="card-text"> Tallas: XS, S, M, L XL </p>\n'+
-        '   <button type="button" class="btn btn-outline-dark">Agregar</button>\n'+
+        '   <button type="button" class="btn btn-outline-dark" >Agregar</button>\n'+
         '   </div>\n'+
         '   </div>\n'+
         '   </div>';
@@ -30,7 +30,6 @@ function drawProducts(arrayProducts){
     spinner.remove();
     
 }//  Products 
-// Products();
 
 
     function addProductsoSystem(nombre, descripcion, precio, image){
@@ -51,7 +50,6 @@ function drawProducts(arrayProducts){
         localStorage.setItem("localProduct", JSON.stringify(Productlist));
     }// local Storage Product
 
-    console.log("Hola mundo");
 
 
 window.onload= function(){
