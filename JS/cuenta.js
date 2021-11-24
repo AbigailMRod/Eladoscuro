@@ -98,6 +98,7 @@ const campos ={
 //Envio de formulario
 
 
+
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
     let nombre = document.getElementById('nombre').value;
