@@ -1,3 +1,7 @@
+.cart{
+    margin-top: 8px;
+}
+
 .products-container{
     max-width: 90%;
     justify-content: space-around;
@@ -32,11 +36,10 @@
 }
 
 .products-tittle{
-    width: 50%;
+    width: 60%;
 }
 
 .price{
-    width: 7%;
     border-bottom: 4px solid lightgreen;
     display: flex;
     align-items: center;
