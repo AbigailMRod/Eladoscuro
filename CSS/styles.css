@@ -93,6 +93,17 @@ Collage Image
   /* color: white; */
   transform: rotateY(180deg);
 }
+
+/*Se agregan estilos a la parte trasera de la card */
+.display-flex{
+  display: flex;
+  flex-direction: column;
+  /* background-color: #d60f08; */
+  text-align: center; 
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
 @media screen and  (min-width:350px){
   .gallery-container{
     grid-template-columns: repeat(2, 1fr);
