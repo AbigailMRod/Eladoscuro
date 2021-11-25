@@ -4,6 +4,10 @@ el local storage y facilitar tareas *************************|
  */
 
 
+// ya no usar esta página!!! 
+// se recomienda borrarla y dejarla guardada en algún commit de GitHub
+
+
 //** Funcion para playeras**/
 function addItem(item){ 
     const itemHTML =  
@@ -137,7 +141,6 @@ addItem3({'name':'Amor a la mexicana',
 
 
 
-
 //************************* CARRITO **************************/
 
 
@@ -226,6 +229,4 @@ function totalCost(product){
 
 
 
-
 onLoadcartNumbers();
-//displayCart();

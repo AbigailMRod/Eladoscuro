@@ -6,10 +6,14 @@ function drawProducts(arrayProducts){
     arrayProducts.forEach(function (element) {
     // Productsase.forEach(function (element) {
         let etiqueta= "list-items";
+        let etiquetaTalla = '<p class="card-text"> Tallas: XS, S, M, L XL </p>\n';
+
         if(element.category=="Posters"){
             etiqueta="list-items3";
+            etiquetaTalla = "<p></p> \n"; 
         }else if (element.category=="Stickers"){
             etiqueta="list-items2";
+            etiquetaTalla = "<p></p> \n"; 
         }
         let ancla = document.getElementById(etiqueta);
         let card= ' <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" style="padding-bottom: 3%;">\n'+ 
@@ -18,15 +22,15 @@ function drawProducts(arrayProducts){
         '   <div class="card-body">\n'+
         '   <h6 class="card-title" style= "font-weight: bold; ">'+element.model+'</h6>\n'+
         '   <p class="card-text">'+element.description +'</p>\n'+
-        '   <p class="card-text" > $'+element.price +' MX </p>\n'+
-        '   <p class="card-text"> Tallas: XS, S, M, L XL </p>\n'+
+        '   <p class="card-text" > $'+element.price +'.00 MXN </p>\n'+
+            etiquetaTalla  +
         '   <button type="button" class="btn btn-outline-dark" >Agregar</button>\n'+
         '   </div>\n'+
         '   </div>\n'+
         '   </div>';
         ancla.innerHTML +=card;
     })
-    spinner.remove();
+    //spinner.remove();
     
 }//  Products 
 
@@ -46,40 +50,40 @@ function drawProducts(arrayProducts){
 
 
     function localStorageProduct (Productlist){
-        localStorage.setItem("localProduct", JSON.stringify(Productlist));
+        localStorage.setItem("localProduct", JSON.stringify(Productlist));  
     }// local Storage Product
 
 
 
 window.onload= function(){
-    let ProductBase=[
+    let products=[
         // playeras y sudaderas
         {model:"Amor a la mexicana", img:'./../img/Index/playera_1.jpg',         
-        description:'Sudadera para hombre',price : '800.00', category:"Playeras & Sudaderas"},
+        description:'Sudadera para hombre',price : 800.00, category:"Playeras & Sudaderas"},
         {model:'Amor a la mexicana', img:'./../img/Index/playera_2.jpg', 
-        description:'Playera para mujer', price : '400.00', category:"Playeras & Sudaderas"},
+        description:'Playera para mujer', price : 400.00, category:"Playeras & Sudaderas"},
         {model:'Lucha libre', img:'./../img/Index/playera_3.jpg',
-        description:'Playera para hombre', price : '400.00', category:"Playeras & Sudaderas"},
+        description:'Playera para hombre', price : 400.00, category:"Playeras & Sudaderas"},
         {model:'Lucha libre', img:'./../img/Index/playera_4.jpg',
-        description:'Playera para mujer', price : '400.00', category:"Playeras & Sudaderas"},
+        description:'Playera para mujer', price : 400.00, category:"Playeras & Sudaderas"},
         ///Stickers
         {model:'Logo', img:'./../img/Index/sticker_1.jpg',  description:'Juego de stickers 1', 
-        price : '100.00' , category:"Stickers"},
+        price : 100.00 , category:"Stickers"},
         {model:'Logo + amor ', img:'./../img/Index/sticker_2.jpg', description:'Juego de stickers 2', 
-        price: '100.00', category:"Stickers"},
+        price: 100.00, category:"Stickers"},
         {model:'Lucha libre',img:'./../img/Index/sticker_3.jpg',description:'Juego de stickers 3', 
-        price: '100.00', category:"Stickers"},
+        price: 100.00, category:"Stickers"},
         {model:'Amor a la mexicana', img:'./../img/Index/sticker_4.jpg',description:'Juego de stickers 4', 
-        price : "100.00", category:"Stickers"},
+        price : 100.00, category:"Stickers"},
         //posters
         {model:'Lucha libre', img:'./../img/Index/poster_1.jpg', description:'Poster tamaño carta', 
-        price: '$50.00', category:"Posters"},
+        price: 50.00, category:"Posters"},
         {model:'Lucha libre + amor',  img:'./../img/Index/poster_2.jpg', description:'Poster decorativo', 
-        price : '$75.00', category:"Posters"},
+        price : 75.00, category:"Posters"},
         {model:'Lucha libre', img:'./../img/Index/poster_3.jpg', description:'Poster decorativo', 
-        price :'$75.00', category:"Posters"},
+        price :75.00, category:"Posters"},
         {model:'Amor a la mexicana', img:'./../img/Index/poster_4.jpg',description:'Poster decorativo', 
-        price:'$75.00', category:"Posters"}
+        price:75.00, category:"Posters"}
     ];
     //falta el objeto window
     // null
@@ -93,11 +97,33 @@ window.onload= function(){
     }else{
             //si no existe
 
-        window.localStorage.setItem("localProduct",JSON.stringify(ProductBase));
-        valueInLocalStorage= ProductBase
+        window.localStorage.setItem("localProduct",JSON.stringify(products));
+        valueInLocalStorage= products
     }
     
     drawProducts(storeList);
+
+
+
+    let carts = document.querySelectorAll('.btn');
+    console.log(carts.length);  //aquí me da 0
+    
+        //let products =[
+        // playeras y sudaderas
+        //{model:"Amor a la mexicana ", img:'./../img/Index/playera_1.jpg', description:'Sudadera para hombre',price : 800.00, category:"Playeras & Sudaderas", inCart: 0},
+        //{model:'Amor a la mexicana ', img:'./../img/Index/playera_2.jpg', description:'Playera para mujer', price : 400.00, category:"Playeras & Sudaderas", inCart: 0},
+        //{model:'Lucha libre', img:'./../img/Index/playera_3.jpg', description:'Playera para hombre', price : 400.00, category:"Playeras & Sudaderas", inCart: 0},
+        //{model:'Lucha libre', img:'./../img/Index/playera_4.jpg', description:'Playera para mujer', price : 400.00, category:"Playeras & Sudaderas", inCart: 0}]
+    
+    
+    
+    for (let i = 0; i < carts.length; i++){
+        carts[i].addEventListener('click', () => {
+            cartNumbers(products[i]);  
+            totalCost(products[i]);
+              })
+    }//for
+    
 
 }//window.onload
 
@@ -107,32 +133,13 @@ window.onload= function(){
 //************************* CARRITO **************************/
 
 
-let carts = document.querySelectorAll('.btn');
-console.log(carts.length);  //aquí me da 0
-
-let products =[
-    // playeras y sudaderas
-    {model:"Amor a la mexicana ", img:'./../img/Index/playera_1.jpg', description:'Sudadera para hombre',price : 800.00, category:"Playeras & Sudaderas", inCart: 0},
-    {model:'Amor a la mexicana ', img:'./../img/Index/playera_2.jpg', description:'Playera para mujer', price : 400.00, category:"Playeras & Sudaderas", inCart: 0},
-    {model:'Lucha libre', img:'./../img/Index/playera_3.jpg', description:'Playera para hombre', price : 400.00, category:"Playeras & Sudaderas", inCart: 0},
-    {model:'Lucha libre', img:'./../img/Index/playera_4.jpg', description:'Playera para mujer', price : 400.00, category:"Playeras & Sudaderas", inCart: 0}]
-
-
-
-for (let i = 0; i < carts.length; i++){
-    carts[i].addEventListener('click', () => {
-        cartNumbers(products[i]);  
-        totalCost(products[i]);
-          })
-}//for
-
 
 
 function onLoadcartNumbers(){
     let productNumbers = localStorage.getItem("cartNumbers");
     if (productNumbers) {
         document.querySelector('.cart span').textContent = productNumbers;
-        
+
     }//if
 }//onLoadcartNumbers
 
@@ -158,7 +165,7 @@ function setItems(product){
     console.log("Mis productos en carrito son:" , cartItems);
     if(cartItems != null){
         if(cartItems[product.img] == undefined ){
-            cartItems = {
+            cartItems = { 
                 ...cartItems,
                 [product.img]: product
             }
@@ -191,14 +198,10 @@ function totalCost(product){
 }//totalCost para calcular costo Total
 
 
-function displayCart(){
-    let cartItems  = localStorage.getItem("productosEnCarrito");
-    cartItems = JSON.parse(cartItems); 
-}//displayCart
 
 
 onLoadcartNumbers();
-displayCart();
+
 
 
 
