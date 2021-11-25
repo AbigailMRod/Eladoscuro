@@ -86,7 +86,7 @@ formulario.addEventListener('submit', (evento) => {
     localStorage.setItem("newmsg", JSON.stringify(newMsg));
 
 
-    if (campos.nombre && campos.correo && campos.telefono && campos.mensaje) {
+    if (campos.nombre && campos.correo && campos.telefono) {
 
         formulario.reset(); //borramos los campos dentro de los inputs
 
@@ -120,24 +120,27 @@ function send(nombre, correo, tel, mensaje) { //enviar correo
 } //enviar correo
 
 
-const valText = document.getElementById('mensaje');
+//*********** */ validacion de textArea con JS********
+//************************************************************************************************* */
+// const valText = document.getElementById('mensaje');
 
-if (valText == expresiones.mensaje) {
+// if (valText == expresiones.mensaje) {
 
-    document.getElementById('grupo_mensaje').classList.add('was-validated');
-    document.getElementById('grupo_mensaje').classList.remove('was-invalidated');
+//     document.getElementById('grupo_mensaje').classList.add('was-validated');
+//     document.getElementById('grupo_mensaje').classList.remove('was-invalidated');
 
-    // setTimeout(() => {
-    //     document.getElementById('grupo_mensaje').classList.remove('was-validated');
-    // }, 3000);
+//     // setTimeout(() => {
+//     //     document.getElementById('grupo_mensaje').classList.remove('was-validated');
+//     // }, 3000);
 
-    campos['mensaje'] = true;
-    console.log(expresiones.mensaje);
+//     campos['mensaje'] = true;
+//     console.log(expresiones.mensaje);
 
-} else {
-    document.getElementById('grupo_mensaje').classList.add('was-validated');
-    document.getElementById('grupo_mensaje').classList.remove('was-invalidated');
-    campos['mensaje'] = false;
+// } else {
+//     document.getElementById('grupo_mensaje').classList.add('was-validated');
+//     document.getElementById('grupo_mensaje').classList.remove('was-invalidated');
+//     campos['mensaje'] = false;
 
-    console.log("entrrre");
-}
+//     console.log("entrrre");
+// }
+//******************************************************************************************************* */
