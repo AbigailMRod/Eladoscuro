@@ -128,3 +128,22 @@ formulario.addEventListener('submit', (e) => {
         
     }
 });//formulario
+
+
+
+// ANIMACIONES DE FORMULARIO INICIAR SESIÓN -- REGISTRO
+
+const loginText = document.querySelector("form.login");
+const signupForm = document.querySelector("form.signup");
+const loginForm = document.querySelector("form.login");
+const loginBtn = document.querySelector("label.login");
+const signupBtn = document.querySelector("label.signup");
+
+signupBtn.onclick = (()=>{
+    loginForm.style.marginLeft = "-50%";
+    loginText.style.marginLeft = "-50%";
+});
+loginBtn.onclick = (()=>{
+   loginForm.style.marginLeft = "0%";
+   loginText.style.marginLeft = "0%";
+ });
