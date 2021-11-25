@@ -1,6 +1,6 @@
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
-
+const textarea = document.getElementById('mensaje');
 
 const expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -32,7 +32,7 @@ const validarFormulario = (evento) => {
                 validarCampo(expresiones.telefono, evento.target, 'telefono');
                 break;
             case "mensaje":
-                valText(expresiones.mensaje, evento.target, 'mensaje');
+                validarCampo(expresiones.mensaje, evento.target, 'mensaje');
                 break;
 
         } //switch
@@ -40,6 +40,7 @@ const validarFormulario = (evento) => {
 
 const validarCampo = (expresion, input, campo) => {
         if (expresion.test(input.value)) {
+
             document.getElementById(`grupo__${campo}`).classList.remove('was-invalidated');
             document.getElementById(`grupo__${campo}`).classList.add('was-validated');
 
@@ -63,7 +64,14 @@ const validarCampo = (expresion, input, campo) => {
 inputs.forEach((input) => {
     input.addEventListener('keyup', validarFormulario);
     input.addEventListener('blur', validarFormulario);
+
 }); // inputs 
+
+
+//validación text area
+textarea.addEventListener('keyup', validarFormulario);
+textarea.addEventListener('blur', validarFormulario);
+
 
 formulario.addEventListener('submit', (evento) => {
     evento.preventDefault();
@@ -86,7 +94,7 @@ formulario.addEventListener('submit', (evento) => {
     localStorage.setItem("newmsg", JSON.stringify(newMsg));
 
 
-    if (campos.nombre && campos.correo && campos.telefono) {
+    if (campos.nombre && campos.correo && campos.telefono && campos.mensaje) {
 
         formulario.reset(); //borramos los campos dentro de los inputs
 
@@ -118,29 +126,3 @@ function send(nombre, correo, tel, mensaje) { //enviar correo
         window.open("mailto:eladoscuro9@outlook.com?subject=Dudas y Aclaraciones Eladoscuro&body=" + nombre + '    ' + correo + '    ' + tel + '    ' + mensaje)
     }, 320);
 } //enviar correo
-
-
-//*********** */ validacion de textArea con JS********
-//************************************************************************************************* */
-// const valText = document.getElementById('mensaje');
-
-// if (valText == expresiones.mensaje) {
-
-//     document.getElementById('grupo_mensaje').classList.add('was-validated');
-//     document.getElementById('grupo_mensaje').classList.remove('was-invalidated');
-
-//     // setTimeout(() => {
-//     //     document.getElementById('grupo_mensaje').classList.remove('was-validated');
-//     // }, 3000);
-
-//     campos['mensaje'] = true;
-//     console.log(expresiones.mensaje);
-
-// } else {
-//     document.getElementById('grupo_mensaje').classList.add('was-validated');
-//     document.getElementById('grupo_mensaje').classList.remove('was-invalidated');
-//     campos['mensaje'] = false;
-
-//     console.log("entrrre");
-// }
-//******************************************************************************************************* */
