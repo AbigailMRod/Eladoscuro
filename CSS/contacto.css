@@ -13,7 +13,7 @@
 #container {
     /*imagen de fondo*/
     background-image: url(/img/Index/max-bohme-sogOxlp9ZGU-unsplash.jpg);
-    background-position: calc(100);
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
