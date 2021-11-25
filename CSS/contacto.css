@@ -10,7 +10,7 @@
     top: 7.51px;
 }
 
-#container {
+#containerTT {
     /*imagen de fondo*/
     background-image: url(/img/Index/max-bohme-sogOxlp9ZGU-unsplash.jpg);
     background-position: center;
@@ -19,7 +19,7 @@
 }
 
 .form p {
-    text-align: left;
+    text-align: center;
     letter-spacing: 0.35em;
 }
 

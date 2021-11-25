@@ -5,7 +5,7 @@ const textarea = document.getElementById('mensaje');
 const expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios, pueden llevar acentos.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    telefono: /^\d{7,10}$/, // 7 a 14 numeros.
+    telefono: /^\d{10,10}$/, // 7 a 10 numeros.
     mensaje: /^[a-zA-ZÀ-ÿ\s]{3,40}$/
 
 }
@@ -36,7 +36,7 @@ const validarFormulario = (evento) => {
                 break;
 
         } //switch
-    } //constt validar formulario 
+    } //const validar formulario 
 
 const validarCampo = (expresion, input, campo) => {
         if (expresion.test(input.value)) {
@@ -105,8 +105,8 @@ formulario.addEventListener('submit', (evento) => {
 
         new Swal({ //sweetAlert
                 icon: 'success',
-                title: 'Success...',
-                text: 'Enviado exitosamente!',
+                title: '1,2,3 ¡Estás dentro!',
+                text: '¡Enviado exitosamente!',
             }) //sweetAlert
 
     } else {
@@ -116,7 +116,7 @@ formulario.addEventListener('submit', (evento) => {
             document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
         }, 5000);
 
-    } //condicion para validacion y envio al correo 
+    } //condicion para validación y envio al correo 
 
 }); //addEvenListener
 
