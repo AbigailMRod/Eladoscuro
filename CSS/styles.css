@@ -103,6 +103,8 @@ Collage Image
   
 }
 
+
+
 @media screen and  (min-width:365px){
   .gallery-container{
     grid-template-columns: repeat(2, 1fr);
@@ -179,7 +181,7 @@ Collage Image
       width: 90%;
       margin: auto; 
       grid-auto-rows: 180px;
-      font-size: 2rem;
+      font-size: 1.5rem;
   }
   .gallery__item:nth-child(1){
       grid-column-start: span 2;
