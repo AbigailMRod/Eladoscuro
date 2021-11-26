@@ -1,82 +1,59 @@
-function inicio(){    
-        window.location= "./../index.html";
-        }// función para regresar a la página de inicio
+function inicio() {
+    window.location = "./../index.html";
+} // función para regresar a la página de inicio
 
 
-//función para seleccionar los divs de la página de productos
 
-function VerificarMenu(){
-        if(document.getElementById('categoria').value =="Playeras & Sudaderas"){
-        document.getElementById('list-items');
-        console.log("Se ha posisionado en el div Playeras & Sudaderas ")
+/********************************  para añadir elementos al JSON******************************/
+function saveProduct(e) {
+    e.preventDefault();
 
-        }else if(document.getElementById('categoria').value =="Stickers" ){
-        document.getElementById('list-items2');
-        console.log("Se ha posisionado en el div Stickers ")
+    let nombre = document.getElementById("nombre").value,
+        descripcion = document.getElementById("descripcion").value,
+        precio = document.getElementById("precio").value,
+        image = document.getElementById("imagen").options[document.getElementById("imagen").selectedIndex].value;
+    category = document.getElementById("categoria").options[document.getElementById("categoria").selectedIndex].value;
+    // console.log(nombre);
+    // console.log(descripcion);
+    // console.log(precio);
+    // console.log(image);
 
-        }else if(document.getElementById('categoria').value =="Posters" ){
-        document.getElementById('list-items3');
-        console.log("Se ha posisionado en el div Posters ")
+    let newProduct = {
+        model: nombre,
+        price: precio,
+        description: descripcion,
+        img: image,
+        category: category
+    }; //new Product
 
-        }else{
-        console.log("No se posisionó en ningun div")
-        }
-
-}// VerificarMenu    
-
-
-/********************************  para añadir elementos al JSON******************************/ 
-function saveProduct(e){
-        e.preventDefault();
-
-        let nombre= document.getElementById("nombre").value,
-        descripcion= document.getElementById("descripcion").value,
-        precio= document.getElementById("precio").value,
-        image= document.getElementById("imagen").options[document.getElementById("imagen").selectedIndex].value;
-        category= document.getElementById("categoria").options [document.getElementById("categoria").selectedIndex].value;
-        // console.log(nombre);
-        // console.log(descripcion);
-        // console.log(precio);
-        // console.log(image);
-
-        let newProduct={
-                model:nombre,
-                price: precio,
-                description: descripcion,
-                img: image,
-                category:category
-        };//new Product
-
-        let valueInLocalStorage=  window.localStorage.getItem("localProduct");
-        let storeList;
-        if(valueInLocalStorage){
-           // 1. Traer lo que tengas en el localStorage
-           // 2. Convertirlo de json a un arreglo
-           // 3. hacer push del nuevo objeto
-           // 4. Volver a arreglo a json
-           // 5. Actualizar el item  
-        storeList= JSON.parse(valueInLocalStorage)
+    let valueInLocalStorage = window.localStorage.getItem("localProduct");
+    let storeList;
+    if (valueInLocalStorage) {
+        // 1. Traer lo que tengas en el localStorage
+        // 2. Convertirlo de json a un arreglo
+        // 3. hacer push del nuevo objeto
+        // 4. Volver a arreglo a json
+        // 5. Actualizar el item  
+        storeList = JSON.parse(valueInLocalStorage)
         storeList.push(newProduct);
         console.log(storeList)
-        window.localStorage.setItem("localProduct",JSON.stringify(storeList));
-        nombre= '';
-        descripcion= '';
-        precio='';
-        image='';
+        window.localStorage.setItem("localProduct", JSON.stringify(storeList));
+        nombre = '';
+        descripcion = '';
+        precio = '';
+        image = '';
 
-        }else{
-        window.localStorage.setItem("localProduct",JSON.stringify(ProductBase));
-        valueInLocalStorage= ProductBase
-        }//else
-}// save Product
+    } else {
+        window.localStorage.setItem("localProduct", JSON.stringify(ProductBase));
+        valueInLocalStorage = ProductBase
+    } //else
+} // save Product
 
-   // aseguramos que se ejecute el js despues haber cargado todos los recursos
-   //externos
-        window.onload = ()=>{
+// aseguramos que se ejecute el js despues haber cargado todos los recursos
+//externos
+window.onload = () => {
         console.log("cargo")
-        let form =  document.getElementById("formulario")
+        let form = document.getElementById("formulario")
         form.addEventListener("submit", saveProduct);
 
-        }//window
-
-
+    } //window

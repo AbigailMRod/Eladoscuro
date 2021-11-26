@@ -1,16 +1,21 @@
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
+const textarea = document.getElementById('mensaje');
 
 const expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios, pueden llevar acentos.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+    telefono: /^\d{10,10}$/, // 7 a 10 numeros.
+    mensaje: /^[a-zA-ZÀ-ÿ\s]{3,40}$/
+
 }
 
 const campos = {
     nombre: false,
     correo: false,
-    telefono: false
+    telefono: false,
+    mensaje: false
+
 }
 
 const validarFormulario = (evento) => {
@@ -26,23 +31,31 @@ const validarFormulario = (evento) => {
             case "telefono":
                 validarCampo(expresiones.telefono, evento.target, 'telefono');
                 break;
+            case "mensaje":
+                validarCampo(expresiones.mensaje, evento.target, 'mensaje');
+                break;
+
         } //switch
-    } //constt validar formulario 
+    } //const validar formulario 
 
 const validarCampo = (expresion, input, campo) => {
         if (expresion.test(input.value)) {
-            document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
-            document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
-            document.querySelector(`#grupo__${campo} i`).classList.add('fa-times-circle');
-            document.querySelector(`#grupo__${campo} i`).classList.remove('fa-times-circle');
-            document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
+
+            document.getElementById(`grupo__${campo}`).classList.remove('was-invalidated');
+            document.getElementById(`grupo__${campo}`).classList.add('was-validated');
+
+
+            setTimeout(() => {
+                document.getElementById(`grupo__${campo}`).classList.remove('was-validated');
+            }, 3000);
+
+
+
             campos[campo] = true;
+
         } else {
-            document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
-            document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto');
-            document.querySelector(`#grupo__${campo} i`).classList.remove('fa-times-circle');
-            document.querySelector(`#grupo__${campo} i`).classList.add('fa-check-circle');
-            document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
+            document.getElementById(`grupo__${campo}`).classList.add('was-invalidated');
+            document.getElementById(`grupo__${campo}`).classList.remove('was-validated');
             campos[campo] = false;
         } //else 
     } //validarCampo 
@@ -51,22 +64,23 @@ const validarCampo = (expresion, input, campo) => {
 inputs.forEach((input) => {
     input.addEventListener('keyup', validarFormulario);
     input.addEventListener('blur', validarFormulario);
+
 }); // inputs 
+
+
+//validación text area
+textarea.addEventListener('keyup', validarFormulario);
+textarea.addEventListener('blur', validarFormulario);
+
 
 formulario.addEventListener('submit', (evento) => {
     evento.preventDefault();
 
     let nombre = document.getElementById("nombre").value;
-    console.log(nombre);
-
-    let correo = document.getElementById("email").value;
-    console.log(correo);
-
+    let correo = document.getElementById("correo").value;
     let tel = document.getElementById("tel").value;
-    console.log(tel);
+    let mensaje = document.getElementById("mensaje").value;
 
-    let mensaje = document.getElementById("message").value;
-    console.log(mensaje);
 
     let newMsg = {
             "nombre": nombre,
@@ -78,26 +92,21 @@ formulario.addEventListener('submit', (evento) => {
 
     //almacenamiento en local storage
     localStorage.setItem("newmsg", JSON.stringify(newMsg));
-    console.info("save in local storage")
 
 
-    // send(nombre, correo, tel, mensaje); //almacenamiento en local storage
-
-
-    if (campos.nombre && campos.correo && campos.telefono) {
+    if (campos.nombre && campos.correo && campos.telefono && campos.mensaje) {
 
         formulario.reset(); //borramos los campos dentro de los inputs
 
         send(nombre, correo, tel, mensaje); //almacenamiento en local storage
 
-        borrar(); //quitamos cuadros de verificación 
 
 
 
         new Swal({ //sweetAlert
                 icon: 'success',
-                title: 'Success...',
-                text: 'Enviado exitosamente!',
+                title: '1,2,3 ¡Estás dentro!',
+                text: '¡Enviado exitosamente!',
             }) //sweetAlert
 
     } else {
@@ -107,9 +116,9 @@ formulario.addEventListener('submit', (evento) => {
             document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
         }, 5000);
 
-    } //condicion para validacion y envio al correo 
+    } //condicion para validación y envio al correo 
 
-});
+}); //addEvenListener
 
 
 function send(nombre, correo, tel, mensaje) { //enviar correo
@@ -117,23 +126,3 @@ function send(nombre, correo, tel, mensaje) { //enviar correo
         window.open("mailto:eladoscuro9@outlook.com?subject=Dudas y Aclaraciones Eladoscuro&body=" + nombre + '    ' + correo + '    ' + tel + '    ' + mensaje)
     }, 320);
 } //enviar correo
-
-
-function borrar() {
-    //nombre
-    document.getElementById("grupo__nombre").classList.remove('formulario__grupo-incorrecto');
-    document.getElementById("grupo__nombre").classList.remove('formulario__grupo-correcto');
-    document.getElementById("grupo__nombre").classList.remove('fa-times-circle');
-    document.getElementById("grupo__nombre").classList.remove('fa-check-circle');
-    //correo
-    document.getElementById("grupo__correo").classList.remove('formulario__grupo-incorrecto');
-    document.getElementById("grupo__correo").classList.remove('formulario__grupo-correcto');
-    document.getElementById("grupo__correo").classList.remove('fa-times-circle');
-    document.getElementById("grupo__correo").classList.remove('fa-check-circle');
-
-    //telefono
-    document.getElementById("grupo__telefono").classList.remove('formulario__grupo-incorrecto');
-    document.getElementById("grupo__telefono").classList.remove('formulario__grupo-correcto');
-    document.getElementById("grupo__telefono").classList.remove('fa-times-circle');
-    document.getElementById("grupo__telefono").classList.remove('fa-check-circle');
-} //función borra
