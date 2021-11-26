@@ -1,13 +1,14 @@
 // Inicialización de constantes
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
-const btnEnviar = document.getElementById('btn_enviar');
+const btnEnviar = document.getElementById('btn_enviar_registro');
 
 const expresiones = {
     
-    nombre: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios, pueden llevar acentos.
-    password: /^.{8,50}$/, // 8 a 50 caracteres.
-    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    nombre: /^[a-zA-ZÀ-ÿ\s]{3,100}$/, // Letras y espacios, pueden llevar acentos.
+    password:  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&.])[A-Za-z\d$@$!%*?&.]{8,20}/,  // 8 a 20 caracteres.
+    //^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9]{8,16}$/, //^.{8,50}$/,
+    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{20,70}$/,
     telefono: /^\d{10,10}$/, // 7 a 14 numeros.   
 }//clase expresiones
 
@@ -46,10 +47,9 @@ const validarCampo = (expresion, input, campo) => {
     if(expresion.test(input.value)){
         document.getElementById(`grupo-${campo}`).classList.remove('was-invalidated');
         document.getElementById(`grupo-${campo}`).classList.add('was-validated');
-        console.log('Aqui ando');
         setTimeout( () => {
             document.getElementById(`grupo-${campo}`).classList.remove('was-validated');
-        }, 5000);
+        }, 3000);
         campos[campo] = true;
         
     }else{
@@ -73,7 +73,7 @@ const validarPassword2 = () =>{
         document.getElementById(`grupo-password2`).classList.add('was-validated');
         setTimeout( () => {
             document.getElementById(`grupo-password2`).classList.remove('was-validated');
-        }, 5000);
+        }, 3000);
         document.getElementById(`grupo-password2`).classList.remove('was-invalidated');
         campos['password'] = true;
     }// if password
@@ -106,21 +106,24 @@ formulario.addEventListener('submit', (e) => {
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
     let password2 = document.getElementById('password2').value;
+    console.log(email);
+    console.log(document.getElementById('email').value);
 
-    let nuevoUsusario = {
+    let nuevoUsuario = {
         "nombre":nombre,
         "telefono":telefono,
         "email":email,
         "password":password,
         "password2":password2
     };//nuevoUsuario
-
+    console.log(nuevoUsuario);
+    localStorage.setItem("nuevoUsusario", JSON.stringify(nuevoUsuario));
+    console.info("Save");
    
     
 
-    if(campos.nombre && campos.telefono && campos.email && campos.password){
-        localStorage.setItem("nuevoUsusario", JSON.stringify(nuevoUsusario));
-        console.info("Save");
+    if(campos.nombre && campos.telefono && campos.email && campos.password && campos.email){
+        
         formulario.reset();
         
     } else {
