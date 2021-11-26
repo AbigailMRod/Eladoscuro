@@ -288,3 +288,25 @@ color: white;
 }
 
 
+/* Inicio de sesión */
+
+.formulario__mensaje-activo {
+    font-size: small;
+    height: 45px;
+    line-height: 45px;
+    background: #FF0404;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: block;
+}
+
+.formulario__mensaje {
+    display: none;
+}
+
+.formulario__mensaje p {
+    margin: 0;
+}
+
+
+
