@@ -1,15 +1,25 @@
 // Inicialización de constantes
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
-const btnEnviar = document.getElementById('btn_enviar');
+const btnEnviar = document.getElementById('btn_enviar_registro');
 
 const expresiones = {
+<<<<<<< HEAD
+    
+    nombre: /^[a-zA-ZÀ-ÿ\s]{3,100}$/, // Letras y espacios, pueden llevar acentos.
+    password:  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&.])[A-Za-z\d$@$!%*?&.]{8,20}/,  // 8 a 20 caracteres.
+    //^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9]{8,16}$/, //^.{8,50}$/,
+    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{20,70}$/,
+    telefono: /^\d{10,10}$/, // 7 a 14 numeros.   
+}//clase expresiones
+=======
 
         nombre: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios, pueden llevar acentos.
         password: /^.{8,50}$/, // 8 a 50 caracteres.
         email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
         telefono: /^\d{10,10}$/, // 7 a 14 numeros.   
     } //clase expresiones
+>>>>>>> developer
 
 
 
@@ -46,10 +56,14 @@ const validarCampo = (expresion, input, campo) => {
     if (expresion.test(input.value)) {
         document.getElementById(`grupo-${campo}`).classList.remove('was-invalidated');
         document.getElementById(`grupo-${campo}`).classList.add('was-validated');
+<<<<<<< HEAD
+        setTimeout( () => {
+=======
 
         setTimeout(() => {
+>>>>>>> developer
             document.getElementById(`grupo-${campo}`).classList.remove('was-validated');
-        }, 5000);
+        }, 3000);
         campos[campo] = true;
 
     } else {
@@ -67,6 +81,13 @@ const validarPassword2 = () => {
 
         if (inputPassword1.value !== inputPassword2.value) {
             document.getElementById(`grupo-password2`).classList.remove('was-validated');
+<<<<<<< HEAD
+        }, 3000);
+        document.getElementById(`grupo-password2`).classList.remove('was-invalidated');
+        campos['password'] = true;
+    }// if password
+}//validarPassword
+=======
             document.getElementById(`grupo-password2`).classList.add('was-invalidated');
             campos['password'] = false;
         } else {
@@ -78,6 +99,7 @@ const validarPassword2 = () => {
             campos['password'] = true;
         } // if password
     } //validarPassword
+>>>>>>> developer
 
 
 //Ejecucion por cada input
@@ -98,6 +120,7 @@ const campos = {
 //Envio de formulario
 
 
+
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
     let nombre = document.getElementById('nombre').value;
@@ -105,7 +128,26 @@ formulario.addEventListener('submit', (e) => {
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
     let password2 = document.getElementById('password2').value;
+    console.log(email);
+    console.log(document.getElementById('email').value);
 
+<<<<<<< HEAD
+    let nuevoUsuario = {
+        "nombre":nombre,
+        "telefono":telefono,
+        "email":email,
+        "password":password,
+        "password2":password2
+    };//nuevoUsuario
+    console.log(nuevoUsuario);
+    localStorage.setItem("nuevoUsusario", JSON.stringify(nuevoUsuario));
+    console.info("Save");
+   
+    
+
+    if(campos.nombre && campos.telefono && campos.email && campos.password && campos.email){
+        
+=======
     let nuevoUsusario = {
         "nombre": nombre,
         "telefono": telefono,
@@ -119,6 +161,7 @@ formulario.addEventListener('submit', (e) => {
 
     if (campos.nombre && campos.telefono && campos.email && campos.password) {
         localStorage.setItem("nuevoUsusario", JSON.stringify(nuevoUsusario))
+>>>>>>> developer
         formulario.reset();
 
     } else {
