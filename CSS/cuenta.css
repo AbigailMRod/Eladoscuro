@@ -117,13 +117,6 @@ input[type="radio"] {
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.form-inner form .field {
-    height: 50px;
-    width: 100%;
-    margin-top: 7%;
-    margin-bottom: 7%;
-}
-
 .form {
     font-size: 24px;
     letter-spacing: 0.1em;
@@ -245,14 +238,7 @@ form .btn-field .btn-pedido {
     color: white;
 }
 
-#grupo-nombre,
-#grupo-telefono,
-#grupo-email,
-#grupo-password,
-#grupo-password2 {
-    margin-top: 6%;
-    margin-bottom: 6%;
-}
+
 
 .invalid-feedback {
     display: none;
