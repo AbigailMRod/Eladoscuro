@@ -59,31 +59,31 @@ window.onload= function(){
     let products=[
         // playeras y sudaderas
         {model:"Amor a la mexicana", img:'./../img/Index/playera_1.jpg',         
-        description:'Sudadera para hombre',price : 800.00, category:"Playeras & Sudaderas"},
+        description:'Sudadera para hombre',price : 800.00, category:"Playeras & Sudaderas", inCart:0},
         {model:'Amor a la mexicana', img:'./../img/Index/playera_2.jpg', 
-        description:'Playera para mujer', price : 400.00, category:"Playeras & Sudaderas"},
+        description:'Playera para mujer', price : 400.00, category:"Playeras & Sudaderas", inCart:0},
         {model:'Lucha libre', img:'./../img/Index/playera_3.jpg',
-        description:'Playera para hombre', price : 400.00, category:"Playeras & Sudaderas"},
+        description:'Playera para hombre', price : 400.00, category:"Playeras & Sudaderas", inCart:0},
         {model:'Lucha libre', img:'./../img/Index/playera_4.jpg',
-        description:'Playera para mujer', price : 400.00, category:"Playeras & Sudaderas"},
+        description:'Playera para mujer', price : 400.00, category:"Playeras & Sudaderas", inCart:0},
         ///Stickers
         {model:'Logo', img:'./../img/Index/sticker_1.jpg',  description:'Juego de stickers 1', 
-        price : 100.00 , category:"Stickers"},
+        price : 100.00 , category:"Stickers", inCart:0},
         {model:'Logo + amor ', img:'./../img/Index/sticker_2.jpg', description:'Juego de stickers 2', 
-        price: 100.00, category:"Stickers"},
+        price: 100.00, category:"Stickers", inCart:0},
         {model:'Lucha libre',img:'./../img/Index/sticker_3.jpg',description:'Juego de stickers 3', 
-        price: 100.00, category:"Stickers"},
+        price: 100.00, category:"Stickers", inCart:0},
         {model:'Amor a la mexicana', img:'./../img/Index/sticker_4.jpg',description:'Juego de stickers 4', 
-        price : 100.00, category:"Stickers"},
+        price : 100.00, category:"Stickers", inCart:0},
         //posters
         {model:'Lucha libre', img:'./../img/Index/poster_1.jpg', description:'Poster tamaño carta', 
-        price: 50.00, category:"Posters"},
+        price: 50.00, category:"Posters", inCart:0},
         {model:'Lucha libre + amor',  img:'./../img/Index/poster_2.jpg', description:'Poster decorativo', 
-        price : 75.00, category:"Posters"},
+        price : 75.00, category:"Posters", inCart:0},
         {model:'Lucha libre', img:'./../img/Index/poster_3.jpg', description:'Poster decorativo', 
-        price :75.00, category:"Posters"},
+        price :75.00, category:"Posters", inCart:0},
         {model:'Amor a la mexicana', img:'./../img/Index/poster_4.jpg',description:'Poster decorativo', 
-        price:75.00, category:"Posters"}
+        price:75.00, category:"Posters", inCart:0}
     ];
     //falta el objeto window
     // null
@@ -106,7 +106,7 @@ window.onload= function(){
 
 
     let carts = document.querySelectorAll('.btn');
-    console.log(carts.length);  //aquí me da 0
+    console.log(carts.length);  
     
         //let products =[
         // playeras y sudaderas
