@@ -23,6 +23,9 @@
 
     <title> ELADOSCURO </title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/b2e53d2946.js" crossorigin="anonymous"></script>
     
 </head>
 <body>
@@ -44,14 +47,16 @@
                     <a class="nav-link" href="./../pages/productos.html">PRODUCTOS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./../pages/cuenta.html">CUENTA</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="./../pages/contacto.html">CONTACTO</a>
-                </li>
-                <li class="nav-item">
-                    <a id="usuario" class="nav-link" href="./../pages/cuenta.html">USUARIO: iniciar sesión</a>
-                </li>
+                </li>            
+                
+                <li style="margin-left: 10vw;" class="nav-item">                    
+                       <a href="#"> <i style=" margin-top: 1vh;" class="fas fa-shopping-cart carrito"></i> </a>                                         
+                </li>  
+            
+                <li style="margin-left: 2vw;" class="nav-item">
+                    <a href="./../pages/cuenta.html"><i id="usuario" style="margin-top: 1vh;" class="fas fa-user usuario"></i></a>                    
+                </li>          
             </ul>
         </div>
     </nav> <!-- nav bar -->
@@ -72,18 +77,11 @@
                 <!-- FORMULARIO DE INICIAR SESIÓN -->
                 <form action="#" class="login" class="needs-validation"  novalidate>
                     <div class="field" id="field-email">
-<<<<<<< HEAD
                         <label for="email" class="form-label" id="email" name="email" type="text"> Correo electrónico *</label>
                             <input type="text" id="input_email" class="form-control" placeholder="ejemplo@mail.com" required>
                             <div class="formulario__mensaje" id="formulario__mensaje_correo">
                                 <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> introduce un correo electrónico.</p>
                             </div>
-=======
-                        <label for="email" class="form-label" type="text"> Correo electrónico *</label>
-                            <input type="text" class="form-control" placeholder="ejemplo@mail.com" required>
-                            <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
-                            <div class="alert alert-danger invalid-feedback"  role="alert">Ingresa un correo válido</div>
->>>>>>> developer
                     </div> <!-- field email-->
                     <br/>
                     <div class="field" id="field-contraseña">

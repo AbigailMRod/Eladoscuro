@@ -303,5 +303,16 @@ form .btn-field .btn-pedido {
     margin: 0;
 }
 
+.usuario {
+    color: #ff04047e;
+}
+
+.usuario-activo {
+    color: #7CFC00;
+}
+
+/* #7CFC00 */
+
+
 
 
