@@ -49,13 +49,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="./../pages/contacto.html">CONTACTO</a>
                 </li>
+                <li class="cart">
+                    <a href="./../pages/carrito.html"><ion-icon name="bag-outline"></ion-icon>  <span>0</span></a>
+                </li>
             </ul>
         </div>
     </nav> <!-- nav bar -->
 
        <!--formulario-->
     <div class="container" id="container">
-        <div class="form-container" id="formulario">
+        <div class="form-container">
             <div class="slide-controls">
                 <input type="radio" name="slide" id="login" checked>
                 <input type="radio" name="slide" id="signup">
@@ -69,7 +72,7 @@
                 <!-- FORMULARIO DE INICIAR SESIÓN -->
                 <form action="#" class="login">
                     <div class="field" id="field-email">
-                        <label for="email" class="form-label" id="email" name="email" type="text"> Correo electrónico *</label>
+                        <label for="email" class="form-label" type="text"> Correo electrónico *</label>
                             <input type="text" class="form-control" placeholder="ejemplo@mail.com" required>
                             <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
                             <div class="alert alert-danger invalid-feedback"  role="alert">Ingresa un correo válido</div>
@@ -96,39 +99,45 @@
                </form> <!-- login formulario de iniciar sesión-->
 
                 <!-- FORMULARIO DE REGISTRO -->
-                <form action="#" class="signup" novalidate>
+                <form action="#" class="signup formulario" id="formulario" novalidate>
                     <div class="field" id="grupo-nombre">
                         <label for="nombre" class="form-label"> Nombre *</label>
                         <input id="nombre" name="nombre" type="text" class="form-control" placeholder="" required>
                         <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
-                        <div class="alert alert-danger invalid-feedback"  role="alert">Este campo requiere mínimo 3 letras</div></div>
-                    <div class="field" id="grupo-telefono">
+                        <div class="alert alert-danger invalid-feedback"  role="alert">Este campo requiere mínimo 3 letras</div>
+                    </div>
+
+                    <div class="field " id="grupo-telefono">
                         <label for="telefono" class="form-label"> Télefono *</label>
                         <input id="telefono" name="telefono" type="text" class="form-control" placeholder=""required>
                         <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
                         <div class="alert alert-danger invalid-feedback"  role="alert">por favor solo ingresa 10 números</div>
                     </div>
+
                     <div class="field" id="grupo-email">
                         <label for="email" class="form-label"> Correo electrónico *</label>
-                        <input type="text" class="form-control" name="email" placeholder="ejemplo@mail.com" required>
+                        <input id="email" name="email" type="text" class="form-control" placeholder="ejemplo@mail.com" required>
                         <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
                         <div class="alert alert-danger invalid-feedback"  role="alert">Ingresa un correo válido</div>
                     </div>
+
                     <div class="field" id="grupo-password">
-                        <label for="telefono" class="form-label"> Contraseña *</label>
-                        <input type="password" class="form-control" name="password" placeholder="Contraseña" required>
+                        <label for="password" class="form-label"> Contraseña *</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Asegura tu pase a las gradas" required>
                         <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
-                        <div class="alert alert-danger invalid-feedback"  role="alert">Completa este campo (mín 8 caracteres)</div>
+                        <div class="alert alert-danger invalid-feedback"  role="alert">Usa 8 o más caracteres con una combinación de letras, números y símbolos</div>
                     </div>
+
                     <div class="field" id="grupo-password2">
                         <label for="password2" class="form-label"> Repetir contraseña *</label>
-                        <input type="password2" class="form-control" placeholder="Contraseña" required>
+                        <input type="password" class="form-control" id="password2" name="password2" placeholder="Contraseña" required>
                         <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
                         <div class="alert alert-danger invalid-feedback"  role="alert">La contraseña debe de coincidir</div>
                     </div>
+
                     <div class="btn-field">
                         <div class="btn-layer">
-                            <button id="btn_enviar" type="submit" class="btn btn-light">Registrarse  <i class="bi bi-arrow-right" style="height: 10px;"></i></button>
+                            <button id="btn_enviar_registro" type="submit" class="btn btn-light">Registrarse  <i class="bi bi-arrow-right" style="height: 10px;"></i></button>
                         </div>
                     </div>
                 </form> <!-- signup formulario de registro-->
@@ -154,6 +163,8 @@
     </footer>
     
     <!--Scripts -->    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> <!-- para el icono del carrito -->
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <script src="./../JS/cuenta.js"></script>
