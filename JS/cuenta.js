@@ -7,7 +7,7 @@ const expresiones = {
     
     nombre: /^[a-zA-ZÀ-ÿ\s]{3,100}$/, // Letras y espacios, pueden llevar acentos.
     password:  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&.])[A-Za-z\d$@$!%*?&.]{8,20}/,  // 8 a 20 caracteres.
-    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{2,100}$/,
     telefono: /^\d{10,10}$/, // 7 a 14 numeros.   
 }//clase expresiones
 
@@ -114,14 +114,14 @@ formulario.addEventListener('submit', (e) => {
         "password":password,
         "password2":password2
     };//nuevoUsuario
-    localStorage.setItem("nuevoUsusario", JSON.stringify(nuevoUsuario));
-    console.info("Save");
+   
    
    
     
 
     if(campos.nombre && campos.telefono && campos.email && campos.password){
-        
+        localStorage.setItem("nuevoUsusario", JSON.stringify(nuevoUsuario));
+        console.info("Save");     
         formulario.reset();
 
     } else {
