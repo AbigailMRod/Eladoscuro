@@ -42,8 +42,6 @@
   font-weight: bold;
   border-radius: 6px; 
   font-size: 15px; 
-  
-  
 }
 
 #btn2 {
@@ -52,10 +50,22 @@
   font-weight: bold;
   border-radius: 6px; 
   font-size: 15px; 
-  
-  
 }
 
+#upload_widget {
+  background-color: rgba(3, 22, 39, 0.623);
+  width: 140px;
+  font-weight: bold;
+  border-radius: 6px; 
+  font-size: 15px; 
+  margin-left: 40%;
+}
+
+#img_cloud img{
+  display: flex;
+  width: 100%;
+  height: auto;
+}
 
 /*--------------------------------------------------------------
 # Footer
