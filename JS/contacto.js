@@ -126,3 +126,37 @@ function send(nombre, correo, tel, mensaje) { //enviar correo
         window.open("mailto:eladoscuro9@outlook.com?subject=Dudas y Aclaraciones Eladoscuro&body=" + nombre + '    ' + correo + '    ' + tel + '    ' + mensaje)
     }, 320);
 } //enviar correo
+
+
+function borrar() {
+    //nombre
+    document.getElementById("grupo__nombre").classList.remove('formulario__grupo-incorrecto');
+    document.getElementById("grupo__nombre").classList.remove('formulario__grupo-correcto');
+    document.getElementById("grupo__nombre").classList.remove('fa-times-circle');
+    document.getElementById("grupo__nombre").classList.remove('fa-check-circle');
+    //correo
+    document.getElementById("grupo__correo").classList.remove('formulario__grupo-incorrecto');
+    document.getElementById("grupo__correo").classList.remove('formulario__grupo-correcto');
+    document.getElementById("grupo__correo").classList.remove('fa-times-circle');
+    document.getElementById("grupo__correo").classList.remove('fa-check-circle');
+
+    //telefono
+    document.getElementById("grupo__telefono").classList.remove('formulario__grupo-incorrecto');
+    document.getElementById("grupo__telefono").classList.remove('formulario__grupo-correcto');
+    document.getElementById("grupo__telefono").classList.remove('fa-times-circle');
+    document.getElementById("grupo__telefono").classList.remove('fa-check-circle');
+} //función borra
+
+
+
+
+
+ // **********************articulos en el carrito del carrito ***********************// 
+ function onLoadcartNumbers(){
+    let productNumbers = localStorage.getItem("cartNumbers");
+    if (productNumbers) {
+        document.querySelector('.cart span').textContent = productNumbers;
+    }//if
+}//onLoadcartNumbers
+onLoadcartNumbers();
+// ****************para el carrito******************************************//

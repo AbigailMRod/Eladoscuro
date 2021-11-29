@@ -277,3 +277,8 @@ Collage Image
   .bxl-admi{
     content: url('https://api.iconify.design/ri/admin-fill.svg?color=%23535151');
   }
+
+/* Carrito */
+  .cart{
+    margin-top: 8px;
+}
