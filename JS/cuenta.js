@@ -281,20 +281,6 @@ if (usuario !== null) {
 //     console.log(`ingresó`);
 //     sesionUsuario.innerHTML = `USUARIO: ${usuario}`;
 // } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  
 
  
@@ -302,3 +288,18 @@ loginBtn.onclick = (() => {
     loginForm.style.marginLeft = "0%";
     loginText.style.marginLeft = "0%";
 });
+
+
+
+
+
+
+ // **********************articulos en el carrito del carrito ***********************// 
+function onLoadcartNumbers(){
+    let productNumbers = localStorage.getItem("cartNumbers");
+    if (productNumbers) {
+        document.querySelector('.cart span').textContent = productNumbers;
+    }//if
+}//onLoadcartNumbers
+onLoadcartNumbers();
+// ****************para el carrito******************************************//
