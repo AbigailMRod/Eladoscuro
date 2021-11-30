@@ -3,10 +3,10 @@ const inputs = document.querySelectorAll('#formulario input');
 const textarea = document.getElementById('mensaje');
 
 const expresiones = {
-    nombre: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios, pueden llevar acentos.
-    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    nombre: /^[a-zA-ZÀ-ÿ\s]{3,100}$/, // Letras y espacios, pueden llevar acentos.
+    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{15,100}$/,
     telefono: /^\d{10,10}$/, // 7 a 10 numeros.
-    mensaje: /^[a-zA-ZÀ-ÿ\s]{3,40}$/
+    mensaje: /^[a-zA-ZÀ-ÿ\s]{3,500}$/
 
 }
 
