@@ -7,8 +7,7 @@ const expresiones = {
 
         nombre: /^[a-zA-ZÀ-ÿ\s]{3,100}$/, // Letras y espacios, pueden llevar acentos.
         password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&.])[A-Za-z\d$@$!%*?&.]{8,20}/, // 8 a 20 caracteres.
-        //^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9]{8,16}$/, //^.{8,50}$/,
-        email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{15,100}$/,
+        email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{2,100}$/,
         telefono: /^\d{10,10}$/, // 7 a 14 numeros.   
     } //clase expresiones
 
@@ -73,7 +72,7 @@ const validarPassword2 = () => {
             document.getElementById(`grupo-password2`).classList.add('was-validated');
             setTimeout(() => {
                 document.getElementById(`grupo-password2`).classList.remove('was-validated');
-            }, 5000);
+            }, 3000);
             document.getElementById(`grupo-password2`).classList.remove('was-invalidated');
             campos['password'] = true;
         } // if password
@@ -106,8 +105,6 @@ formulario.addEventListener('submit', (e) => {
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
     let password2 = document.getElementById('password2').value;
-    console.log(email);
-    console.log(document.getElementById('email').value);
 
     let nuevoUsuario = {
         "nombre": nombre,
@@ -116,14 +113,14 @@ formulario.addEventListener('submit', (e) => {
         "password": password,
         "password2": password2
     }; //nuevoUsuario
-    console.log(nuevoUsuario);
-    localStorage.setItem("nuevoUsusario", JSON.stringify(nuevoUsuario));
-    console.info("Save");
 
 
 
-    if (campos.nombre && campos.telefono && campos.email && campos.password && campos.email) {
 
+
+    if (campos.nombre && campos.telefono && campos.email && campos.password) {
+        localStorage.setItem("nuevoUsusario", JSON.stringify(nuevoUsuario));
+        console.info("Save");
         formulario.reset();
 
     } else {
@@ -150,3 +147,19 @@ loginBtn.onclick = (() => {
     loginForm.style.marginLeft = "0%";
     loginText.style.marginLeft = "0%";
 });
+
+
+
+
+
+
+
+// **********************articulos en el carrito del carrito ***********************// 
+function onLoadcartNumbers() {
+    let productNumbers = localStorage.getItem("cartNumbers");
+    if (productNumbers) {
+        document.querySelector('.cart span').textContent = productNumbers;
+    } //if
+} //onLoadcartNumbers
+onLoadcartNumbers();
+// ****************para el carrito******************************************//
