@@ -1,7 +1,9 @@
 .row{
-    display: flexbox;
+    display: grid;
+    justify-content: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+    margin: auto;
+    margin-right: 0px;
+    margin-left: 0px;
 }

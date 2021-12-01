@@ -29,6 +29,7 @@ function displayCart(){
                 </div>
             </div></td>
             <td class="col-sm-1 col-md-1" style="text-align: center">
+
             <output type="cc-number" class="form-control" id="inCart">${item.inCart}<output>
             <!--<output name="result" for="a b">${item.inCart}</output>-->
             </td>
@@ -65,6 +66,10 @@ function displayCart(){
 
 
 
+
+
+
+    
 
 
 

@@ -22,8 +22,8 @@ function drawProducts(arrayProducts){
         '   <div class="card-body">\n'+
         '   <h6 class="card-title" style= "font-weight: bold; ">'+element.model+'</h6>\n'+
         '   <p class="card-text">'+element.description +'</p>\n'+
-        '   <p class="card-text" > $'+element.price +'.00 MXN </p>\n'+
             etiquetaTalla  +
+        '   <p class="card-text" > $'+element.price +'.00 MXN </p>\n'+
         '   <button type="button" class="btn btn-outline-dark" >Agregar</button>\n'+
         '   </div>\n'+
         '   </div>\n'+
