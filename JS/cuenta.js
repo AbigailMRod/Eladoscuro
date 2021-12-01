@@ -4,21 +4,12 @@ const inputs = document.querySelectorAll('#formulario input');
 const btnEnviar = document.getElementById('btn_enviar_registro');
 
 const expresiones = {
-<<<<<<< HEAD
-
-        nombre: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios, pueden llevar acentos.
-        password: /^.{8,50}$/, // 8 a 50 caracteres.
-        email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-        telefono: /^\d{10,10}$/, // 7 a 14 numeros.   
-    } //clase expresiones
-=======
     
     nombre: /^[a-zA-ZÀ-ÿ\s]{3,100}$/, // Letras y espacios, pueden llevar acentos.
     password:  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&.])[A-Za-z\d$@$!%*?&.]{8,20}/,  // 8 a 20 caracteres.
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{2,100}$/,
     telefono: /^\d{10,10}$/, // 7 a 14 numeros.   
 }//clase expresiones
->>>>>>> developer
 
 
 
@@ -116,21 +107,6 @@ formulario.addEventListener('submit', (e) => {
     let password = document.getElementById('password').value;
     let password2 = document.getElementById('password2').value;
 
-<<<<<<< HEAD
-    let nuevoUsusario = {
-        "nombre": nombre,
-        "telefono": telefono,
-        "email": email,
-        "password": password,
-        "password2": password2
-    }; //nuevoUsuario
-
-
-
-
-    if (campos.nombre && campos.telefono && campos.email && campos.password) {
-        localStorage.setItem("nuevoUsusario", JSON.stringify(nuevoUsusario))
-=======
     let nuevoUsuario = {
         "nombre":nombre,
         "telefono":telefono,
@@ -146,7 +122,6 @@ formulario.addEventListener('submit', (e) => {
     if(campos.nombre && campos.telefono && campos.email && campos.password){
         localStorage.setItem("nuevoUsusario", JSON.stringify(nuevoUsuario));
         console.info("Save");     
->>>>>>> developer
         formulario.reset();
 
     } else {
@@ -189,7 +164,7 @@ localStorage.setItem("userInfo", JSON.stringify(x));
  // --------------- INICIO DE SESION  --------------
 
  // Información de localStorage
- let userList = JSON.parse(localStorage.getItem("userInfo")); 
+ let userList = JSON.parse(localStorage.getItem("userInfo")); //nuevoUsusario
 
  let submitBtn = document.getElementById("btn_enviar");
 
@@ -287,7 +262,7 @@ localStorage.setItem("userInfo", JSON.stringify(x));
 
 
 
-//  Usuario activo en NavBar
+// ******************** Usuario activo en NavBar *******************************
 
 let usuario = sessionStorage.getItem("usuarioActivo");
 
