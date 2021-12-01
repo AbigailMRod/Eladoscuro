@@ -287,27 +287,31 @@ Collage Image
 .usuario {
   color: #ff04047e;
   margin-top: 8px;
-  /* margin-left: 10vw; */
+  margin-left: 2vw;
+}
+
+.cart {
+  margin-left: 10vw;
 }
 
 .usuario-activo {
   color: #7CFC00;
   margin-top: 8px;
-  
+  margin-left: 2vw;  
 }
 
-/* @media screen and  (min-width:1200px){
+@media screen and  (max-width:1000px){
   .usuario-activo {
     color: #7CFC00;
     margin-top: 8px;
-    margin-left: 10vw;
+    margin-left: 0vw;
   }
 
   .usuario {
     color: #ff04047e;
     margin-top: 8px;
-    margin-left: 10vw;
+    margin-left: 0vw;
   }
-} */
+}
 
 
