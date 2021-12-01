@@ -1,9 +1,6 @@
 function inicio(){    
         window.location= "./../index.html";
-        }// función para regresar a la página de inicio
-    
-        
-    
+        }// función para regresar a la página de inicio   
     
     /********************************  para añadir elementos al JSON******************************/ 
     function saveProduct(e){
@@ -12,12 +9,8 @@ function inicio(){
         let descripcion= document.getElementById("descripcion").value;
         let precio= document.getElementById("precio").value;
         let image = document.getElementById("product_img").src; /* ************************** */
-        // image= document.getElementById("imagen").options[document.getElementById("imagen").selectedIndex].value;
         let category= document.getElementById("categoria").options [document.getElementById("categoria").selectedIndex].value;
-        // console.log(nombre);
-        // console.log(descripcion);
-        // console.log(precio);
-        // console.log(image);
+        
     
         let newProduct={
                 "model":nombre,
@@ -29,7 +22,6 @@ function inicio(){
     
         let valueInLocalStorage=  window.localStorage.getItem("localProduct");
         let storeList;
-        // console.log(ProductBase);
         if(valueInLocalStorage){
            // 1. Traer lo que tengas en el localStorage
            // 2. Convertirlo de json a un arreglo
@@ -48,16 +40,14 @@ function inicio(){
     
     function cloud (){
     let image = document.getElementById("product_img");
-        // let imagen = document.getElementById('product_img');
         let myWidget = cloudinary.createUploadWidget({
             cloudName: 'dtcyppikq',
             uploadPreset: 'wpicwpay'
         }, (error, result) => {
             if (!error && result && result.event === 'success'){
-                console.log('Imagen subida con éxito', result.info);
-                console.log(result.info);
+                // console.log('Imagen subida con éxito', result.info);
                 image.src = result.info.secure_url;
-                console.log(result.info.secure_url);
+                // console.log(result.info.secure_url);
             }
         });
         document.querySelector('#upload_widget').addEventListener("click", function(){
