@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="./../img/logoPag.svg">
+
+
+    <!-- Fuente Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="./../CSS/contacto.css">
+    <link rel="stylesheet" href="./../CSS/styles.css">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+
+    <title> ELADOSCURO </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+        <a href="./../index.html">
+            <a href="./../index.html"><img src="./../img/Navbar/LOGO.svg" class="d-inline-block align-top" alt="image logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        <!-- burger -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" id="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./../index.html">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./../pages/nosotros.html">NOSOTROS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./../pages/productos.html">PRODUCTOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./../pages/cuenta.html">CUENTA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./../pages/contacto.html">CONTACTO</a>
+                </li>
+                <li class="cart">
+                    <a href="./../pages/carrito.html"><ion-icon name="bag-outline"></ion-icon>  <span>0</span></a>
+                </li> 
+            </ul>
+        </div>
+    </nav>
+    <!-- nav bar -->
+
+    <!--formulario-->
+    <section id="containerTT" class="container-fluid">
+        <div class="row">
+            <form class="form" class="formulario" id="formulario">
+                <p>CONTACTO</p>
+                <div class="form-group" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <form action="#" id="formulario" class="needs-validation" novalidate>
+                        <div class="container-name" id="grupo__nombre">
+                            <label for="nombre" class="formulario__label">Nombre *</label>
+                            <input type="text" id="nombre" class="form-control formulario__input" name="nombre" placeholder="Eladoscuro">
+                            <div class=" alert alert-success valid-feedback" role="alert">¡Muy bien!</div>
+                            <div class="alert alert-danger invalid-feedback" role="alert">Este campo requiere mínimo 3 letras</div>
+                        </div>
+                        <!--div nombre-->
+
+
+                        <div class="container-correo" id="grupo__correo">
+                            <label for="correo" class="formulario__label">Correo electrónico *</label>
+                            <input type="correo" id="correo" class="form-control formulario__input" name="correo" placeholder="eladoscuro@gmail.com">
+                            <div class=" alert alert-success valid-feedback" role="alert">¡Muy bien!</div>
+                            <div class="alert alert-danger invalid-feedback" role="alert">Este campo requiere del @ y el dominio del correo para ser válido</div>
+
+                        </div>
+                        <!--div correo -->
+
+
+                        <div class="container-telefono" id="grupo__telefono">
+                            <label for="telefono" class="formulario__label">Teléfono *</label>
+                            <input type="tel" id="tel" class="form-control formulario__input" name="telefono" placeholder="0123456789">
+                            <div class=" alert alert-success valid-feedback" role="alert">¡Muy bien!</div>
+                            <div class="alert alert-danger invalid-feedback" role="alert">Este campo requiere 10 dígitos </div>
+
+                        </div>
+                        <!-- div telefono -->
+
+
+                        <div class="container-mensaje" id="grupo__mensaje">
+                            <label for="validationTextarea">Mensaje</label>
+                            <textarea id="mensaje" class="form-control" name="mensaje" placeholder="Nooooooo, pues estoy en cero"></textarea>
+                            <div class=" alert alert-success valid-feedback" role="alert">¡Muy bien!</div>
+                            <div class="alert alert-danger invalid-feedback" role="alert">Este campo requiere mínimo 3 letras</div>
+                        </div>
+                        <!--div mensaje -->
+
+
+                        <div class="formulario__mensaje" id="formulario__mensaje">
+                            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                        </div>
+                        <br>
+
+                        <div class="formulario__grupo formulario__grupo-btn-enviar">
+                            <button id="send" type="submit" class="btn btn-light formulario__grupo formulario__grupo-btn-enviar">Enviar <i class="bi bi-arrow-right" style="height: 10px;"></i></button>
+                        </div>
+
+
+                    </form>
+
+                </div>
+                <!--from-group-->
+
+        </div>
+        <!--row-->
+
+    </section>
+    <!--section container-->
+
+
+    <footer id="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100074238384668" target="_blank" class="facebook"><i class="bxl-facebook"></i></a>
+                <a href="https://twitter.com/ELADOSCURO_9" target="_blank" class="twitter"><i class="bxl-twitter"></i></a>
+                <a href="https://www.instagram.com/eladoscuro9/" target="_blank" class="instagram"><i class="bxl-instagram"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; Copyright <strong><span>ELADOSCURO</span></strong>. All Rights Reserved
+            </div>
+        </div>
+        <!-- container -->
+    </footer>
+    <!-- End Footer -->
+
+
+    <!--Scripts -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> <!-- para el icono del carrito -->
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+    <script src="./../JS/contacto.js"></script>
+
+</body>
+
+</html>

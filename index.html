@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         
         <!-- Favicons -->
         <link rel="icon" type="image/png" href="./img/logoPag.svg">
@@ -14,9 +14,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
         
+
         <!-- Styles CSS -->
-        <link rel="stylesheet" href="./CSS/styles.css">
-        <link href="./boxicons/css/." rel="stylesheet">
+        <link rel="stylesheet" href="./CSS/styles.css">       
 
 
         <!-- Bootstrap CSS -->
@@ -28,7 +28,7 @@
 
     <body>
         <nav class="navbar sticky-top navbar-expand-lg navbar-light">
-            <img src="./img/Navbar/LOGO.svg" class="d-inline-block align-top" alt="image logo">
+          <a href="./index.html"><img src="./img/Navbar/LOGO.svg" class="d-inline-block align-top" alt="image logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button> <!-- burger -->
@@ -49,6 +49,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./pages/contacto.html">CONTACTO</a>
                     </li>
+                    <li class="cart">
+                    <a href="./../pages/carrito.html"><ion-icon name="bag-outline"></ion-icon>  <span>0</span></a>
+                    </li>  
                 </ul>
             </div>
         </nav> <!-- nav bar -->
@@ -62,13 +65,13 @@
                 </ol>
                 <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./img/Index/andrew-schultz-Ad1WbFtQF3Q-unsplash.jpg" class="d-block w-100" alt="...">
+                    <img src="./img/Index/carrusel_3.png" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/Index/emir-saldierna-oHWCOXSYdsg-unsplash.jpg" class="d-block w-100" alt="...">
+                    <img src="./img/Index/carrusel_2.png" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/Index/max-bohme-sogOxlp9ZGU-unsplash.jpg" class="d-block w-100" alt="...">
+                    <img src="./img/Index/carrusel_1.png" class="d-block w-100" alt="...">
                 </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
@@ -82,7 +85,108 @@
             </div> <!--CAROUSEL  -->
         </section>
 
+        <!-- Collage image -->
+        <div class="gallery-container col col-12">
+            <div class="gallery__item">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="./img/Index/playera_1.jpg" alt="Avatar" class="gallery__img">
+                      </div>
+                      <div class="flip-card-back card text-center text-white bg-dark mb-3">
+                          <div class="card-header">
+                            Sudadera
+                          </div>
+                          <div class="card-body display-flex">
+                            <h3 style="font-style: italic;">Amor a la mexicana</h3>
+                            <p>¿Frío? ¿Qué es eso?</p>
+                            <div>
+                              <a href="./pages/productos.html" class="btn btn-light">Ámonos a productos</a>
+                            </div>
+                          </div>
+                        </div><!--fin card-header-->
+                    </div><!--fin flip-card-inner-->
+                </div> <!--fin flip card -->
+             </div> <!-- image1 -->
+             <div class="gallery__item">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="./img/Index/playera_2.jpg" alt="Avatar" class="gallery__img">
+                      </div> <!--Fin flip-card-front-->
+                      <div class="flip-card-back card text-center text-white bg-dark mb-3">
+                        <div class="card-header">
+                          Playera Mujer
+                        </div>
+                        <div class="card-body display-flex">
+                          <h3 class="card-title" style="font-style: italic;">Amor a la mexicana</h3>
+                          <p class="card-text">Sabemos que todos quieren vestirse bien, como nosotros</p>
+                          <div>
+                            <a href="./pages/productos.html" class="btn btn-light">Ámonos a productos</a>
+                          </div>
+                        </div>
+                      </div><!--fin card-header-->
+                    </div><!--fin flip-card-inner-->
+                </div><!--fin flip card -->
+             </div> <!-- image2 -->
+                 
+            <div class="gallery__item">
+                <img src="./img/Index/chiles.jpg" alt="" class="gallery__img opacity-25">
+            </div> <!-- Imagen 3 -->
+            <div class="gallery__item">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="./img/Index/playera_3.jpg" alt="Avatar" class="gallery__img">
+                      </div>
+                      <div class="flip-card-back card text-center text-white bg-dark mb-3">
+                        <div class="card-header">
+                          Playera Hombre
+                        </div>
+                        <div class="card-body display-flex">
+                          <h3 class="card-title" style="font-style: italic;">Lucha libre</h3>
+                          <p class="card-text">Cada lucha a librar, debe de ser con estilo</p>
+                          <div>
+                            <a href="./pages/productos.html" class="btn btn-light">Ámonos a productos</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!--fin flip-card-inner-->
+                </div><!--fin flip card -->
+            </div> <!-- Imagen 4 -->
+            <div class="gallery__item">
+                <img src="./img/Index/stock.jpg" alt="" class="gallery__img">
+            </div> <!-- Imagen 5 -->
+            <div class="gallery__item">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="./img/Index/sticker_2.jpg" alt="Avatar" class="gallery__img">
+                      </div>
+                      <div class="flip-card-back card text-center text-white bg-dark mb-3">
+                        <div class="card-header">
+                          Stickers
+                        </div>
+                        <div class="card-body display-flex">
+                          <h3 class="card-title" style="font-style: italic;">Logo + amor</h3>
+                          <p>Sabemos que quieres distinguirte por eso</p>
+                          <div>
+                            <a href="./pages/productos.html" class="btn btn-light">Ámonos a productos</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!--fin flip-card-inner-->
+                </div><!--fin flip card -->
+            </div> <!-- Imagen 6 -->
+            <div class="gallery__item">
+                <img src="./img/Index/emir-saldierna-oHWCOXSYdsg-unsplash.jpg" alt="" class="gallery__img">
+            </div> <!-- Imagen 7 -->
+            <div class="gallery__item">
+                <img src="./img/Index/palacio.jpg" alt="" class="gallery__img">
+            </div> <!-- Imagen 8 -->
+        </div> <!-- Fin collage Image -->
 
+        <!--Footer-->
 
         <footer id="footer">
             <div class="container">
@@ -93,7 +197,7 @@
                 </div>             
                 <div class="copyright">
                     &copy; Copyright <strong><span>ELADOSCURO</span></strong>. All Rights Reserved
-                    <a href="./admin/admin.html" style="background:black;" class="admi"><i class="bxl-admi"></i></a>
+                    <a href="./admin/login.html" style="background:black;" class="admi"><i class="bxl-admi"></i></a>
                 </div>
             </div> <!-- container -->
         </footer><!-- End Footer -->    
@@ -101,5 +205,9 @@
         <!--Scripts -->    
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> <!-- para el icono del carrito -->
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+        <script src="./JS/main.js"></script>
     </body>
 </html>
+

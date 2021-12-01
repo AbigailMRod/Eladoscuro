@@ -1,0 +1,208 @@
+.body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#logo {
+    /* position: absolute; */
+    width: 187px;
+    height: 101.31px;
+    left: 41px;
+    top: 7.51px;
+}
+
+#containerTT {
+    /*imagen de fondo*/
+    background-image: url(/img/Index/max-bohme-sogOxlp9ZGU-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form p {
+    text-align: center;
+    letter-spacing: 0.35em;
+}
+
+.form-control {
+    /*cuadros de introduccion de datos */
+    background-color: rgba(0, 0, 0, .5);
+    border-color: rgba(0, 0, 0, .5);
+    color: white;
+}
+
+:invalid {
+    color: #FF0404;
+}
+
+.form {
+    /* cuadro de negro de fondo  */
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    line-height: 28.13px;
+    font-style: normal;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    padding: 4%;
+    width: 871px;
+    /* height: 580px; */
+}
+
+
+/* letras debajo del cuadro para que marquen el error que tuvo  */
+
+.formulario__input-error {
+    font-size: 14px;
+    margin-bottom: 0;
+    display: none;
+    color: #FF0404;
+}
+
+.formulario__input-error-activo {
+    display: block;
+}
+
+
+/* ********************************cuadro de advertencia ***************************** */
+
+
+/* texto de advetencia de que no se han llenado los datos correcttamente  */
+
+.formulario__grupo-terminos,
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+    grid-column: span 2;
+}
+
+
+/* estilo del mensaje de advertencia  */
+
+.formulario__mensaje {
+    font-size: small;
+    height: 45px;
+    line-height: 45px;
+    background: #FF0404;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+}
+
+
+/* mensaje de advertencia  */
+
+.formulario__mensaje-activo {
+    display: block;
+}
+
+.formulario__mensaje p {
+    margin: 0;
+}
+
+
+/* ********************************cuadro de advertencia ***************************** */
+
+#iniciar {
+    color: rgba(255, 255, 255, 0.651);
+}
+
+.row {
+    /*centrado del cuadro en la pantallass*/
+    margin-right: 0px;
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    padding: 4%;
+}
+
+#send {
+    /*boton enviar */
+    color: #FF0404;
+    width: 283px;
+    font-weight: bold;
+    border-radius: 0px;
+    font-size: 24px;
+}
+
+#cbtn {
+    color: #FF0404;
+}
+
+.containerSect {
+    font-style: 1rem;
+}
+
+.form-group {
+    justify-content: left;
+}
+
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: #FF0404;
+}
+
+.was-invalidated :valid~.invalid-feedback {
+    display: block;
+}
+
+.was-invalidated .form-control:valid {
+    border-color: #FF0404;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+#footer {
+    text-align: center;
+    background: #000000;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 0;
+}
+
+#footer .social-links {
+    text-align: center;
+    margin: 3 3 40px 1;
+}
+
+#footer .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #d60f08;
+    color: #fff;
+    line-height: 1;
+    padding: 10px 0;
+    margin-right: 20px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+#footer .social-links a:hover {
+    background: #02bdad;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 0;
+}
+
+#footer .copyright {
+    text-align: center;
+    margin: 0 0 5px 0;
+}
+
+.bxl-twitter {
+    content: url('https://api.iconify.design/bx/bxl-twitter.svg?color=white');
+}
+
+.bxl-instagram {
+    content: url('https://api.iconify.design/fontisto/instagram.svg?color=white');
+}
+
+.bxl-facebook {
+    content: url('https://api.iconify.design/cib/facebook-f.svg?color=white');
+}

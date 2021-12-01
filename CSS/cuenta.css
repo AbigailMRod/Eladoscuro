@@ -1,0 +1,283 @@
+body {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    background-image: url(/img/Index/mexicoMiAmor.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#container {
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    line-height: 28.13px;
+    font-style: normal;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 4%;
+    overflow: hidden;
+    width: 871px;
+    height: 85%;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
+/* BOTONES DE INICIAR SESIÓN Y CREAR CUENTA */
+
+#container .slide-controls {
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    margin: 30px 0 10px 0;
+    justify-content: space-between;
+}
+
+.slide-controls .slide {
+    height: 100%;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.6s ease;
+    letter-spacing: 0.35rem;
+}
+
+.slide-controls label.signup {
+    color: white;
+}
+
+.slide-controls .slider-tab {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#signup:checked~.slider-tab {
+    left: 50%;
+}
+
+#signup:checked~label.signup {
+    color: #fff;
+    cursor: default;
+    user-select: none;
+    text-decoration: underline;
+}
+
+#signup:checked~label.login {
+    color: white;
+}
+
+#login:checked~label.signup {
+    color: white;
+}
+
+#login:checked~label.login {
+    cursor: default;
+    user-select: none;
+    text-decoration: underline;
+}
+
+.field {
+    text-align: left;
+    justify-content: flex-start;
+    color: #fff;
+}
+
+#container .form-container {
+    width: 100%;
+    max-height: auto;
+    overflow: hidden;
+    padding-bottom: 5%;
+}
+
+.form-container .form-inner {
+    display: flex;
+    width: 200%;
+}
+
+.form-container .form-inner form {
+    width: 50%;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form {
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    line-height: 28.13px;
+    font-style: normal;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    padding: 4%;
+    width: 871px;
+}
+
+.form-inner form .field input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+.form-inner form .field input::placeholder {
+    color: #999;
+    transition: all 0.3s ease;
+}
+
+form .field input:focus::placeholder {
+    color: #b3b3b3;
+}
+
+.btn-field {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 40%;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    margin-top: 8%;
+    margin-right: 0%;
+}
+
+form .btn-field .btn-layer {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 100%;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.651);
+    transition: all 0.4s ease;
+}
+
+.btn-field a:link {
+    color: white;
+}
+
+
+/* visited link */
+
+.btn-field a:visited {
+    color: white;
+}
+
+
+/* mouse over link */
+
+.btn-field a:hover {
+    color: white;
+}
+
+
+/* selected link */
+
+.btn-field a:active {
+    color: white;
+}
+
+form .btn-field .btn-pass {
+    display: flex;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    height: 100%;
+    width: 100%;
+    justify-content: right;
+    align-items: center;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.651);
+    transition: all 0.4s ease;
+}
+
+form .btn-field .btn-pedido {
+    display: flex;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    height: 100%;
+    width: 100%;
+    justify-content: right;
+    align-items: center;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.651);
+    transition: all 0.4s ease;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FF0404;
+    border-radius: 0%;
+}
+
+
+/*cuadros de introduccion de datos en CREAR CUENTA*/
+
+.form-control {
+    background-color: rgba(0, 0, 0, .5);
+    border-color: rgba(0, 0, 0, .5);
+    color: white;
+}
+
+
+
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: red;
+}
+
+.was-invalidated :valid~.invalid-feedback {
+    display: block;
+}
+
+.was-invalidated .form-control:valid {
+    border-color: red;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: red;
+}
+
+.was-invalidated :valid~.invalid-feedback {
+    display: block;
+}
+
+.was-invalidated .form-control:valid {
+    border-color: red;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}

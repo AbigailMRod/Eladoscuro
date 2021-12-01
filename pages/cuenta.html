@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- Favicons -->
+      <link rel="icon" type="image/png" href="./../img/logoPag.svg">
+        
+    <!-- link botstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="./../CSS/cuenta.css">
+    <link rel="stylesheet" href="./../CSS/styles.css">
+
+     <!-- Fuente Roboto-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+
+    <title> ELADOSCURO </title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
+    
+</head>
+<body>
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+        <img src="./../img/Navbar/LOGO.svg" class="d-inline-block align-top" alt="image logo">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button> <!-- burger -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" id="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./../index.html">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./../pages/nosotros.html">NOSOTROS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./../pages/productos.html">PRODUCTOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./../pages/cuenta.html">CUENTA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./../pages/contacto.html">CONTACTO</a>
+                </li>
+                <li class="cart">
+                    <a href="./../pages/carrito.html"><ion-icon name="bag-outline"></ion-icon>  <span>0</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav> <!-- nav bar -->
+
+       <!--formulario-->
+    <div class="container" id="container">
+        <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+                <label for="login" class="slide login">INICIAR SESIÓN</label>
+                <label for="signup" class="slide signup">CREAR CUENTA</label>
+                <div class="slider-tab"></div>
+            </div>
+
+            <div class="form-inner">
+
+                <!-- FORMULARIO DE INICIAR SESIÓN -->
+                <form action="#" class="login">
+                    <div class="field" id="field-email">
+                        <label for="email" class="form-label" type="text"> Correo electrónico *</label>
+                            <input type="text" class="form-control" placeholder="ejemplo@mail.com" required>
+                            <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
+                            <div class="alert alert-danger invalid-feedback"  role="alert">Ingresa un correo válido</div>
+                    </div> <!-- field email-->
+                    <br/>
+                    <div class="field" id="field-contraseña">
+                       <label for="password" class="form-label"> Contraseña *</label>
+                       <input type="password" class="form-control" placeholder="Contraseña" required>
+                            <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
+                            <div class="alert alert-danger invalid-feedback"  role="alert">Completa este campo</div>
+                    </div> <!-- field contraseña-->
+                    <br/>
+                    <div class="btn-field">
+                        <div class="btn-layer">
+                            <button id="btn_enviar" type="submit" class="btn btn-light">Iniciar sesión  <i class="bi bi-arrow-right" style="height: 10px;"></i></button>
+                        </div>
+                        <div class="btn-pass">
+                            <a href="#">? Olvidé mi contraseña</a>
+                        </div>
+                        <div class="btn-pedido">
+                            <a href="#">Consultar pedido</a>
+                        </div>
+                    </div>                   
+               </form> <!-- login formulario de iniciar sesión-->
+
+                <!-- FORMULARIO DE REGISTRO -->
+                <form action="#" class="signup formulario" id="formulario" novalidate>
+                    <div class="field" id="grupo-nombre">
+                        <label for="nombre" class="form-label"> Nombre *</label>
+                        <input id="nombre" name="nombre" type="text" class="form-control" placeholder="" required>
+                        <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
+                        <div class="alert alert-danger invalid-feedback"  role="alert">Este campo requiere mínimo 3 letras</div>
+                    </div>
+
+                    <div class="field " id="grupo-telefono">
+                        <label for="telefono" class="form-label"> Télefono *</label>
+                        <input id="telefono" name="telefono" type="text" class="form-control" placeholder=""required>
+                        <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
+                        <div class="alert alert-danger invalid-feedback"  role="alert">por favor solo ingresa 10 números</div>
+                    </div>
+
+                    <div class="field" id="grupo-email">
+                        <label for="email" class="form-label"> Correo electrónico *</label>
+                        <input id="email" name="email" type="text" class="form-control" placeholder="ejemplo@mail.com" required>
+                        <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
+                        <div class="alert alert-danger invalid-feedback"  role="alert">Ingresa un correo válido</div>
+                    </div>
+
+                    <div class="field" id="grupo-password">
+                        <label for="password" class="form-label"> Contraseña *</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Asegura tu pase a las gradas" required>
+                        <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
+                        <div class="alert alert-danger invalid-feedback"  role="alert">Usa 8 o más caracteres con una combinación de letras, números y símbolos</div> 
+                    </div>
+
+                    <div class="field" id="grupo-password2">
+                        <label for="password2" class="form-label"> Repetir contraseña *</label>
+                        <input type="password" class="form-control" id="password2" name="password2" placeholder="Contraseña" required>
+                        <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
+                        <div class="alert alert-danger invalid-feedback"  role="alert">La contraseña debe de coincidir</div>
+                    </div>
+
+                    <div class="btn-field">
+                        <div class="btn-layer">
+                            <button id="btn_enviar_registro" type="submit" class="btn btn-light">Registrarse  <i class="bi bi-arrow-right" style="height: 10px;"></i></button>
+                        </div>
+                    </div>
+                </form> <!-- signup formulario de registro-->
+              
+            </div> <!-- form-inner -->
+        
+        </div> <!-- form-container -->
+    
+    </div> <!-- container -->
+
+    <!--Footer-->
+    <footer id="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            </div>             
+            <div class="copyright">
+                &copy; Copyright <strong><span>ELADOSCURO</span></strong>. All Rights Reserved
+            </div>
+        </div> <!-- container footer -->
+    </footer>
+    
+    <!--Scripts -->    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> <!-- para el icono del carrito -->
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="./../JS/cuenta.js"></script>
+</body>
+</html>

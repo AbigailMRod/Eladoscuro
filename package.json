@@ -1,0 +1,22 @@
+{
+  "name": "eladoscuro.json",
+  "version": "1.0.0",
+  "description": "Tienda e-commerce basada en la venta online de souvenirs mexicanas con diseños originales, enfocada a un nicho de mercado: extranjeros con gusto por la cultura mexicana.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbigailMRod/Eladoscuro.git"
+  },
+  "author": "Eladoscuro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AbigailMRod/Eladoscuro/issues"
+  },
+  "homepage": "https://github.com/AbigailMRod/Eladoscuro#readme",
+  "dependencies": {
+    "sweetalert2": "^11.1.10"
+  }
+}
