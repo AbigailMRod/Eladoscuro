@@ -48,15 +48,15 @@ cd Eladoscuro/
 <img src="./img/Index/chiles.jpg" width="40%" alt="Logo of the project" align="right">
 
 Hecho con ❤ por 
-- Abigail Muñoz
-- Bernardo Fernández
-- Paulyna Campuzano
-- Arturo Islas
-- Christian Neri
-- Luis Hernández
-- Armando Arciniega
-- Iram Monarres
-- Edwin Mendez
+- Abigail Muñoz    https://github.com/AbigailMRod
+- Bernardo Fernández   https://github.com/JBFernandez
+- Paulyna Campuzano   https://github.com/PaulynaC
+- Arturo Islas   https://github.com/arturoislas
+- Christian Neri   https://github.com/ChristianNeri
+- Luis Hernández   https://github.com/Luis-E-Hdz-Garcia
+- Armando Arciniega   https://github.com/armandoarciniegag
+- Iram Monarres   https://github.com/cristian-iram-monarres-mtz
+- Edwin Mendez   https://github.com/EdwMendz
 
 
 =======
