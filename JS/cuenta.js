@@ -115,14 +115,20 @@ formulario.addEventListener('submit', (e) => {
         "password2":password2
     };//nuevoUsuario
    
-   
-   
     
 
     if(campos.nombre && campos.telefono && campos.email && campos.password){
         localStorage.setItem("nuevoUsusario", JSON.stringify(nuevoUsuario));
         console.info("Save");     
         formulario.reset();
+
+        new Swal({ //sweetAlert
+            icon: 'success',
+            title: '1,2,3 ¡Estás registrado! Para entrar al cuadrilatero inicia sesión',
+            text: '¡Enviado exitosamente!',
+        }) //sweetAlert
+        setTimeout(function(){ window.location.href = "./../index.html"},5000); // timeout
+
 
     } else {
         //     document.getElementById('grupo-enviar').classList.add('was-validated');
