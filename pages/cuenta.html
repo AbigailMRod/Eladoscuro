@@ -23,6 +23,9 @@
 
     <title> ELADOSCURO </title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/b2e53d2946.js" crossorigin="anonymous"></script>
     
 </head>
 <body>
@@ -44,13 +47,13 @@
                     <a class="nav-link" href="./../pages/productos.html">PRODUCTOS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./../pages/cuenta.html">CUENTA</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="./../pages/contacto.html">CONTACTO</a>
                 </li>
                 <li class="cart">
                     <a href="./../pages/carrito.html"><ion-icon name="bag-outline"></ion-icon>  <span>0</span></a>
+                </li>
+                <li  class="usuario">
+                    <a  href="./../pages/cuenta.html"><i id="usuario" class="bi bi-person-circle"></i> </a>
                 </li>
             </ul>
         </div>
@@ -70,19 +73,22 @@
             <div class="form-inner">
 
                 <!-- FORMULARIO DE INICIAR SESIÓN -->
-                <form action="#" class="login">
+                <form action="#" class="login" class="needs-validation"  novalidate>
                     <div class="field" id="field-email">
-                        <label for="email" class="form-label" type="text"> Correo electrónico *</label>
-                            <input type="text" class="form-control" placeholder="ejemplo@mail.com" required>
-                            <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
-                            <div class="alert alert-danger invalid-feedback"  role="alert">Ingresa un correo válido</div>
+                        <label for="email" class="form-label" id="emailI" name="emailI" type="text"> Correo electrónico *</label>
+                            <input type="text" id="input_email" class="form-control" placeholder="ejemplo@mail.com" required>
+                            <div class="formulario__mensaje" id="formulario__mensaje_correo">
+                                <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> introduce un correo electrónico.</p>
+                            </div>
                     </div> <!-- field email-->
                     <br/>
                     <div class="field" id="field-contraseña">
                        <label for="password" class="form-label"> Contraseña *</label>
-                       <input type="password" class="form-control" placeholder="Contraseña" required>
-                            <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
-                            <div class="alert alert-danger invalid-feedback"  role="alert">Completa este campo</div>
+                       <input type="password" id="input_password" class="form-control" placeholder="Contraseña" required>
+                       <div class="formulario__mensaje" id="formulario__mensaje_contraseña">
+                        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> introduce una contraseña. </p>
+                    </div>
+                                                     
                     </div> <!-- field contraseña-->
                     <br/>
                     <div class="btn-field">
@@ -162,8 +168,9 @@
         </div> <!-- container footer -->
     </footer>
     
-    <!--Scripts --> 
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>   
+    <!--Scripts -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>    
+    <!--Scripts -->    
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> <!-- para el icono del carrito -->
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
