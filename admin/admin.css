@@ -1,22 +1,23 @@
-/*--------------------------------------------------------------
-# Form
---------------------------------------------------------------*/
+.body {
+  font-family: 'Roboto', sans-serif;
+}
 
-#container {
-   
+#containerF {
+  /*imagen de fondo*/
   background-image: url(/img/admin/background-admin.svg);
-  background-position: top;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+
 .form p {
-  text-align: center;
-  letter-spacing: 0.35em;  
+    text-align: center;
+    letter-spacing: 0.35em;
 }
 
-
-.form {    
+.form {
+  /* cuadro de negro de fondo  */
   font-size: 24px;
   letter-spacing: 0.1em;
   line-height: 28.13px;
@@ -24,60 +25,71 @@
   background-color: rgba(0, 0, 0, .5);
   color: #fff;
   padding: 4%;
-  width: 871px;
-  height: 620px;
 }
 
 
-.row {  
-  margin-right: 0px;
-  margin-left: 0px;    
-  justify-content: center;
-  padding:10%;
+.form_form {
+    /*centrado del cuadro en la pantalla*/
+    margin-right: 0px;
+    margin-left: 0px;
+    justify-content: center;
+    padding: 5%;
 }
 
 #btn_enviar {
-  background-color: rgba(25, 113, 196, 0.623);
-  width: 140px;
-  font-weight: bold;
-  border-radius: 6px; 
-  font-size: 15px; 
+    background-color: rgba(25, 113, 196, 0.623);
+    width: 140px;
+    font-weight: bold;
+    border-radius: 6px; 
+    font-size: 15px; 
+  }
   
+  #btn2 {
+    background-color: rgba(123, 206, 16, 0.589);    
+    width: 140px;
+    font-weight: bold;
+    border-radius: 6px; 
+    font-size: 15px; 
+  }
   
-}
+  #upload_widget {
+    background-color: rgba(3, 22, 39, 0.623);
+    width: 140px;
+    font-weight: bold;
+    border-radius: 6px; 
+    font-size: 15px; 
+    margin-left: 10%;
+  }
 
-#btn2 {
-  background-color: rgba(123, 206, 16, 0.589);    
-  width: 140px;
-  font-weight: bold;
-  border-radius: 6px; 
-  font-size: 15px; 
+  #button_widget{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+
+  #product_img{
+    display: flex;
+    align-items: flex-end;
+    width: 60%;
+    height: auto;
+    text-align: left;
+  }
+ 
+
+  #footer {
+    text-align: center;
+    background: #000000;
+    color: #fff;
+    font-size: 15px;    
+    padding: 10px 0;
+    height: 50px; 
+    background:black; 
+    width:100%;
+    position:absolute;   
+  }  
   
-  
-}
-
-
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-
-
-
-#footer {
-  text-align: center;
-  background: #000000;
-  color: #fff;
-  font-size: 15px;    
-  padding: 10px 0;
-  height: 50px; 
-  background:black; 
-  width:100%; 
-  position:absolute;   
-    
-}  
-
-#footer .copyright {
-  text-align: center;
-  margin: 0 0 5px 0;
-}
-
+  #footer .copyright {
+    text-align: center;
+    margin: 0 0 5px 0;
+  }
