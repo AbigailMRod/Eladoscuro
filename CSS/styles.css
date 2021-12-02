@@ -287,17 +287,20 @@ Collage Image
 .usuario {
   color: #ff04047e;
   margin-top: 8px;
-  margin-left: 2vw;
+  margin-left: 3vw;
 }
 
 .cart {
-  margin-left: 10vw;
+  margin-left: 8vw;
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
 }
 
 .usuario-activo {
   color: #7CFC00;
   margin-top: 8px;
-  margin-left: 2vw;  
+  margin-left: 3vw;  
 }
 
 @media screen and  (max-width:1000px){
@@ -312,6 +315,11 @@ Collage Image
     margin-top: 8px;
     margin-left: 0vw;
   }
+
+  .cart {
+    margin-left: 0vw;
+  }
+
 }
 
 
