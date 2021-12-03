@@ -53,7 +53,7 @@ Hecho con ❤ por
 - Paulyna Campuzano   https://github.com/PaulynaC
 - Arturo Islas   https://github.com/arturoislas
 - Christian Neri   https://github.com/ChristianNeri
-- Luis Hernández   https://github.com/Luis-E-Hdz-Garcia
+- Luis Hernández   https://github.com/19lheg
 - Armando Arciniega   https://github.com/armandoarciniegag
 - Iram Monarres   https://github.com/cristian-iram-monarres-mtz
 - Edwin Mendez   https://github.com/EdwMendz
