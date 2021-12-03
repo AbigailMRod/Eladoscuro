@@ -54,4 +54,12 @@ Hecho con ❤ por
 - Luis Hernández   https://github.com/Luis-E-Hdz-Garcia
 - Armando Arciniega   https://github.com/armandoarciniegag
 - Iram Monarres   https://github.com/cristian-iram-monarres-mtz
+<<<<<<< HEAD
 - Edwin Mendez   https://github.com/EdwMendz
+=======
+- Edwin Mendez   https://github.com/EdwMendz
+
+
+
+
+>>>>>>> developer
