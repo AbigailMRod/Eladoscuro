@@ -1,4 +1,4 @@
-<<<<<<< .merge_file_a15588
+
 
 <img src="./img/logoPag.svg" width="30%" alt="Logo of the project" align="right">
 
@@ -53,13 +53,11 @@ Hecho con ❤ por
 - Paulyna Campuzano   https://github.com/PaulynaC
 - Arturo Islas   https://github.com/arturoislas
 - Christian Neri   https://github.com/ChristianNeri
-- Luis Hernández   https://github.com/Luis-E-Hdz-Garcia
+- Luis Hernández   https://github.com/19lheg
 - Armando Arciniega   https://github.com/armandoarciniegag
 - Iram Monarres   https://github.com/cristian-iram-monarres-mtz
 - Edwin Mendez   https://github.com/EdwMendz
 
 
-=======
-# Eladoscuro
-Tienda e-commerce basada en la venta online de souvenirs mexicanas con diseños originales, enfocada a un nicho de mercado: extranjeros con gusto por la cultura mexicana.
->>>>>>> .merge_file_a10840
+
+
