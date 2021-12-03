@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `ELADOSCURO`.`CLIENTE` (
   `nombre` VARCHAR(100) NOT NULL,
   `telefono` VARCHAR(10) NOT NULL,
   `email` VARCHAR(100) NOT NULL,
-  `contraseña` VARCHAR(20) NOT NULL,
+  `contrasenia` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`id_cliente`),
   UNIQUE INDEX `id_contacto_UNIQUE` (`id_cliente` ASC) VISIBLE)
 ENGINE = InnoDB;
@@ -55,7 +55,8 @@ CREATE TABLE IF NOT EXISTS `ELADOSCURO`.`CATEGORIA` (
   `id_categoria` INT NOT NULL,
   `nombre` VARCHAR(70) NOT NULL DEFAULT 'XS, S, M, L XL',
   `descripcion` VARCHAR(70) NOT NULL,
-  PRIMARY KEY (`id_categoria`))
+  PRIMARY KEY (`id_categoria`),
+  UNIQUE INDEX `id_categoria_UNIQUE` (`id_categoria` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
@@ -65,7 +66,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `ELADOSCURO`.`PRODUCTO` ;
 
 CREATE TABLE IF NOT EXISTS `ELADOSCURO`.`PRODUCTO` (
-  `id_producto` INT NOT NULL,
+  `id_producto` INT NOT NULL AUTO_INCREMENT,
   `imagen` VARCHAR(200) NOT NULL,
   `nombre` VARCHAR(100) NOT NULL,
   `descripcion` VARCHAR(500) NOT NULL,
@@ -73,6 +74,7 @@ CREATE TABLE IF NOT EXISTS `ELADOSCURO`.`PRODUCTO` (
   `CATEGORIA_id_categoria` INT NOT NULL,
   PRIMARY KEY (`id_producto`, `CATEGORIA_id_categoria`),
   INDEX `fk_PRODUCTO_CATEGORIA1_idx` (`CATEGORIA_id_categoria` ASC) VISIBLE,
+  UNIQUE INDEX `id_producto_UNIQUE` (`id_producto` ASC) VISIBLE,
   CONSTRAINT `fk_PRODUCTO_CATEGORIA1`
     FOREIGN KEY (`CATEGORIA_id_categoria`)
     REFERENCES `ELADOSCURO`.`CATEGORIA` (`id_categoria`)
@@ -87,9 +89,9 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `ELADOSCURO`.`ADMINISTRADOR` ;
 
 CREATE TABLE IF NOT EXISTS `ELADOSCURO`.`ADMINISTRADOR` (
-  `id_admi` INT NOT NULL,
+  `id_admi` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(50) NOT NULL,
-  `contraseña` VARCHAR(20) NOT NULL,
+  `contrasenia` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`id_admi`),
   UNIQUE INDEX `id_admi_UNIQUE` (`id_admi` ASC) VISIBLE)
 ENGINE = InnoDB;
@@ -121,7 +123,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `ELADOSCURO`.`DETALLE_VENTA` ;
 
 CREATE TABLE IF NOT EXISTS `ELADOSCURO`.`DETALLE_VENTA` (
-  `id_detalle_venta` INT NOT NULL,
+  `id_detalle_venta` INT NOT NULL AUTO_INCREMENT,
   `direccion` VARCHAR(200) NOT NULL,
   `cantidad` INT NOT NULL,
   `total` FLOAT NOT NULL,
@@ -132,6 +134,7 @@ CREATE TABLE IF NOT EXISTS `ELADOSCURO`.`DETALLE_VENTA` (
   PRIMARY KEY (`id_detalle_venta`, `PRODUCTO_id_producto`, `PRODUCTO_CATEGORIA_id_categoria`, `VENTA_id_venta`, `VENTA_CLIENTE_id_cliente`),
   INDEX `fk_DETALLE_VENTA_PRODUCTO1_idx` (`PRODUCTO_id_producto` ASC, `PRODUCTO_CATEGORIA_id_categoria` ASC) VISIBLE,
   INDEX `fk_DETALLE_VENTA_VENTA1_idx` (`VENTA_id_venta` ASC, `VENTA_CLIENTE_id_cliente` ASC) VISIBLE,
+  UNIQUE INDEX `id_detalle_venta_UNIQUE` (`id_detalle_venta` ASC) VISIBLE,
   CONSTRAINT `fk_DETALLE_VENTA_PRODUCTO1`
     FOREIGN KEY (`PRODUCTO_id_producto` , `PRODUCTO_CATEGORIA_id_categoria`)
     REFERENCES `ELADOSCURO`.`PRODUCTO` (`id_producto` , `CATEGORIA_id_categoria`)
