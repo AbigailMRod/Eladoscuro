@@ -2,23 +2,21 @@
 # Form
 --------------------------------------------------------------*/
 
-body{
+body {
     background-image: url(/img/admin/background-admin.svg);
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    padding:6%;
-
+    padding: 6%;
 }
 
-  .form p {
+.form p {
     text-align: center;
-    letter-spacing: 0.35em;  
-  }
-  
-  
-  .form {    
+    letter-spacing: 0.35em;
+}
+
+.form {
     font-size: 24px;
     letter-spacing: 0.1em;
     line-height: 28.13px;
@@ -27,31 +25,42 @@ body{
     color: #fff;
     padding: 4%;
     width: 871px;
-    height: 260px;
-    margin-top: 30px;
-    
-  }
-  
-  
-  .row {  
+}
+
+.row {
     margin-right: 0px;
-    margin-left: 0px;    
+    margin-left: 0px;
     justify-content: center;
-    padding:10%;
-  }
-  
-  #boton {
+    padding: 10%;
+}
+
+.formulario__mensaje {
+    font-size: small;
+    height: 25px;
+    line-height: 25px;
+    background: #FF0404;
+    padding: 0 10px;
+    border-radius: 3px;
+    display: none;
+}
+
+
+/* mensaje de advertencia  */
+
+.formulario__mensaje-activo {
+    display: block;
+}
+
+.formulario__mensaje p {
+    margin: 0;
+}
+
+#boton {
     background-color: rgba(0, 0, 0, .5);
     width: 140px;
-    margin-top: 300px;
+    margin-top: 310px;
     font-weight: bold;
-    border-radius: 6px; 
-    font-size: 15px;     
+    border-radius: 6px;
+    font-size: 15px;
     position: absolute;
-    
-  }
-  
-
-
-  
-  
+}

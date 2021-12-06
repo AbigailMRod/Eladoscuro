@@ -1,5 +1,5 @@
 function inicio(){    
-        window.location= "./../index.html";
+        window.location= "./../pages/productos.html";
         }// función para regresar a la página de inicio   
     
     /********************************  para añadir elementos al JSON******************************/ 

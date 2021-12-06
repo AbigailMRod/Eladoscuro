@@ -12,7 +12,7 @@ INSERT INTO `eladoscuro`.`contacto` (`id_contacto`, `nombre`, `telefono`, `email
 
 -- Datos ADMINISTRADOR
 
-INSERT INTO `eladoscuro`.`administrador` (`id_admi`, `nombre`, `contraseña`) VALUES ('1', 'ELADO', 'Oscuro_09');
+INSERT INTO `eladoscuro`.`administrador` (`id_admi`, `nombre`, `contrasenia`) VALUES ('1', 'ELADO', 'Oscuro_09');
 
 -- Datos CATEGORÍA
 
@@ -32,11 +32,11 @@ INSERT INTO `eladoscuro`.`producto` (`id_producto`, `imagen`, `nombre`, `descrip
 
 -- Datos CLIENTE
 
-INSERT INTO `eladoscuro`.`cliente` (`id_cliente`, `nombre`, `telefono`, `email`, `contraseña`) VALUES ('1', 'Jesús Treji', '557223492', 'jsrd1@gmail.com', 'Jes932');
-INSERT INTO `eladoscuro`.`cliente` (`id_cliente`, `nombre`, `telefono`, `email`, `contraseña`) VALUES ('2', 'Hillary Navarro', '55312452', 'hillaryd@gmail.com', 'h_23illa');
-INSERT INTO `eladoscuro`.`cliente` (`id_cliente`, `nombre`, `telefono`, `email`, `contraseña`) VALUES ('3', 'Mafer Navarro', '5593421573', 'mafer@gmail.com', 'm1fwer3');
-INSERT INTO `eladoscuro`.`cliente` (`id_cliente`, `nombre`, `telefono`, `email`, `contraseña`) VALUES ('4', 'David Santiago', '55322363', 'davids23@gmail.com', 'davidis35');
-INSERT INTO `eladoscuro`.`cliente` (`id_cliente`, `nombre`, `telefono`, `email`, `contraseña`) VALUES ('5', 'Mirta Lopez', '5532257894', 'mirtdf23@gmail.com', 'm245urtkd');
+INSERT INTO `eladoscuro`.`cliente` (`id_cliente`, `nombre`, `telefono`, `email`, `contrasenia`) VALUES ('1', 'Jesús Treji', '557223492', 'jsrd1@gmail.com', 'Jes932');
+INSERT INTO `eladoscuro`.`cliente` (`id_cliente`, `nombre`, `telefono`, `email`, `contrasenia`) VALUES ('2', 'Hillary Navarro', '55312452', 'hillaryd@gmail.com', 'h_23illa');
+INSERT INTO `eladoscuro`.`cliente` (`id_cliente`, `nombre`, `telefono`, `email`, `contrasenia`) VALUES ('3', 'Mafer Navarro', '5593421573', 'mafer@gmail.com', 'm1fwer3');
+INSERT INTO `eladoscuro`.`cliente` (`id_cliente`, `nombre`, `telefono`, `email`, `contrasenia`) VALUES ('4', 'David Santiago', '55322363', 'davids23@gmail.com', 'davidis35');
+INSERT INTO `eladoscuro`.`cliente` (`id_cliente`, `nombre`, `telefono`, `email`, `contrasenia`) VALUES ('5', 'Mirta Lopez', '5532257894', 'mirtdf23@gmail.com', 'm245urtkd');
 
 
 -- Datos VENTA
