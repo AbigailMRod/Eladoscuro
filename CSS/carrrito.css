@@ -18,7 +18,7 @@
 
 body{
     width: 100%;
-    font-family: 'lato';
+    font-family: 'Roboto';
 }
 
 .imagen{
@@ -86,4 +86,27 @@ h2{
     background: #eee;
     padding: 5px;
 
+}
+
+
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: inherit;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.table th {
+    padding: 0.75rem;
+    vertical-align: top;
+ 
+}
+
+.media-object{
+
+    width: 130px; 
+    height: 150px;
 }

@@ -1,4 +1,5 @@
 let btn_enviar = document.getElementById('btn_enviar');
+let btn_remove = document.getElementById('btn_remove');
 
 
 // articulos en el carrito del carrito
@@ -29,25 +30,25 @@ function displayCart(){
     if (cartItems && productContainer) {
         productContainer.innerHTML = '';
         Object.values(cartItems).map(item => {
-            productContainer.innerHTML += `<tr>
+            productContainer.innerHTML += `
+            <tr>
             <a class="thumbnail pull-left" href="./../pages/productos.html">  </a>
-            <th scope="row"><img class="media-object" src="${item.img}" style="width: 130px; height: 150px;"></th> 
-            <td>${item.description}</td>
-            <td>
-            <div
+            <th><img class="media-object" src="${item.img}"></th>
             
+            
+            <td>${item.description}</td>
+            <td>            
                 <div>
                 <class="quantity">
-                <input class="cantidad-input" type="number" value="${item.inCart}">
+                <input class="cantidad-input" type="number" value="${item.inCart}" min="0">
+                
                 </div>
             </td>
             <td>$${item.price}.00</td>
             <td><strong>$${item.inCart*item.price}.00</strong></td>
-            <td> 
-
-                    
+            <td>                    
             <button type="button"  class="btn btn-danger" >
-                <span class="remove"></span> Remover
+                <span class="remove">Remover</span> 
             </button></td> 
 
           </tr>`; 
@@ -67,21 +68,7 @@ function displayCart(){
         <td><h3>Total a pagar</h3></td>
         <td class="text-center"><h3><strong>$${cartCost}.00</strong></h3></td>
         </tr>
-        <tr>
-        <td>   </td>
-        <td>   </td>
-        <td>   </td>
-        <td>   </td>
-        <td>
-        <td>
-        <button type="button" id="btn_enviar" class="btn btn-success">
-             <span class="glyphicon glyphicon-play">Comprar</span>
-             
-
-        </button>
         
-        </td>
-        </tr>
 
         
     </body>`;
@@ -93,33 +80,43 @@ function displayCart(){
 
 }//displayCart
 
+function removeProduct(event) {
+ 
+    const target = event.currentTarget;     
+     target.parentNode.parentNode.remove();
+     cartItems();
+   }
 
 
-if (onLoadcartNumbers=0) {
-    console.log ("no hay nadie")
-} 
+   btn_remove.addEventListener('click', () => {
 
-if (onLoadcartNumbers >=1) {
-    console.log ("aqui toy")
-}
+    function removeproductContainer(event){
 
-
-
-
-
-// ${ btn_enviar.addEventListener('submit', (evento) => {
-//     //     evento.preventDefault();
+        const target = event.currentTarget;
+        console.log('The target in remove is:', target.parentNode.parentNode);       
+        
+        target.parentNode.parentNode.remove();
+       
+    }
     
-//     new Swal({ //sweetAlert
-//     icon: 'success',
-//     title: '1,2,3 ¡Estás dentro!',
-//     text: '¡Enviado exitosamente!',
-//     }) //sweetAlert    
-                        
+
+   })
+   
+
+
+btn_enviar.addEventListener('click',() => {
+    //     evento.preventDefault();
+    new Swal({ //sweetAlert
+    icon: 'success',
+    title: '¡Round 1!',
+    text: '¡Compra exitosa!',
+    }) //sweetAlert    
+                     
     
         
-//     }) //addEvenListener  
-// }
+    }) //addEvenListener  
+
+
 
 
 
