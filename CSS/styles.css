@@ -322,6 +322,24 @@ Collage Image
     margin-left: 0vw;
   }
 
+} /* media querrys */
+
+/* Cerrar Sesión */
+
+.cerrarSesion {
+  display: none;
+}
+
+/* .cerrarSesionActivo {
+  display: none;
+} */
+
+/* .iniciarSesion {
+
+} */
+
+.iniciarSesionDesactivado {
+  display: none;
 }
 
 
