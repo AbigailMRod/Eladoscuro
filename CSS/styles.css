@@ -290,18 +290,20 @@ Collage Image
   margin-left: 3vw;
 }
 
-.cart {
-  margin-left: 8vw;
-  display: flex;
-  flex-direction: row;
-  padding-left: 0;
-}
-
 .usuario-activo {
   color: #7CFC00;
   margin-top: 8px;
   margin-left: 3vw;  
 }
+
+.cart {
+  margin-left: 10vw;
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+}
+
+/* Media Querry para eliminar margen en Hamburguesa */
 
 @media screen and  (max-width:1000px){
   .usuario-activo {
@@ -320,6 +322,25 @@ Collage Image
     margin-left: 0vw;
   }
 
+} /* media querrys */
+
+/* Cerrar Sesión */
+
+.cerrarSesion {
+  display: none;
 }
+
+/* .cerrarSesionActivo {
+  display: none;
+} */
+
+/* .iniciarSesion {
+
+} */
+
+.iniciarSesionDesactivado {
+  display: none;
+}
+
 
 

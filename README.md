@@ -1,5 +1,3 @@
-
-
 <img src="./img/logoPag.svg" width="30%" alt="Logo of the project" align="right">
 
 # <p style="text-align: center;"> Eladoscuro </p>
@@ -13,9 +11,9 @@ Tienda e-commerce basada en la venta online de souvenirs mexicanas con diseños 
 
 Solo necesitas correr el archivo principal, desde el cuál podrás disfrutar de nuestra página
 
-```shell
+shell
 index.html
-```
+
 ## Desarrollo
 
 ### Tecnologías 
@@ -41,10 +39,10 @@ Nuestra línea de diseño se enfoca en el gusto por la cultura mexicana
 
 Nuestro proyecto es un repositorio público, por lo que si quisieras contribuir deberás:
 
-```shell
+shell
 git clone https://github.com/AbigailMRod/Eladoscuro.git
 cd Eladoscuro/
-```
+
 <img src="./img/Index/chiles.jpg" width="40%" alt="Logo of the project" align="right">
 
 Hecho con ❤ por 
@@ -56,8 +54,12 @@ Hecho con ❤ por
 - Luis Hernández   https://github.com/19lheg
 - Armando Arciniega   https://github.com/armandoarciniegag
 - Iram Monarres   https://github.com/cristian-iram-monarres-mtz
+<<<<<<< HEAD
+- Edwin Mendez   https://github.com/EdwMendz
+=======
 - Edwin Mendez   https://github.com/EdwMendz
 
 
 
 
+>>>>>>> developer
