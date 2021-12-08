@@ -1,4 +1,5 @@
 let btn_enviar = document.getElementById('btn_enviar');
+let btn_remove = document.getElementById('btn_remove');
 
 
 // articulos en el carrito del carrito
@@ -91,7 +92,7 @@ function displayCart(){
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
         <tr>
-            <th scope="row"><img class="media-object" src="${item.img}" style="width: 130px; height: 150px;"></th> 
+            <th scope="row"><img class="media-object" src="${item.img}" ></th> 
             <td class="description">${item.description}</td>
             
             
@@ -128,19 +129,7 @@ function displayCart(){
         <td><h3>Total a pagar</h3></td>
         <td class="text-center"><h3><strong>$${cartCost}.00</strong></h3></td>
         </tr>
-        <tr>
-        <td>   </td>
-        <td>   </td>
-        <td>   </td>
-        <td>   </td>
-        <td>
-        <td>
-        <button type="button" id="btn_enviar" class="btn btn-success">
-             <span class="glyphicon glyphicon-play">Comprar</span>
-        </button>
         
-        </td>
-        </tr>
 
         
     </body>`;
@@ -225,23 +214,29 @@ function manageQuantity() {
 
 
 
+//     function removeproduct(event){
 
-
-
-
-// ${ btn_enviar.addEventListener('submit', (evento) => {
-//     //     evento.preventDefault();
+//         const target = event.currentTarget;        
+//         target.parentNode.parentNode.remove();
+//         productContainer();
+//     }
     
-//     new Swal({ //sweetAlert
-//     icon: 'success',
-//     title: '1,2,3 ¡Estás dentro!',
-//     text: '¡Enviado exitosamente!',
-//     }) //sweetAlert    
-                        
-    
-        
-//     }) //addEvenListener  
-// }
+
+//    })
+   
+
+
+btn_enviar.addEventListener('click',() => {
+    //     evento.preventDefault();
+    new Swal({ //sweetAlert
+    icon: 'success',
+    title: 'Round 1',
+    text: '¡Compra exitosa!',
+    }) //sweetAlert    
+
+    }) //addEvenListener  
+
+
 
 
 
@@ -258,13 +253,26 @@ displayCart();
 let usuario = sessionStorage.getItem("usuarioActivo");
 
 
-let sesionUsuario = document.getElementById("usuario");
-//console.log(usuario);
+let iniciarSesion = document.getElementById("iniciarSesion");
+let cerrarSesion = document.getElementById("cerrarSesion");
+
+
+console.log(usuario);
 
 if (usuario !== null) {
     console.log(`ingresó`);
-    sesionUsuario.classList.remove("usuario");
-    sesionUsuario.classList.add("usuario-activo");
-} 
+    iniciarSesion.classList.remove("iniciarSesion");
+    iniciarSesion.classList.add("iniciarSesionDesactivado");
+
+    cerrarSesion.classList.remove("cerrarSesion");
+    cerrarSesion.classList.add("cerrarSesionActivo");
+}
+
+
+//**************** Cerrar sesion ***************************************/
+
+cerrarSesion.addEventListener("click", function(e) {
+    sessionStorage.clear();    
+});
 
 
