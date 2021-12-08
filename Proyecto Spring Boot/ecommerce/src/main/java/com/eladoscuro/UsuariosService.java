@@ -3,6 +3,7 @@ package com.eladoscuro;
 
 import com.eladoscuro.model.producto;
 import com.eladoscuro.model.usuario;
+import com.eladoscuro.utils.SHAUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -36,9 +37,10 @@ public class UsuariosService {
     }//deleteUsuario
 
     public void addUsuario(usuario usuario){
-        Optional<usuario> prodByname = usuariosRepository.findByName(usuario.getNombre());
-        if (prodByname.isPresent()){
-            throw new IllegalStateException("El usuario con el nombre [" + usuario.getNombre() + "] ya existe");
+        Optional<usuario> userByEmail =
+                usuariosRepository.findByEmail(usuario.getEmail());
+        if (userByEmail.isPresent()){
+            throw new IllegalStateException("El usuario con el email [" + usuario.getEmail() + "] ya existe");
         }//isPresent
         usuariosRepository.save(usuario);
     }//addUsuario
@@ -48,10 +50,12 @@ public class UsuariosService {
     public void updateUsuario(Long id, String originalPassword, String newPassword, String telefono, String nombre, String email){
         usuario usr = usuariosRepository.findById(id).
                 orElseThrow(()-> new IllegalStateException("El usuario con el id" + id + "no existe"));
+
+
         if(telefono !=null)
             if((!telefono.isEmpty()) && (! telefono.equals(usr.getTelefono()))){
                 usr.setTelefono(telefono);
-        }//updateTelefono
+            }//updateTelefono
 
         if (nombre !=null)
             if ((!nombre.isEmpty()) && (! nombre.equals(usr.getNombre()))){
@@ -59,14 +63,20 @@ public class UsuariosService {
             }//updateNombre
 
         if( email !=null)
-            if ((!email.isEmpty()) && (! email.equals(usr.getEmail()))){
+            if ((!email.isEmpty()) && (! email.equals(usr.getEmail()) ) ){
                 usr.getEmail();
-            }
+            }//updateEmail
 
-        if (usr.getPassword().equals(originalPassword)){
-            usr.setPassword(newPassword);
-            }//if original
+        if ((originalPassword == null) || (newPassword==null)){
+            throw new IllegalStateException("El usuario con el id [" + id +
+                    "] no existe");
+        }//if updatePassword
 
+        if (! SHAUtil.verifyHash(originalPassword, usr.getPassword())){
+            throw new IllegalStateException("La contraseña del Usuario con el id [" + id + "[ no coincide");
+        }//verifyHash
+
+        usr.setPassword(newPassword);
 
     }//updateUsuario
 
