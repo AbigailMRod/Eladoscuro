@@ -72,7 +72,7 @@ function cartNumbers(product, action){
         document.querySelector('.cart span').textContent = 1;
     }
     setItems(product);    
-}//cartNumbers function
+}//cartNumbers agrega y quita la cantidad de articulos en el logo del carrito
 
 
 function displayCart(){
@@ -219,7 +219,7 @@ function manageQuantity() {
             displayCart();
         });
     }//for
-}//managaQuantity
+}//managaQuantity para subir y bajar la cantidad de articulos en el carrito
 
 
 
