@@ -80,23 +80,16 @@ function displayCart(){
 
 }//displayCart
 
-function removeProduct(event) {
- 
-    const target = event.currentTarget;     
-     target.parentNode.parentNode.remove();
-     cartItems();
-   }
+
 
 
    btn_remove.addEventListener('click', () => {
 
-    function removeproductContainer(event){
+    function removeproduct(event){
 
-        const target = event.currentTarget;
-        console.log('The target in remove is:', target.parentNode.parentNode);       
-        
+        const target = event.currentTarget;        
         target.parentNode.parentNode.remove();
-       
+        productContainer();
     }
     
 
@@ -108,7 +101,7 @@ btn_enviar.addEventListener('click',() => {
     //     evento.preventDefault();
     new Swal({ //sweetAlert
     icon: 'success',
-    title: '¡Round 1!',
+    title: 'Round 1',
     text: '¡Compra exitosa!',
     }) //sweetAlert    
                      
