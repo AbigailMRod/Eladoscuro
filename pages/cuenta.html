@@ -32,32 +32,37 @@
 
     <nav class="navbar sticky-top navbar-expand-lg navbar-light">
         <a href="./../index.html"><img src="./../img/Navbar/LOGO.svg" class="d-inline-block align-top" alt="image logo"></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button> <!-- burger -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav" id="nav">
-                  <li class="nav-item">
-                      <a class="nav-link" href="./../index.html">INICIO</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="./../pages/nosotros.html">NOSOTROS</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="./../pages/productos.html">PRODUCTOS</a>
-                  </li>                    
-                  <li class="nav-item">
-                      <a class="nav-link" href="./../pages/contacto.html">CONTACTO</a>
-                  </li>
-                  <li class="cart">
-                  <a href="./../pages/carrito.html"><ion-icon name="bag-outline"></ion-icon>  <span>0</span></a>
-                  </li>
-                  <li  class="usuario">
-                    <a  href="./../pages/cuenta.html"><i id="usuario" class="bi bi-person-circle"></i> </a>
-                </li>  
-              </ul>
-          </div>
-      </nav> <!-- nav bar -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button> <!-- burger -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" id="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./../index.html">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./../pages/nosotros.html">NOSOTROS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./../pages/productos.html">PRODUCTOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./../pages/contacto.html">CONTACTO</a>
+                </li>
+                <li id="iniciarSesion" class="iniciarSesion" class="nav-item">
+                    <a class="nav-link" href="./../pages/cuenta.html">INICIAR SESIÓN</a>
+                </li>
+                <li id="cerrarSesion" class="cerrarSesion" class="nav-item">
+                    <a class="nav-link" href="./../pages/cuenta.html">CERRAR SESIÓN</a>
+                </li>
+            
+                <li class="cart">
+                    <a href="./../pages/carrito.html"><ion-icon name="bag-outline"></ion-icon>  <span>0</span></a>
+                </li>
+                      
+            </ul>
+        </div>
+    </nav> <!-- nav bar -->
 
        <!--formulario-->
     <div class="container" id="container">
@@ -94,13 +99,7 @@
                     <div class="btn-field">
                         <div class="btn-layer">
                             <button id="btn_enviar" type="submit" class="btn btn-light">Iniciar sesión  <i class="bi bi-arrow-right" style="height: 10px;"></i></button>
-                        </div>
-                        <div class="btn-pass">
-                            <a href="#">? Olvidé mi contraseña</a>
-                        </div>
-                        <div class="btn-pedido">
-                            <a href="#">Consultar pedido</a>
-                        </div>
+                        </div>                        
                     </div>                   
                </form> <!-- login formulario de iniciar sesión-->
 
