@@ -30,7 +30,6 @@ function drawProducts(arrayProducts) {
             ancla.innerHTML += card;
         })
         //spinner.remove();
-
 } //  Products 
 
 
@@ -214,18 +213,25 @@ function onLoadcartNumbers() {
     } //if
 } //onLoadcartNumbers
 
-function cartNumbers(product) {
+function cartNumbers(product, action) {
     //console.log("El producto elegido es:", product);   
     let productNumbers = localStorage.getItem('cartNumbers');
     productNumbers = parseInt(productNumbers);
 
-    if (productNumbers) {
-        localStorage.setItem('cartNumbers', productNumbers + 1);
+    let cartItems = localStorage.getItem('productosEnCarrito');
+    cartItems = JSON.parse(cartItems);
+
+    if (action) {
+        localStorage.setItem("cartNumbers", productNumbers - 1);
+        document.querySelector('.cart span').textContent = productNumbers - 1;
+        console.log("action running");
+    } else if (productNumbers) {
+        localStorage.setItem("cartNumbers", productNumbers + 1);
         document.querySelector('.cart span').textContent = productNumbers + 1;
     } else {
-        localStorage.setItem('cartNumbers', 1);
+        localStorage.setItem("cartNumbers", 1);
         document.querySelector('.cart span').textContent = 1;
-    } //else
+    }
     setItems(product);
 } //cartNumbers function
 
@@ -233,7 +239,7 @@ function cartNumbers(product) {
 function setItems(product) {
     let cartItems = localStorage.getItem("productosEnCarrito");
     cartItems = JSON.parse(cartItems);
-    console.log("Mis productos en carrito son:", cartItems);
+    //console.log("Mis productos en carrito son:" , cartItems);
     if (cartItems != null) {
         if (cartItems[product.img] == undefined) {
             cartItems = {
@@ -271,6 +277,8 @@ function totalCost(product) {
 
 
 
+
+
 onLoadcartNumbers();
 
 // ******************** Usuario activo en NavBar *******************************
@@ -278,11 +286,24 @@ onLoadcartNumbers();
 let usuario = sessionStorage.getItem("usuarioActivo");
 
 
-let sesionUsuario = document.getElementById("usuario");
+let iniciarSesion = document.getElementById("iniciarSesion");
+let cerrarSesion = document.getElementById("cerrarSesion");
+
+
 console.log(usuario);
 
 if (usuario !== null) {
     console.log(`ingresó`);
-    sesionUsuario.classList.remove("usuario");
-    sesionUsuario.classList.add("usuario-activo");
+    iniciarSesion.classList.remove("iniciarSesion");
+    iniciarSesion.classList.add("iniciarSesionDesactivado");
+
+    cerrarSesion.classList.remove("cerrarSesion");
+    cerrarSesion.classList.add("cerrarSesionActivo");
 }
+
+
+//**************** Cerrar sesion ***************************************/
+
+cerrarSesion.addEventListener("click", function(e) {
+    sessionStorage.clear();
+});
