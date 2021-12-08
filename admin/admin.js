@@ -5,6 +5,7 @@ function inicio() {
 /********************************  para añadir elementos al JSON******************************/
 function saveProduct(e) {
     e.preventDefault();
+    const formulario = document.getElementById('formulario');
     let nombre = document.getElementById("nombre").value;
     let descripcion = document.getElementById("descripcion").value;
     let precio = document.getElementById("precio").value;
@@ -31,7 +32,21 @@ function saveProduct(e) {
         storeList = JSON.parse(valueInLocalStorage)
         storeList.push(newProduct);
         console.log(storeList)
+
+
+
         window.localStorage.setItem("localProduct", JSON.stringify(storeList));
+
+
+
+        new Swal({ //sweetAlert
+                icon: 'success',
+                title: '¡Nuevo traje de pelea cargado!',
+                text: '¡Guardado exitosamente!',
+            }) //sweetAlert
+
+        formulario.reset();
+
     }
 } // save Product
 
@@ -58,7 +73,8 @@ function cloud() {
 
 
 window.onload = function() {
-        console.log("cargo")
+
         document.getElementById('formulario').addEventListener('submit', saveProduct);
         cloud();
+
     } //window
