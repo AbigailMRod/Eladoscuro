@@ -1,6 +1,8 @@
 package com.eladoscuro.model;
 
 
+import com.eladoscuro.utils.SHAUtil;
+
 import javax.persistence.*;
 
 @Entity
@@ -22,7 +24,8 @@ public class usuario { //POJO
         this.nombre = nombre;
         this.telefono = telefono;
         this.email = email;
-        this.password = contraseña;
+        this.setPassword(password);
+//        this.password = contraseña;
     }//constructor
 
     public usuario(){}
@@ -64,6 +67,6 @@ public class usuario { //POJO
     }//getPassword
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = SHAUtil.createHash(password);
     }//setPassword
 }//class usuario
