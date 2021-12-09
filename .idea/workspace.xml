@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b575b3b-b632-4d1a-bc7c-41290c208213" name="Changes" comment="" />
+    <list default="true" id="fd0ec64c-dc7f-45f2-8131-74cb81e9f0c3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="21lKpogpj52HRKcdFD8bMa0nCn8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="221cS6qO7nkVM1TlzDORKwgAR46" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -26,11 +22,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0b575b3b-b632-4d1a-bc7c-41290c208213" name="Changes" comment="" />
-      <created>1638510422228</created>
+      <changelist id="fd0ec64c-dc7f-45f2-8131-74cb81e9f0c3" name="Changes" comment="" />
+      <created>1639008602957</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1638510422228</updated>
+      <updated>1639008602957</updated>
     </task>
     <servers />
   </component>
