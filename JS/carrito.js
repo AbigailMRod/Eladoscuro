@@ -126,7 +126,7 @@ function displayCart(){
         <td>   </td>
         <td>   </td>
         <td>   </td>
-        <td><h3>Total a pagar</h3></td>
+        <td><h3>Total a pagar:</h3></td>
         <td class="text-center"><h3><strong>$${cartCost}.00</strong></h3></td>
         </tr>
         

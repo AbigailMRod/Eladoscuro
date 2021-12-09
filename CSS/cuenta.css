@@ -23,6 +23,35 @@ body {
     margin-bottom: 5%;
 }
 
+ #containerSect{
+    /* position:sticky; */
+    letter-spacing: 0.3em;
+    display: flex;
+    /* height: 50px; */
+    width: 100%;
+    overflow: hidden;
+    /* margin: 30px 0 10px 0; */
+    justify-content: space-between;
+    border-bottom: 200rem;
+    /* padding: 4%; */
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 35px;
+    margin-left: 50px;
+    /* margin-top: 5%; */
+    /* margin-bottom: 5%; */
+    padding: 0;
+    
+} */
+
+.login{
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+
 
 /* BOTONES DE INICIAR SESIÓN Y CREAR CUENTA */
 
@@ -80,10 +109,12 @@ input[type="radio"] {
 
 #signup:checked~label.login {
     color: white;
+    
 }
 
 #login:checked~label.signup {
     color: white;
+    /* text-decoration: underline; */
 }
 
 #login:checked~label.login {
@@ -145,7 +176,7 @@ form .field input:focus::placeholder {
 }
 
 .btn-field {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-row-gap: 40%;
@@ -153,7 +184,16 @@ form .field input:focus::placeholder {
     width: 100%;
     position: relative;
     margin-top: 8%;
-    margin-right: 0%;
+    margin-right: 0%; */
+
+
+
+        /*boton enviar */
+        color: #FF0404;
+        width: 283px;
+        font-weight: bold;
+        border-radius: 0px;
+        font-size: 24px;
 }
 
 form .btn-field .btn-layer {
@@ -217,10 +257,9 @@ form .btn-field .btn-pedido {
 }
 
 .btn {
-    padding: 0px;
+   
     display: block;
     text-align: center;
-    margin-left: 10%;
     font-size: 24px;
     font-weight: 700;
     color: #FF0404;

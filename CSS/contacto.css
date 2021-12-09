@@ -21,18 +21,19 @@
 .form p {
     text-align: center;
     letter-spacing: 0.35em;
+    
 }
+
+
 
 .form-control {
     /*cuadros de introduccion de datos */
     background-color: rgba(0, 0, 0, .5);
     border-color: rgba(0, 0, 0, .5);
-    color: white;
+    color: white;    
 }
 
-:invalid {
-    color: #FF0404;
-}
+
 
 .form {
     /* cuadro de negro de fondo  */
