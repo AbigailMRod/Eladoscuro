@@ -297,7 +297,7 @@ Collage Image
 }
 
 .cart {
-  margin-left: 10vw;
+  margin-left: 0vw;
   display: flex;
   flex-direction: row;
   padding-left: 0;
