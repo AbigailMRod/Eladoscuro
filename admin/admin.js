@@ -1,80 +1,73 @@
-function inicio() {
-    window.location = "./../pages/productos.html";
-} // función para regresar a la página de inicio   
+function inicio(){    
+        window.location= "./../pages/productos.html";
+        }// función para regresar a la página de inicio   
 
-/********************************  para añadir elementos al JSON******************************/
-function saveProduct(e) {
-    e.preventDefault();
+
+
+/********************************  para añadir elementos a la base de datos ******************************/
+const btnAddProducts = document.querySelector("#formulario");
+btnAddProducts.addEventListener("submit", function(evento){
+    evento.preventDefault();
     const formulario = document.getElementById('formulario');
-    let nombre = document.getElementById("nombre").value;
-    let descripcion = document.getElementById("descripcion").value;
-    let precio = document.getElementById("precio").value;
-    let image = document.getElementById("product_img").src; /* ************************** */
-    let category = document.getElementById("categoria").options[document.getElementById("categoria").selectedIndex].value;
+    let nombre= document.getElementById("nombre").value;
+        let descripcion= document.getElementById("descripcion").value;
+        let precio= document.getElementById("precio").value;
+        let imagen = document.getElementById("product_img").src; /* ************************** */
+        let categoria= document.getElementById("categoria").options [document.getElementById("categoria").selectedIndex].value;   
+        let inCart=0; 
 
+        let newProduct=
+            {
+                "nombre": nombre,
+                "descripcion": descripcion,
+                "imagen": imagen,
+                "precio": precio,
+                "categoria_id_categoria": categoria,
+                "inCart":inCart
+            };
+            console.log(newProduct)
 
-    let newProduct = {
-        "model": nombre,
-        "price": precio,
-        "description": descripcion,
-        "img": image,
-        "category": category
-    }; //new Product
-
-    let valueInLocalStorage = window.localStorage.getItem("localProduct");
-    let storeList;
-    if (valueInLocalStorage) {
-        // 1. Traer lo que tengas en el localStorage
-        // 2. Convertirlo de json a un arreglo
-        // 3. hacer push del nuevo objeto
-        // 4. Volver a arreglo a json
-        // 5. Actualizar el item  
-        storeList = JSON.parse(valueInLocalStorage)
-        storeList.push(newProduct);
-        console.log(storeList)
-
-
-
-        window.localStorage.setItem("localProduct", JSON.stringify(storeList));
-
-
-
-        new Swal({ //sweetAlert
-                icon: 'success',
-                title: '¡Nuevo traje de pelea cargado!',
-                text: '¡Guardado exitosamente!',
-            }) //sweetAlert
-
-        formulario.reset();
-
-    }
-} // save Product
-
-// aseguramos que se ejecute el js despues haber cargado todos los recursos
-//externos
-
-function cloud() {
-    let image = document.getElementById("product_img");
-    let myWidget = cloudinary.createUploadWidget({
-        cloudName: 'dtcyppikq',
-        uploadPreset: 'wpicwpay'
-    }, (error, result) => {
-        if (!error && result && result.event === 'success') {
-            // console.log('Imagen subida con éxito', result.info);
-            image.src = result.info.secure_url;
-            // console.log(result.info.secure_url);
+        let url= "http://127.0.0.1:8080/api/productos";
+        fetch(url, {
+        method: "POST",
+        headers: new Headers({
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmlnYWlsLm11bm96cm9kcmlAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE2MzkwNzk0MzAsImV4cCI6MTYzOTExNTQzMH0.SZU-FlaJnAr6MATPbVlGsTFOjlScfMkbTH6y68gRXSc'
+            }),
+        body:  JSON.stringify(newProduct),
+        
+    })
+    .then(data=>{
+        if(data.status==200){
+            console.log("success")
         }
-    });
-    document.querySelector('#upload_widget').addEventListener("click", function() {
-        myWidget.open();
+    })
+    .catch(function(error){
+        console.log(error);
+    })// function erro
+    new Swal({ //sweetAlert
+        icon: 'success',
+        title: '¡Nuevo traje de pelea cargado!',
+        text: '¡Guardado exitosamente!',
+    }) //sweetAlert
 
-    }, false);
-} // para guardar las imágenes en Cloudinary
+formulario.reset();
+})//function submit
 
-
-window.onload = function() {
-
-        document.getElementById('formulario').addEventListener('submit', saveProduct);
-        cloud();
-
-    } //window
+function cloud (){
+    let imagen = document.getElementById("product_img");
+        let myWidget = cloudinary.createUploadWidget({
+            cloudName: 'dtcyppikq',
+            uploadPreset: 'wpicwpay'
+        }, (error, result) => {
+            if (!error && result && result.event === 'success'){
+                // console.log('Imagen subida con éxito', result.info);
+                imagen.src = result.info.secure_url;
+                // console.log(result.info.secure_url);
+            }
+        });
+        document.querySelector('#upload_widget').addEventListener("click", function(){
+            myWidget.open();
+        }, false);
+    }// para guardar las imágenes en Cloudinary
+    cloud();

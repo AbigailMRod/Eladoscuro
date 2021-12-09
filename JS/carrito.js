@@ -92,26 +92,26 @@ function displayCart(){
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
         <tr>
-            <th scope="row"><img class="media-object" src="${item.img}" ></th> 
-            <td class="description">${item.description}</td>
+            <th scope="row"><img class="media-object" src="${item.imagen}" ></th> 
+            <td class="description">${item.descripcion}</td>
             
             
             <td>
                 <div class="quantity">
-                    <ion-icon class="decrease" name="remove-circle" id="${item.img}"></ion-icon>
+                    <ion-icon class="decrease" name="remove-circle" id="${item.imagen}"></ion-icon>
                         <span>${item.inCart}</span>
-                    <ion-icon class="increase" name="add-circle" id="${item.img}"></ion-icon>
+                    <ion-icon class="increase" name="add-circle" id="${item.imagen}"></ion-icon>
                 </div>
             </td>
 
 
-            <td class="precio">$${item.price}.00</td>
-            <td><strong>$${item.inCart*item.price}.00</strong></td>
+            <td class="precio">$${item.precio}.00</td>
+            <td><strong>$${item.inCart*item.precio}.00</strong></td>
             
             
             <td>         
             <button type="button"  class="btn btn-danger" > 
-                <span class="remove" id="${item.img}" > Remover </span>     
+                <span class="remove" id="${item.imagen}" > Remover </span>     
             </button>
             </td> 
 
