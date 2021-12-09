@@ -7,7 +7,7 @@
   padding: 0;
 }
 body {
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     color: #444444;
   }
 
@@ -25,7 +25,7 @@ body {
 #nav a {
     color: #FF0404;
     font-weight: 600;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.2em;
 }/*estilo de letras de la navbar*/
 
 
