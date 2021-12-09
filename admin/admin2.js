@@ -209,6 +209,7 @@ let usuario = sessionStorage.getItem("usuarioActivo");
 
 let iniciarSesion = document.getElementById("iniciarSesion");
 let cerrarSesion = document.getElementById("cerrarSesion");
+let icono = document.getElementById("mascara");
 
 
 console.log(usuario);
@@ -217,9 +218,12 @@ if (usuario !== null) {
     console.log(`ingresó`);
     iniciarSesion.classList.remove("iniciarSesion");
     iniciarSesion.classList.add("iniciarSesionDesactivado");
+    
 
     cerrarSesion.classList.remove("cerrarSesion");
     cerrarSesion.classList.add("cerrarSesionActivo");
+    icono.classList.remove("cerrarSesion");
+    icono.classList.add("cerrarSesionActivo");
 }
 
 
@@ -228,6 +232,7 @@ if (usuario !== null) {
 cerrarSesion.addEventListener("click", function(e) {
     sessionStorage.clear();    
 });
+
 
 
 
