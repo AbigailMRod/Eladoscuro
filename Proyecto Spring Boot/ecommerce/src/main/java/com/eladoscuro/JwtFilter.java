@@ -27,7 +27,7 @@ public class JwtFilter extends GenericFilterBean {
 
         String authHeader = httpServletRequest.getHeader("authorization");
 
-        if ( (httpServletRequest.getMethod().equals("POST")) ||
+        if ( //(httpServletRequest.getMethod().equals("POST")) ||
                 (httpServletRequest.getMethod().equals("PUT"))||
                 (httpServletRequest.getMethod().equals("DELETE"))||
                 (httpServletRequest.getMethod().equals("GET")) ) {

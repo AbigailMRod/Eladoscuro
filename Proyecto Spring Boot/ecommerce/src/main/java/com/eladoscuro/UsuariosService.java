@@ -46,6 +46,7 @@ public class UsuariosService {
     }//addUsuario
 
 
+
     @Transactional
     public void updateUsuario(Long id, String originalPassword, String newPassword, String telefono, String nombre, String email){
         usuario usr = usuariosRepository.findById(id).
@@ -79,5 +80,7 @@ public class UsuariosService {
         usr.setPassword(newPassword);
 
     }//updateUsuario
+
+
 
 }//UsuarioService

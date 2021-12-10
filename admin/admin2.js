@@ -309,7 +309,6 @@ if (usuario !== null) {
 //**************** Cerrar sesion ***************************************/
 
 cerrarSesion.addEventListener("click", function(e) {
-<<<<<<< HEAD
     sessionStorage.clear();    
 });
 
@@ -317,7 +316,3 @@ cerrarSesion.addEventListener("click", function(e) {
 
 
 
-=======
-    sessionStorage.clear();
-});
->>>>>>> developer

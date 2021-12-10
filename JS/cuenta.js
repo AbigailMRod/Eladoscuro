@@ -1,3 +1,183 @@
+/*INICIO  Crear cuenta */
+
+/*Tomamos los elementos del HTML */
+
+
+const $formulario = document.querySelector("#formulario");
+const $nombre = document.querySelector("#nombre");
+const $telefono= document.querySelector("#telefono");
+const $email= document.querySelector("#email");
+const $password= document.querySelector("#password");
+const $password2= document.querySelector("#password2");
+
+
+
+$formulario.addEventListener('submit', e =>{
+    // Para que no se envie el formulario se implementa el preventDefaul
+    e.preventDefault();
+
+    // Se obtiene el valor de cada input
+    const nombre = $nombre.value;
+    const telefono = $telefono.value;
+    const email = $email.value;
+    const password= $password.value;
+    const password2= $password2.value;
+
+    
+
+    //Con que solo no se cumpla la condicion  puedo hacer el fetch 
+    if(email !=""){
+        //uRL a la cual voy a hacer una peticion
+    const endpoint = "http://127.0.0.1:8081/api/usuarios";
+    // Estatus 200 -> ok 
+    console.log(`Estado de la promesa es : ${endpoint}`);
+     fetch(endpoint,{
+         method: 'POST',
+         //Convertimos el objeto en una cadena de texto
+         body:JSON.stringify({
+             nombre,
+             telefono,
+             email,
+             password
+
+         }),
+         headers:{
+            'Content-type': 'application/json'
+         }
+     }).then(res=>{
+        
+         console.info("Save");
+         formulario.reset();
+
+                 new Swal({ //sweetAlert
+                         icon: 'success',
+                         title: '1,2,3 ¡Estás registrado! Para entrar al cuadrilatero inicia sesión',
+                         text: '¡Enviado exitosamente!',
+                     }) //sweetAlert
+                 setTimeout(function() { window.location.href = "./../index.html" }, 5000); // timeout;
+     })
+    }else{
+             document.getElementById('grupo-enviar').classList.add('was-validated');
+    }
+    
+    
+     //Funcion reutilizable para validar cada campo 
+     //Se usa las expresiones, los inputs y el campo 
+     // *****campo manda a llamar al ultimo elemtno de validarCampo en el switch****
+     const validarCampo = (expresion, input, campo) => {
+         if (expresion.test(input.value)) {
+             document.getElementById(`grupo-${campo}`).classList.remove('was-invalidated');
+             document.getElementById(`grupo-${campo}`).classList.add('was-validated');
+             setTimeout(() => {
+                 document.getElementById(`grupo-${campo}`).classList.remove('was-validated');
+             }, 3000);
+             campos[campo] = true;
+    
+         } else {
+             document.getElementById(`grupo-${campo}`).classList.remove('was-validated');
+             document.getElementById(`grupo-${campo}`).classList.add('was-invalidated');
+             campos[campo] = false;
+         } //if else
+     }; //validarCampo
+
+});
+
+// Iniciar Sesión ****************
+let submitBtn = document.getElementById("btn_enviar");
+
+// Click Iniciar sesión
+submitBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    let emailLogin = document.getElementById("input_email").value;
+    let passwordLogin = document.getElementById("input_password").value;
+
+    let userInfo = {
+        "email": emailLogin,
+        "password": passwordLogin,
+    };
+
+    if ((emailLogin == "") && (passwordLogin == "")) {
+        console.log("Ambos vacíos");
+
+        document.getElementById("formulario__mensaje_correo").classList.remove("formulario__mensaje");
+        document.getElementById("formulario__mensaje_correo").classList.add("formulario__mensaje-activo");
+
+        document.getElementById("formulario__mensaje_contraseña").classList.remove("formulario__mensaje");
+        document.getElementById("formulario__mensaje_contraseña").classList.add("formulario__mensaje-activo");
+
+
+        setTimeout(() => {
+            document.getElementById("formulario__mensaje_correo").classList.remove("formulario__mensaje-activo");
+            document.getElementById("formulario__mensaje_correo").classList.add("formulario__mensaje");
+
+            document.getElementById("formulario__mensaje_contraseña").classList.remove("formulario__mensaje-activo");
+            document.getElementById("formulario__mensaje_contraseña").classList.add("formulario__mensaje");
+
+        }, 5000);
+
+        // Email vacío
+    } else if (emailLogin == "") {
+        console.log("email vacío");
+        document.getElementById("formulario__mensaje_correo").classList.remove("formulario__mensaje");
+        document.getElementById("formulario__mensaje_correo").classList.add("formulario__mensaje-activo");
+        setTimeout(() => {
+            document.getElementById("formulario__mensaje_correo").classList.remove("formulario__mensaje-activo");
+            document.getElementById("formulario__mensaje_correo").classList.add("formulario__mensaje");
+
+        }, 5000);
+
+        // Password vacío
+    } else if (passwordLogin == "") {
+        console.log("paswword vacío");
+        document.getElementById("formulario__mensaje_contraseña").classList.remove("formulario__mensaje");
+        document.getElementById("formulario__mensaje_contraseña").classList.add("formulario__mensaje-activo");
+        setTimeout(() => {
+            document.getElementById("formulario__mensaje_contraseña").classList.remove("formulario__mensaje-activo");
+            document.getElementById("formulario__mensaje_contraseña").classList.add("formulario__mensaje");
+
+        }, 5000);
+
+    } else {    
+
+    const endpoint = "http://127.0.0.1:8081/api/login/clientes";
+    // Estatus 200 -> ok 
+    console.log(`Estado de la promesa es : ${endpoint}`);
+    console.log(JSON.stringify(userInfo));
+    fetch(endpoint,{
+        method: 'POST',
+        //Convertimos el objeto en una cadena de texto
+          body:JSON.stringify(userInfo),
+        headers:{
+            'Content-type': 'application/json'
+         }
+     }).then(res=>{
+         res.text().then(function(text){
+            if(text == "true") {            
+                console.log("bienvenido");
+                      Swal.fire(
+                          '¡Bienvenido!',
+                          `${userInfo.email}`,
+                          'success'
+                      ); // Sweetalert
+                      setTimeout(function() { window.location.href = "./../index.html";
+                     sessionStorage.setItem("usuarioActivo", userInfo.email); }, 1000); // timeout
+           } else {
+               console.log(res.body);
+               console.log(res.body.locked);
+                   console.log("Contraseña o emial incorrectos");
+                      Swal.fire(
+                          '¡Nombre de usuario o contraseña incorrectos!',
+                          "",
+                          'error')
+                      }//else
+         });
+        
+            })//then
+    }//else
+})//EventListener
+
+
 // Inicialización de constantes
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
@@ -57,6 +237,7 @@ const validarCampo = (expresion, input, campo) => {
         campos[campo] = false;
     } //if else
 }; //validarCampo
+    
 
 
 //Función para validar que el password coincida en ambos campos
@@ -167,105 +348,7 @@ x = [
 localStorage.setItem("userInfo", JSON.stringify(x));
 
 
-// --------------- INICIO DE SESION  --------------
 
-// Información de localStorage
-let userList = JSON.parse(localStorage.getItem("userInfo")); //nuevoUsusario
-
-let submitBtn = document.getElementById("btn_enviar");
-
-// Click Iniciar sesión
-submitBtn.addEventListener("click", function(e) {
-    e.preventDefault();
-
-    let emailLogin = document.getElementById("input_email").value;
-    let passwordLogin = document.getElementById("input_password").value;
-
-    // Validar campos
-
-    // Ambos campos vacíos
-    if ((emailLogin == "") && (passwordLogin == "")) {
-        console.log("Ambos vacíos");
-
-        document.getElementById("formulario__mensaje_correo").classList.remove("formulario__mensaje");
-        document.getElementById("formulario__mensaje_correo").classList.add("formulario__mensaje-activo");
-
-        document.getElementById("formulario__mensaje_contraseña").classList.remove("formulario__mensaje");
-        document.getElementById("formulario__mensaje_contraseña").classList.add("formulario__mensaje-activo");
-
-
-        setTimeout(() => {
-            document.getElementById("formulario__mensaje_correo").classList.remove("formulario__mensaje-activo");
-            document.getElementById("formulario__mensaje_correo").classList.add("formulario__mensaje");
-
-            document.getElementById("formulario__mensaje_contraseña").classList.remove("formulario__mensaje-activo");
-            document.getElementById("formulario__mensaje_contraseña").classList.add("formulario__mensaje");
-
-        }, 5000);
-
-        // Email vacío
-    } else if (emailLogin == "") {
-        console.log("email vacío");
-        document.getElementById("formulario__mensaje_correo").classList.remove("formulario__mensaje");
-        document.getElementById("formulario__mensaje_correo").classList.add("formulario__mensaje-activo");
-        setTimeout(() => {
-            document.getElementById("formulario__mensaje_correo").classList.remove("formulario__mensaje-activo");
-            document.getElementById("formulario__mensaje_correo").classList.add("formulario__mensaje");
-
-        }, 5000);
-
-        // Password vacío
-    } else if (passwordLogin == "") {
-        console.log("paswword vacío");
-        document.getElementById("formulario__mensaje_contraseña").classList.remove("formulario__mensaje");
-        document.getElementById("formulario__mensaje_contraseña").classList.add("formulario__mensaje-activo");
-        setTimeout(() => {
-            document.getElementById("formulario__mensaje_contraseña").classList.remove("formulario__mensaje-activo");
-            document.getElementById("formulario__mensaje_contraseña").classList.add("formulario__mensaje");
-
-        }, 5000);
-
-    } else {
-
-        // Ambos campos llenos        
-        let userInfo = {
-            "email": emailLogin,
-            "password": passwordLogin,
-        };
-
-        // validar correo y contraseña        
-        let validInfo = false;
-        let index = "";
-        for (let i = 0; i < userList.length; i++) {
-            if ((userInfo.email == userList[i].email) && (userInfo.password == userList[i].password)) {
-                validInfo = true;
-                index = i;
-            }; // if validar correo y contraseña     
-        }; // for validar correo y contraseña
-
-        switch (validInfo) {
-            case true:
-                console.log("bienvenido");
-                Swal.fire(
-                    '¡Bienvenido!',
-                    `${userInfo.email}`,
-                    'success'
-                ); // Sweetalert
-                setTimeout(function() { window.location.href = "./../index.html";
-                    sessionStorage.setItem("usuarioActivo", userInfo.email); }, 1000); // timeout
-                break;
-            case false:
-                console.log("Contraseña o emial incorrectos");
-                Swal.fire(
-                    '¡Nombre de usuario o contraseña incorrectos!',
-                    "",
-                    'error'
-                ); // Sweetalert                   
-        } // Switch para validInfo            
-
-    }; // else Ambos campos llenos 
-
-}); // event listener
 
 
 
