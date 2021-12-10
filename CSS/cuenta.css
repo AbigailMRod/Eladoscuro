@@ -18,11 +18,33 @@ body {
     color: white;
     padding: 4%;
     overflow: hidden;
-    height: 85%;
     margin: 0 auto;
     margin-top: 5%;
     margin-bottom: 5%;
 }
+
+ #containerSect{ 
+    letter-spacing: 0.3em;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    justify-content: space-between;
+    border-bottom: 200rem;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 35px;
+    margin-left: 50px;
+    padding: 0;
+    
+} */
+
+.login{
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
 
 
 /* BOTONES DE INICIAR SESIÓN Y CREAR CUENTA */
@@ -44,7 +66,7 @@ body {
     font-size: 25px;
     font-weight: 500;
     text-align: center;
-    line-height: 48px;
+    line-height: 24px;
     cursor: pointer;
     z-index: 1;
     transition: all 0.6s ease;
@@ -81,11 +103,12 @@ input[type="radio"] {
 
 #signup:checked~label.login {
     color: white;
+    
 }
 
 #login:checked~label.signup {
     color: white;
-}
+    }
 
 #login:checked~label.login {
     cursor: default;
@@ -146,15 +169,12 @@ form .field input:focus::placeholder {
 }
 
 .btn-field {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-row-gap: 40%;
-    height: 50px;
-    width: 100%;
-    position: relative;
-    margin-top: 8%;
-    margin-right: 0%;
+        /*boton enviar */
+        color: #FF0404;
+        width: 283px;
+        font-weight: bold;
+        border-radius: 0px;
+        font-size: 24px;
 }
 
 form .btn-field .btn-layer {
@@ -218,10 +238,9 @@ form .btn-field .btn-pedido {
 }
 
 .btn {
+   
     display: block;
     text-align: center;
-    width: 80%;
-    margin-left: 10%;
     font-size: 24px;
     font-weight: 700;
     color: #FF0404;
@@ -302,15 +321,7 @@ form .btn-field .btn-pedido {
     margin: 0;
 }
 
-/* .usuario {
-    color: #ff04047e;
-}
 
-.usuario-activo {
-    color: #7CFC00;
-} */
-
-/* #7CFC00 */
 
 
 

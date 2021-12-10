@@ -31,7 +31,7 @@
 <body>
 
     <nav class="navbar sticky-top navbar-expand-lg navbar-light">
-        <img src="./../img/Navbar/LOGO.svg" class="d-inline-block align-top" alt="image logo">
+        <a href="./../index.html"><img src="./../img/Navbar/LOGO.svg" class="d-inline-block align-top" alt="image logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button> <!-- burger -->
@@ -53,7 +53,10 @@
                     <a class="nav-link" href="./../pages/cuenta.html">INICIAR SESIÓN</a>
                 </li>
                 <li id="cerrarSesion" class="cerrarSesion" class="nav-item">
-                    <a class="nav-link" href="./../pages/cuenta.html">CERRAR SESIÓN</a>
+                    <a class="nav-link" href="./../pages/cuenta.html">CERRAR SESIÓN</a>                      
+                </li>
+                <li id="mascara" class="cerrarSesion" class="nav-item">
+                  <a href="./../pages/productos.html"><img style="height: 30px; width: 30px; padding-top: 8px;" src="./../img/Navbar/logo iniciar_sesion-02-01.svg" alt=""></a>
                 </li>
             
                 <li class="cart">
@@ -66,36 +69,41 @@
 
        <!--formulario-->
     <div class="container" id="container">
-        <div class="form-container">
-            <div class="slide-controls">
-                <input type="radio" name="slide" id="login" checked>
-                <input type="radio" name="slide" id="signup">
-                <label for="login" class="slide login">INICIAR SESIÓN</label>
-                <label for="signup" class="slide signup">CREAR CUENTA</label>
-                <div class="slider-tab"></div>
-            </div>
+        <div class="form-container" >
 
+            <div id="containerSect" >
+                    <input type="radio" name="slide" id="login" checked >
+                    <input type="radio" name="slide" id="signup">
+                    <label for="login" class="slide login" > INICIAR SESIÓN</label>
+                    <label for="signup" class="slide signup">CREAR CUENTA</label>
+                    <div class="slider-tab" ></div>
+            </div>
+            
             <div class="form-inner">
+            
 
                 <!-- FORMULARIO DE INICIAR SESIÓN -->
                 <form action="#" class="login" class="needs-validation"  novalidate>
                     <div class="field" id="field-email">
                         <label for="email" class="form-label" id="emailI" name="emailI" type="text"> Correo electrónico *</label>
-                            <input type="text" id="input_email" class="form-control" placeholder="ejemplo@mail.com" required>
+                            <input type="text" id="input_email" class="form-control" placeholder="eladoscuro@gmail.com" required>
                             <div class="formulario__mensaje" id="formulario__mensaje_correo">
                                 <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> introduce un correo electrónico.</p>
                             </div>
                     </div> <!-- field email-->
                     <br/>
+                    <br>
                     <div class="field" id="field-contraseña">
                        <label for="password" class="form-label"> Contraseña *</label>
-                       <input type="password" id="input_password" class="form-control" placeholder="Contraseña" required>
+                       <input type="password" id="input_password" class="form-control" placeholder="Confirma tu pase a las gradas" required>
                        <div class="formulario__mensaje" id="formulario__mensaje_contraseña">
                         <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> introduce una contraseña. </p>
                     </div>
                                                      
                     </div> <!-- field contraseña-->
                     <br/>
+                    <br>
+                    
                     <div class="btn-field">
                         <div class="btn-layer">
                             <button id="btn_enviar" type="submit" class="btn btn-light">Iniciar sesión  <i class="bi bi-arrow-right" style="height: 10px;"></i></button>
@@ -107,21 +115,21 @@
                 <form action="#" class="signup formulario" id="formulario" novalidate>
                     <div class="field" id="grupo-nombre">
                         <label for="nombre" class="form-label"> Nombre *</label>
-                        <input id="nombre" name="nombre" type="text" class="form-control" placeholder="" required>
+                        <input id="nombre" name="nombre" type="text" class="form-control" placeholder="Eladoscuro" required>
                         <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
                         <div class="alert alert-danger invalid-feedback"  role="alert">Este campo requiere mínimo 3 letras</div>
                     </div>
 
                     <div class="field " id="grupo-telefono">
                         <label for="telefono" class="form-label"> Teléfono *</label>
-                        <input id="telefono" name="telefono" type="text" class="form-control" placeholder=""required>
+                        <input id="telefono" name="telefono" type="text" class="form-control" placeholder="0123456789"required>
                         <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
                         <div class="alert alert-danger invalid-feedback"  role="alert">por favor solo ingresa 10 números</div>
                     </div>
 
                     <div class="field" id="grupo-email">
                         <label for="email" class="form-label"> Correo electrónico *</label>
-                        <input id="email" name="email" type="text" class="form-control" placeholder="ejemplo@mail.com" required>
+                        <input id="email" name="email" type="text" class="form-control" placeholder="eladoscuro@gmail.com" required>
                         <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
                         <div class="alert alert-danger invalid-feedback"  role="alert">Ingresa un correo válido</div>
                     </div>
@@ -135,11 +143,12 @@
 
                     <div class="field" id="grupo-password2">
                         <label for="password2" class="form-label"> Repetir contraseña *</label>
-                        <input type="password" class="form-control" id="password2" name="password2" placeholder="Contraseña" required>
+                        <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirma tu pase a las gradas" required>
                         <div class=" alert alert-success valid-feedback"  role="alert">¡Muy bien!</div>
                         <div class="alert alert-danger invalid-feedback"  role="alert">La contraseña debe de coincidir</div>
                     </div>
 
+                    <br>
                     <div class="btn-field">
                         <div class="btn-layer">
                             <button id="btn_enviar_registro" type="submit" class="btn btn-light">Registrarse  <i class="bi bi-arrow-right" style="height: 10px;"></i></button>
@@ -157,9 +166,9 @@
     <footer id="footer">
         <div class="container">
             <div class="social-links">
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100074238384668" target="_blank" class="facebook"><i class="bxl-facebook"></i></a>
+                <a href="https://twitter.com/ELADOSCURO_9"  target="_blank" class="twitter"><i class="bxl-twitter"></i></a>
+                <a href="https://www.instagram.com/eladoscuro9/" target="_blank" class="instagram"><i class="bxl-instagram"></i></a>                    
             </div>             
             <div class="copyright">
                 &copy; Copyright <strong><span>ELADOSCURO</span></strong>. All Rights Reserved

@@ -5,7 +5,7 @@ function drawProducts(arrayProducts) {
     arrayProducts.forEach(function(element) {
             // Productsase.forEach(function (element) {
             let etiqueta = "list-items";
-            let etiquetaTalla = '<p class="card-text"> Tallas: XS, S, M, L XL </p>\n';
+            let etiquetaTalla = '<p class="card-text"> Unitalla </p>\n';
 
             if (element.category == "Posters") {
                 etiqueta = "list-items3";
@@ -125,7 +125,7 @@ window.onload = function() {
             {
                 model: 'Lucha libre',
                 img: './../img/Index/poster_1.jpg',
-                description: 'Poster tamaño carta',
+                description: 'Póster tamaño carta',
                 price: 50.00,
                 category: "Posters",
                 inCart: 0
@@ -133,7 +133,7 @@ window.onload = function() {
             {
                 model: 'Lucha libre + amor',
                 img: './../img/Index/poster_2.jpg',
-                description: 'Poster decorativo',
+                description: 'Póster decorativo',
                 price: 75.00,
                 category: "Posters",
                 inCart: 0
@@ -141,7 +141,7 @@ window.onload = function() {
             {
                 model: 'Lucha libre',
                 img: './../img/Index/poster_3.jpg',
-                description: 'Poster decorativo',
+                description: 'Póster decorativo',
                 price: 75.00,
                 category: "Posters",
                 inCart: 0
@@ -149,7 +149,7 @@ window.onload = function() {
             {
                 model: 'Amor a la mexicana',
                 img: './../img/Index/poster_4.jpg',
-                description: 'Poster decorativo',
+                description: 'Póster decorativo',
                 price: 75.00,
                 category: "Posters",
                 inCart: 0
@@ -288,6 +288,7 @@ let usuario = sessionStorage.getItem("usuarioActivo");
 
 let iniciarSesion = document.getElementById("iniciarSesion");
 let cerrarSesion = document.getElementById("cerrarSesion");
+let icono = document.getElementById("mascara");
 
 
 console.log(usuario);
@@ -296,9 +297,12 @@ if (usuario !== null) {
     console.log(`ingresó`);
     iniciarSesion.classList.remove("iniciarSesion");
     iniciarSesion.classList.add("iniciarSesionDesactivado");
+    
 
     cerrarSesion.classList.remove("cerrarSesion");
     cerrarSesion.classList.add("cerrarSesionActivo");
+    icono.classList.remove("cerrarSesion");
+    icono.classList.add("cerrarSesionActivo");
 }
 
 
