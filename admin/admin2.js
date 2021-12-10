@@ -17,7 +17,7 @@ productosPromise
             let etiqueta= "";
             if(element.categoria_id_categoria==1){
                 etiqueta= "list-items";
-                etiquetaTalla = '<p class="card-text"> Tallas: XS, S, M, L XL </p>\n';
+                etiquetaTalla = '<p class="card-text"> Unitalla</p>\n';
             } else if(element.categoria_id_categoria==2){
                 etiqueta="list-items2";
                 etiquetaTalla = "<p></p> \n"; 
