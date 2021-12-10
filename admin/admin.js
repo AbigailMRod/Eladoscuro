@@ -14,7 +14,6 @@ btnAddProducts.addEventListener("submit", function(evento){
         let precio= document.getElementById("precio").value;
         let imagen = document.getElementById("product_img").src; /* ************************** */
         let categoria= document.getElementById("categoria").options [document.getElementById("categoria").selectedIndex].value;   
-        let inCart=0; 
 
         let newProduct=
             {
@@ -22,8 +21,7 @@ btnAddProducts.addEventListener("submit", function(evento){
                 "descripcion": descripcion,
                 "imagen": imagen,
                 "precio": precio,
-                "categoria_id_categoria": categoria,
-                "inCart":inCart
+                "categoria_id_categoria": categoria
             };
             console.log(newProduct)
 
@@ -32,7 +30,7 @@ btnAddProducts.addEventListener("submit", function(evento){
         method: "POST",
         headers: new Headers({
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmlnYWlsLm11bm96cm9kcmlAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE2MzkwNzk0MzAsImV4cCI6MTYzOTExNTQzMH0.SZU-FlaJnAr6MATPbVlGsTFOjlScfMkbTH6y68gRXSc'
+            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmlnYWlsLm1yb2RyaWd1ZXoyMUBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTYzOTA5MzQ3NiwiZXhwIjoxNjM5MTI5NDc2fQ.MXMXaqAZ7jZgJArRlz1OYHLI6yDojkK1fvIFNe8auog'
             }),
         body:  JSON.stringify(newProduct),
         

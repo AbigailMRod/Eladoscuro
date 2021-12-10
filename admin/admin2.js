@@ -84,13 +84,12 @@ function agregarCarrito(objProductoStr){
 
 function onLoadcartNumbers(productNumbers) {
     console.log(productNumbers);
-
     // let productNumbers = localStorage.getItem("cartNumbers");
-    // if (productNumbers) {
+    if (productNumbers) {
         document.querySelector('.cart span').textContent = productNumbers;
         window.localStorage.setItem("cartNumbers", productNumbers);
 
-    // } //if
+    } //if
 } //onLoadcartNumbers
 
 function cartNumbers(product, action) {
@@ -189,15 +188,5 @@ if (usuario !== null) {
 //**************** Cerrar sesion ***************************************/
 
 cerrarSesion.addEventListener("click", function(e) {
-<<<<<<< HEAD
-    sessionStorage.clear();    
-});
-
-
-
-
-
-=======
     sessionStorage.clear();
 });
->>>>>>> developer

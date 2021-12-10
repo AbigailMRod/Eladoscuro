@@ -34,6 +34,7 @@ public class ProductosService {
     }// delete products
 
     public void addProducts (producto producto){
+        System.out.println(producto);
         Optional<producto> prodByName= productosRepository.findByName(producto.getNombre());
         if (prodByName.isPresent()){
             throw new IllegalStateException("El producto con el nombre [" +producto.getNombre() +"] ya existe");
