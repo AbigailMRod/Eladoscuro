@@ -25,6 +25,7 @@ public class producto {//POJOs
         this.CATEGORIA_id_categoria = CATEGORIA_id_categoria;
     }// constructor
 
+
     public producto() {
     }// cosntructor vacío
 
@@ -76,4 +77,3 @@ public class producto {//POJOs
         this.CATEGORIA_id_categoria = CATEGORIA_id_categoria;
     }
 }// class producto
-

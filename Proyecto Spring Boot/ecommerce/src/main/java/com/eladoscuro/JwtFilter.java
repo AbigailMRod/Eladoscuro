@@ -27,14 +27,22 @@ public class JwtFilter extends GenericFilterBean {
 
         String authHeader = httpServletRequest.getHeader("authorization");
 
-        if ( //(httpServletRequest.getMethod().equals("POST")) ||
-                (httpServletRequest.getMethod().equals("PUT"))||
-                (httpServletRequest.getMethod().equals("DELETE"))||
-                (httpServletRequest.getMethod().equals("GET")) ) {
-            if  ( (authHeader== null ) || (! authHeader.startsWith("Bearer ")) ) {
-                throw new ServletException("1. Invalid Token !");
-            } // == null ! Bearer
-            String token = authHeader.substring(7);
+        httpServletRequest.getRequestURL();
+        if (((httpServletRequest.getRequestURL().toString().contains("/api/users")) &&
+                ((httpServletRequest.getMethod().equals("POST") ||
+                        (httpServletRequest.getMethod().equals("PUT")) ||
+                        (httpServletRequest.getMethod().equals("GET")) ||
+                        (httpServletRequest.getMethod().equals("DELETE")))) ||
+                (httpServletRequest.getRequestURL().toString().contains("/api/productos")) &&
+                        ((httpServletRequest.getMethod().equals("POST") ||
+                                (httpServletRequest.getMethod().equals("PUT")) ||
+                                (httpServletRequest.getMethod().equals("DELETE"))))))
+        {
+
+            if ((authHeader == null) || (!authHeader.startsWith("Bearer "))){
+                throw new ServletException("1. Invalid Token!");
+            }// if == null ! Bearer
+            String token= authHeader.substring(7); // despues del Bearer, por eso el 7
             try  {
                 Claims claims = Jwts.parser().setSigningKey("this-secret-is-not-very-secret-99")
                         .parseClaimsJws(token).getBody();
@@ -42,7 +50,7 @@ public class JwtFilter extends GenericFilterBean {
             }  catch ( SignatureException | MalformedJwtException e ) {
                 throw new ServletException( "2. Invalid Token!" );
             }//catch
-        }//POST - PUT - DELETE - GET
+        }// PST, PUT, GET, DELETE
         chain.doFilter(httpServletRequest, httpServletResponse);
     }//doFilter
 }//JwtFilter
