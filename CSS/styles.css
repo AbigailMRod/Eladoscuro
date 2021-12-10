@@ -7,7 +7,7 @@
   padding: 0;
 }
 body {
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     color: #444444;
   }
 
@@ -25,7 +25,7 @@ body {
 #nav a {
     color: #FF0404;
     font-weight: 600;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.2em;
 }/*estilo de letras de la navbar*/
 
 
@@ -282,3 +282,65 @@ Collage Image
   .cart{
     margin-top: 8px;
 }
+
+/* Usuario */
+.usuario {
+  color: #ff04047e;
+  margin-top: 8px;
+  margin-left: 3vw;
+}
+
+.usuario-activo {
+  color: #7CFC00;
+  margin-top: 8px;
+  margin-left: 3vw;  
+}
+
+.cart {
+  margin-left: 0vw;
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+}
+
+/* Media Querry para eliminar margen en Hamburguesa */
+
+@media screen and  (max-width:1000px){
+  .usuario-activo {
+    color: #7CFC00;
+    margin-top: 8px;
+    margin-left: 0vw;
+  }
+
+  .usuario {
+    color: #ff04047e;
+    margin-top: 8px;
+    margin-left: 0vw;
+  }
+
+  .cart {
+    margin-left: 0vw;
+  }
+
+} /* media querrys */
+
+/* Cerrar Sesión */
+
+.cerrarSesion {
+  display: none;
+}
+
+/* .cerrarSesionActivo {
+  display: none;
+} */
+
+/* .iniciarSesion {
+
+} */
+
+.iniciarSesionDesactivado {
+  display: none;
+}
+
+
+

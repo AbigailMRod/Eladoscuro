@@ -1,89 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" href="./../img/logoPag.svg">
-        
-  <!-- Fuente Roboto-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Styles CSS -->
-<link rel="stylesheet" href="./../admin/admin.css">
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="./../img/logoPag.svg">
 
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <!-- Fuente Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
 
-<title> Administrador </title>
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="./../admin/admin.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+
+    <title> Administrador </title>
 </head>
 
 <body>
     <section class="container-fluid" id="containerF">
         <div class="form_form">
-    <form action="#" class="form" id="formulario" method="post">
-        <p> - ADMINISTRADOR -</p>
-        <div class="form-group" id="grupo-nombre">
-            <label for="categoria" class="form-label">Categoría:</label>
-            <select id="categoria" name="categoria" class="form-control"> <!-- onchange="VerificarMenu()" -->
+            <form action="#" class="form" id="formulario" method="post">
+                <p> - ADMINISTRADOR -</p>
+                <div class="form-group" id="grupo__nombre">
+                    <label for="categoria" class="form-label">Categoría:</label>
+                    <select id="categoria" name="categoria" class="form-control"> <!-- onchange="VerificarMenu()" -->
               <option selected >Elegir. . .</option>
               <option>Playeras & Sudaderas</option>            
               <option>Stickers</option>
               <option>Posters</option>            
-            </select>                       
-          </div><!-- Categoria -->
+            </select>
 
-          <div class="form-group">
-            <label for="nombre">Nombre del producto:</label>
-            <input type="text" class="form-control" id="nombre" required>            
-          </div><!-- Nombre -->
+                </div>
+                <!-- Categoria -->
 
-          <div class="form-group">
-            <label for="descripcion">Descripción:</label>
-            <textarea class="form-control" id="descripcion" required></textarea>
-          </div>  <!-- Descripción -->
+                <div class="form-group " id="grupo__nombre formulario">
+                    <label for="nombre">Nombre del producto:</label>
+                    <input type="text" class="form-control" id="nombre">
 
-          <div class="form-group">
-            <label for="precio">Precio:</label>
-            <input type="number" class="form-control" id="precio"  required>
-          </div> <!-- Precio -->  
+                </div>
+                <!-- Nombre -->
 
-          <div class="form-group" > 
-            <div class="row">
-              <div class="col-6" id="button_widget">
-                <button id="upload_widget" class="btn btn-primary" type="button"> Subir foto</button>
-              </div> <!-- col2 -->
-              <div class="col-6 d-flex justify-content-center">
-                <img class="img_new-shirt" src="./../img/Index/shirt.jpg" alt="product_img" id="product_img">
-              </div> <!-- col1 -->
-          </div>
-        </div> <!-- Imagen -->
+                <div class="form-group " id="grupo__nombre formulario">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea class="form-control" id="descripcion" required></textarea>
 
-        <input  id="btn_enviar" type="submit" class="btn btn-primary"></input>     
-        <input type="button" id="btn2" class="btn btn-primary" value="Inicio" onclick="inicio()"> 
-    </form>
-    </div>
-    </section> <!-- sección del formulario -->
+                </div>
+                <!-- Descripción -->
+
+                <div class="form-group " id="grupo__nombre formulario">
+                    <label for="precio">Precio:</label>
+                    <input type="number" class="form-control" id="precio" required>
+
+                </div>
+                <!-- Precio -->
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-6" id="button_widget">
+                            <button id="upload_widget" class="btn btn-primary" type="button"> Subir foto</button>
+                        </div>
+                        <!-- col2 -->
+                        <div class="col-6 d-flex justify-content-center">
+                            <img class="img_new-shirt" src="./../img/admin/imagen_admin.png" alt="product_img" id="product_img">
+                        </div>
+                        <!-- col1 -->
+                    </div>
+                </div>
+                <!-- Imagen -->
+
+                <input id="btn_enviar" type="submit" class="btn btn-primary" value="Guardar"></input>
+                <input type="button" id="btn2" class="btn btn-primary" value="Pag. Productos" onclick="inicio()">
+            </form>
+        </div>
+    </section>
+    <!-- sección del formulario -->
 
 
     <footer id="footer">
-      <div class="container-fluid">                   
-          <div class="copyright">
-              &copy; Copyright <strong><span>ELADOSCURO</span></strong>. All Rights Reserved              
-          </div>
-      </div> <!-- container -->
-    </footer><!-- End Footer -->   
+        <div class="container-fluid">
+            <div class="copyright">
+                &copy; Copyright <strong><span>ELADOSCURO</span></strong>. All Rights Reserved
+            </div>
+        </div>
+        <!-- container -->
+    </footer>
+    <!-- End Footer -->
 
-  <!--Scripts -->    
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-  <!-- <script src="https://widget.clodinary.com/v2.0/global/all.js"></script> -->
-  <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
-  <script src="./admin.js"></script>
-  </body>
+    <!--Scripts -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <!-- <script src="https://widget.clodinary.com/v2.0/global/all.js"></script> -->
+    <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+    <script src="./admin.js"></script>
+</body>
+
 </html>

@@ -3,10 +3,10 @@ const inputs = document.querySelectorAll('#formulario input');
 const textarea = document.getElementById('mensaje');
 
 const expresiones = {
-    nombre: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios, pueden llevar acentos.
-    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    nombre: /^[a-zA-ZÀ-ÿ\s]{3,100}$/, // Letras y espacios, pueden llevar acentos.
+    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{2,100}$/,
     telefono: /^\d{10,10}$/, // 7 a 10 numeros.
-    mensaje: /^[a-zA-ZÀ-ÿ\s]{3,40}$/
+    mensaje: /^[a-zA-ZÀ-ÿ\s]{3,500}$/
 
 }
 
@@ -151,12 +151,45 @@ function borrar() {
 
 
 
- // **********************articulos en el carrito del carrito ***********************// 
- function onLoadcartNumbers(){
+// **********************articulos en el carrito del carrito ***********************// 
+function onLoadcartNumbers() {
     let productNumbers = localStorage.getItem("cartNumbers");
     if (productNumbers) {
         document.querySelector('.cart span').textContent = productNumbers;
-    }//if
-}//onLoadcartNumbers
+    } //if
+} //onLoadcartNumbers
 onLoadcartNumbers();
 // ****************para el carrito******************************************//
+
+
+// ******************** Usuario activo en NavBar *******************************
+
+let usuario = sessionStorage.getItem("usuarioActivo");
+
+
+let iniciarSesion = document.getElementById("iniciarSesion");
+let cerrarSesion = document.getElementById("cerrarSesion");
+let icono = document.getElementById("mascara");
+
+
+console.log(usuario);
+
+if (usuario !== null) {
+    console.log(`ingresó`);
+    iniciarSesion.classList.remove("iniciarSesion");
+    iniciarSesion.classList.add("iniciarSesionDesactivado");
+    
+
+    cerrarSesion.classList.remove("cerrarSesion");
+    cerrarSesion.classList.add("cerrarSesionActivo");
+    icono.classList.remove("cerrarSesion");
+    icono.classList.add("cerrarSesionActivo");
+}
+
+
+//**************** Cerrar sesion ***************************************/
+
+cerrarSesion.addEventListener("click", function(e) {
+    sessionStorage.clear();    
+});
+

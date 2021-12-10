@@ -4,12 +4,12 @@ const inputs = document.querySelectorAll('#formulario input');
 const btnEnviar = document.getElementById('btn_enviar_registro');
 
 const expresiones = {
-    
-    nombre: /^[a-zA-ZÀ-ÿ\s]{3,100}$/, // Letras y espacios, pueden llevar acentos.
-    password:  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&.])[A-Za-z\d$@$!%*?&.]{8,20}/,  // 8 a 20 caracteres.
-    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{2,100}$/,
-    telefono: /^\d{10,10}$/, // 7 a 14 numeros.   
-}//clase expresiones
+
+        nombre: /^[a-zA-ZÀ-ÿ\s]{3,100}$/, // Letras y espacios, pueden llevar acentos.
+        password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&.])[A-Za-z\d$@$!%*?&.]{8,20}/, // 8 a 20 caracteres.
+        email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{2,100}$/,
+        telefono: /^\d{10,10}$/, // 7 a 14 numeros.   
+    } //clase expresiones
 
 
 
@@ -46,7 +46,6 @@ const validarCampo = (expresion, input, campo) => {
     if (expresion.test(input.value)) {
         document.getElementById(`grupo-${campo}`).classList.remove('was-invalidated');
         document.getElementById(`grupo-${campo}`).classList.add('was-validated');
-
         setTimeout(() => {
             document.getElementById(`grupo-${campo}`).classList.remove('was-validated');
         }, 3000);
@@ -108,21 +107,27 @@ formulario.addEventListener('submit', (e) => {
     let password2 = document.getElementById('password2').value;
 
     let nuevoUsuario = {
-        "nombre":nombre,
-        "telefono":telefono,
-        "email":email,
-        "password":password,
-        "password2":password2
-    };//nuevoUsuario
-   
-   
-   
-    
+        "nombre": nombre,
+        "telefono": telefono,
+        "email": email,
+        "password": password,
+        "password2": password2
+    }; //nuevoUsuario
 
-    if(campos.nombre && campos.telefono && campos.email && campos.password){
+
+
+    if (campos.nombre && campos.telefono && campos.email && campos.password) {
         localStorage.setItem("nuevoUsusario", JSON.stringify(nuevoUsuario));
-        console.info("Save");     
+        console.info("Save");
         formulario.reset();
+
+        new Swal({ //sweetAlert
+                icon: 'success',
+                title: '1,2,3 ¡Estás registrado! Para entrar al cuadrilatero inicia sesión',
+                text: '¡Enviado exitosamente!',
+            }) //sweetAlert
+        setTimeout(function() { window.location.href = "./../index.html" }, 5000); // timeout
+
 
     } else {
         //     document.getElementById('grupo-enviar').classList.add('was-validated');
@@ -144,10 +149,156 @@ signupBtn.onclick = (() => {
     loginForm.style.marginLeft = "-50%";
     loginText.style.marginLeft = "-50%";
 });
-loginBtn.onclick = (()=>{
-   loginForm.style.marginLeft = "0%";
-   loginText.style.marginLeft = "0%";
- });
+loginBtn.onclick = (() => {
+    loginForm.style.marginLeft = "0%";
+    loginText.style.marginLeft = "0%";
+});
+
+// ------------- CREAR USUARIOS EN LOCALSTORAGE -------
+
+let x = [];
+x = [
+    { "email": "armandoarciniega@ciencias.unam.mx", "password": "1234Armando" },
+    { "email": "bernardo.fersan@gmail.com", "password": "bernardo" },
+    { "email": "arturo.islas95@gmail.com", "password": "arturo" },
+    { "email": "punto.campuzano@gmail.com", "password": "paulyna" }
+];
+
+localStorage.setItem("userInfo", JSON.stringify(x));
+
+
+// --------------- INICIO DE SESION  --------------
+
+// Información de localStorage
+let userList = JSON.parse(localStorage.getItem("userInfo")); //nuevoUsusario
+
+let submitBtn = document.getElementById("btn_enviar");
+
+// Click Iniciar sesión
+submitBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    let emailLogin = document.getElementById("input_email").value;
+    let passwordLogin = document.getElementById("input_password").value;
+
+    // Validar campos
+
+    // Ambos campos vacíos
+    if ((emailLogin == "") && (passwordLogin == "")) {
+        console.log("Ambos vacíos");
+
+        document.getElementById("formulario__mensaje_correo").classList.remove("formulario__mensaje");
+        document.getElementById("formulario__mensaje_correo").classList.add("formulario__mensaje-activo");
+
+        document.getElementById("formulario__mensaje_contraseña").classList.remove("formulario__mensaje");
+        document.getElementById("formulario__mensaje_contraseña").classList.add("formulario__mensaje-activo");
+
+
+        setTimeout(() => {
+            document.getElementById("formulario__mensaje_correo").classList.remove("formulario__mensaje-activo");
+            document.getElementById("formulario__mensaje_correo").classList.add("formulario__mensaje");
+
+            document.getElementById("formulario__mensaje_contraseña").classList.remove("formulario__mensaje-activo");
+            document.getElementById("formulario__mensaje_contraseña").classList.add("formulario__mensaje");
+
+        }, 5000);
+
+        // Email vacío
+    } else if (emailLogin == "") {
+        console.log("email vacío");
+        document.getElementById("formulario__mensaje_correo").classList.remove("formulario__mensaje");
+        document.getElementById("formulario__mensaje_correo").classList.add("formulario__mensaje-activo");
+        setTimeout(() => {
+            document.getElementById("formulario__mensaje_correo").classList.remove("formulario__mensaje-activo");
+            document.getElementById("formulario__mensaje_correo").classList.add("formulario__mensaje");
+
+        }, 5000);
+
+        // Password vacío
+    } else if (passwordLogin == "") {
+        console.log("paswword vacío");
+        document.getElementById("formulario__mensaje_contraseña").classList.remove("formulario__mensaje");
+        document.getElementById("formulario__mensaje_contraseña").classList.add("formulario__mensaje-activo");
+        setTimeout(() => {
+            document.getElementById("formulario__mensaje_contraseña").classList.remove("formulario__mensaje-activo");
+            document.getElementById("formulario__mensaje_contraseña").classList.add("formulario__mensaje");
+
+        }, 5000);
+
+    } else {
+
+        // Ambos campos llenos        
+        let userInfo = {
+            "email": emailLogin,
+            "password": passwordLogin,
+        };
+
+        // validar correo y contraseña        
+        let validInfo = false;
+        let index = "";
+        for (let i = 0; i < userList.length; i++) {
+            if ((userInfo.email == userList[i].email) && (userInfo.password == userList[i].password)) {
+                validInfo = true;
+                index = i;
+            }; // if validar correo y contraseña     
+        }; // for validar correo y contraseña
+
+        switch (validInfo) {
+            case true:
+                console.log("bienvenido");
+                Swal.fire(
+                    '¡Bienvenido!',
+                    `${userInfo.email}`,
+                    'success'
+                ); // Sweetalert
+                setTimeout(function() { window.location.href = "./../index.html";
+                    sessionStorage.setItem("usuarioActivo", userInfo.email); }, 1000); // timeout
+                break;
+            case false:
+                console.log("Contraseña o emial incorrectos");
+                Swal.fire(
+                    '¡Nombre de usuario o contraseña incorrectos!',
+                    "",
+                    'error'
+                ); // Sweetalert                   
+        } // Switch para validInfo            
+
+    }; // else Ambos campos llenos 
+
+}); // event listener
+
+
+
+// ******************** Usuario activo en NavBar *******************************
+
+let usuario = sessionStorage.getItem("usuarioActivo");
+
+
+let iniciarSesion = document.getElementById("iniciarSesion");
+let cerrarSesion = document.getElementById("cerrarSesion");
+let icono = document.getElementById("mascara");
+
+
+console.log(usuario);
+
+if (usuario !== null) {
+    console.log(`ingresó`);
+    iniciarSesion.classList.remove("iniciarSesion");
+    iniciarSesion.classList.add("iniciarSesionDesactivado");
+    
+
+    cerrarSesion.classList.remove("cerrarSesion");
+    cerrarSesion.classList.add("cerrarSesionActivo");
+    icono.classList.remove("cerrarSesion");
+    icono.classList.add("cerrarSesionActivo");
+}
+
+
+//**************** Cerrar sesion ***************************************/
+
+cerrarSesion.addEventListener("click", function(e) {
+    sessionStorage.clear();    
+});
 
 
 
@@ -155,12 +306,14 @@ loginBtn.onclick = (()=>{
 
 
 
- // **********************articulos en el carrito del carrito ***********************// 
-function onLoadcartNumbers(){
+// **********************articulos en el carrito del carrito ***********************// 
+function onLoadcartNumbers() {
     let productNumbers = localStorage.getItem("cartNumbers");
     if (productNumbers) {
         document.querySelector('.cart span').textContent = productNumbers;
-    }//if
-}//onLoadcartNumbers
+    } //if
+} //onLoadcartNumbers
 onLoadcartNumbers();
 // ****************para el carrito******************************************//
+
+

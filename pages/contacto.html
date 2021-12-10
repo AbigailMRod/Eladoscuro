@@ -30,8 +30,7 @@
 
 <body>
     <nav class="navbar sticky-top navbar-expand-lg navbar-light">
-        <a href="./../index.html">
-            <a href="./../index.html"><img src="./../img/Navbar/LOGO.svg" class="d-inline-block align-top" alt="image logo"></a>
+        <a href="./../index.html"><img src="./../img/Navbar/LOGO.svg" class="d-inline-block align-top" alt="image logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -46,16 +45,23 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./../pages/productos.html">PRODUCTOS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./../pages/cuenta.html">CUENTA</a>
-                </li>
+                </li>               
                 <li class="nav-item">
                     <a class="nav-link" href="./../pages/contacto.html">CONTACTO</a>
                 </li>
+                <li id="iniciarSesion" class="iniciarSesion" class="nav-item">
+                    <a class="nav-link" href="./../pages/cuenta.html">INICIAR SESIÓN</a>
+                </li>
+                <li id="cerrarSesion" class="cerrarSesion" class="nav-item">
+                    <a class="nav-link" href="./../pages/cuenta.html">CERRAR SESIÓN</a>                      
+                </li>
+                <li id="mascara" class="cerrarSesion" class="nav-item">
+                    <a href="./../pages/productos.html"><img style="height: 30px; width: 30px; padding-top: 8px;" src="./../img/Navbar/logo iniciar_sesion-02-01.svg" alt=""></a>
+                </li>
                 <li class="cart">
                     <a href="./../pages/carrito.html"><ion-icon name="bag-outline"></ion-icon>  <span>0</span></a>
-                </li> 
+                </li>
+                
             </ul>
         </div>
     </nav>
@@ -98,7 +104,7 @@
 
 
                         <div class="container-mensaje" id="grupo__mensaje">
-                            <label for="validationTextarea">Mensaje</label>
+                            <label for="validationTextarea">Mensaje *</label>
                             <textarea id="mensaje" class="form-control" name="mensaje" placeholder="Nooooooo, pues estoy en cero"></textarea>
                             <div class=" alert alert-success valid-feedback" role="alert">¡Muy bien!</div>
                             <div class="alert alert-danger invalid-feedback" role="alert">Este campo requiere mínimo 3 letras</div>
@@ -107,7 +113,7 @@
 
 
                         <div class="formulario__mensaje" id="formulario__mensaje">
-                            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor llena el formulario correctamente. </p>
                         </div>
                         <br>
 
