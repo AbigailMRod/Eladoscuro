@@ -214,15 +214,6 @@ function manageQuantity() {
 
 
 
-//     function removeproduct(event){
-
-//         const target = event.currentTarget;        
-//         target.parentNode.parentNode.remove();
-//         productContainer();
-//     }
-    
-
-//    })
    
 
 

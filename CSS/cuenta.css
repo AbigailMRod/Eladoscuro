@@ -23,23 +23,17 @@ body {
     margin-bottom: 5%;
 }
 
- #containerSect{
-    /* position:sticky; */
+ #containerSect{ 
     letter-spacing: 0.3em;
     display: flex;
-    /* height: 50px; */
     width: 100%;
     overflow: hidden;
-    /* margin: 30px 0 10px 0; */
     justify-content: space-between;
     border-bottom: 200rem;
-    /* padding: 4%; */
     margin-top: 20px;
     margin-right: 20px;
     margin-bottom: 35px;
     margin-left: 50px;
-    /* margin-top: 5%; */
-    /* margin-bottom: 5%; */
     padding: 0;
     
 } */
@@ -114,8 +108,7 @@ input[type="radio"] {
 
 #login:checked~label.signup {
     color: white;
-    /* text-decoration: underline; */
-}
+    }
 
 #login:checked~label.login {
     cursor: default;
@@ -176,18 +169,6 @@ form .field input:focus::placeholder {
 }
 
 .btn-field {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-row-gap: 40%;
-    height: 50px;
-    width: 100%;
-    position: relative;
-    margin-top: 8%;
-    margin-right: 0%; */
-
-
-
         /*boton enviar */
         color: #FF0404;
         width: 283px;
@@ -340,15 +321,7 @@ form .btn-field .btn-pedido {
     margin: 0;
 }
 
-/* .usuario {
-    color: #ff04047e;
-}
 
-.usuario-activo {
-    color: #7CFC00;
-} */
-
-/* #7CFC00 */
 
 
 
