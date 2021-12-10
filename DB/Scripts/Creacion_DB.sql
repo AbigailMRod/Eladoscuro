@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `ELADOSCURO`.`CLIENTE` (
   `nombre` VARCHAR(100) NOT NULL,
   `telefono` VARCHAR(10) NOT NULL,
   `email` VARCHAR(100) NOT NULL,
-  `contrasenia` VARCHAR(20) NOT NULL,
+  `contrasenia` VARCHAR(200) NOT NULL,
   PRIMARY KEY (`id_cliente`),
   UNIQUE INDEX `id_contacto_UNIQUE` (`id_cliente` ASC) VISIBLE)
 ENGINE = InnoDB;
@@ -71,6 +71,7 @@ CREATE TABLE IF NOT EXISTS `ELADOSCURO`.`PRODUCTO` (
   `nombre` VARCHAR(100) NOT NULL,
   `descripcion` VARCHAR(500) NOT NULL,
   `precio` FLOAT NOT NULL,
+  `tallas` VARCHAR(80) NULL,
   `CATEGORIA_id_categoria` INT NOT NULL,
   PRIMARY KEY (`id_producto`, `CATEGORIA_id_categoria`),
   INDEX `fk_PRODUCTO_CATEGORIA1_idx` (`CATEGORIA_id_categoria` ASC) VISIBLE,
@@ -91,7 +92,7 @@ DROP TABLE IF EXISTS `ELADOSCURO`.`ADMINISTRADOR` ;
 CREATE TABLE IF NOT EXISTS `ELADOSCURO`.`ADMINISTRADOR` (
   `id_admi` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(50) NOT NULL,
-  `contrasenia` VARCHAR(20) NOT NULL,
+  `contrasenia` VARCHAR(200) NOT NULL,
   PRIMARY KEY (`id_admi`),
   UNIQUE INDEX `id_admi_UNIQUE` (`id_admi` ASC) VISIBLE)
 ENGINE = InnoDB;

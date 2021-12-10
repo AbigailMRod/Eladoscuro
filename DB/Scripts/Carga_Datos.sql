@@ -23,20 +23,29 @@ INSERT INTO `eladoscuro`.`categoria` (`id_categoria`, `nombre`, `descripcion`) V
 
 -- Datos PRODUCTO
 
-INSERT INTO `eladoscuro`.`producto` (`id_producto`, `imagen`, `nombre`, `descripcion`, `precio`, `CATEGORIA_id_categoria`) VALUES ('1', 'https://98482249.jpg.com', 'Amor a la mexicana', 'Sudadera para hombre', '800', '1');
-INSERT INTO `eladoscuro`.`producto` (`id_producto`, `imagen`, `nombre`, `descripcion`, `precio`, `CATEGORIA_id_categoria`) VALUES ('2', 'https://3454923.jpg.com', 'Sudadera para hombre', 'Playera para mujer', '400', '1');
-INSERT INTO `eladoscuro`.`producto` (`id_producto`, `imagen`, `nombre`, `descripcion`, `precio`, `CATEGORIA_id_categoria`) VALUES ('3', 'https://34234529.jpg.com', 'Lucha Libre', 'Playera para hiombre', '400', '1');
-INSERT INTO `eladoscuro`.`producto` (`id_producto`, `imagen`, `nombre`, `descripcion`, `precio`, `CATEGORIA_id_categoria`) VALUES ('4', 'https://34234549.jpg.com', 'Logo + amor', 'Juego de stickers 2', '100', '2');
-INSERT INTO `eladoscuro`.`producto` (`id_producto`, `imagen`, `nombre`, `descripcion`, `precio`, `CATEGORIA_id_categoria`) VALUES ('5', 'https://342345459.jpg.com', 'Lucha libre', 'Poster decorativo', '75', '3');
+
+INSERT INTO `eladoscuro`.`producto` (`id_producto`, `imagen`, `nombre`, `descripcion`, `precio`, `tallas`, `CATEGORIA_id_categoria`) VALUES ('1', 'https://res.cloudinary.com/dtcyppikq/image/upload/v1639016021/yycknbur10gdvqjl53be.jpg', 'Amor a la mexicana', 'Sudadera para hombre', '800', 'Tallas: XS, S, M, L XL', '1');
+INSERT INTO `eladoscuro`.`producto` (`id_producto`, `imagen`, `nombre`, `descripcion`, `precio`, `tallas`, `CATEGORIA_id_categoria`) VALUES ('2', 'https://res.cloudinary.com/dtcyppikq/image/upload/v1639016040/tikkbibw5twh16ydt3z1.jpg', 'Amor a la mexicana', 'Playera para mujer', '400', 'Tallas: XS, S, M, L XL', '1');
+INSERT INTO `eladoscuro`.`producto` (`id_producto`, `imagen`, `nombre`, `descripcion`, `precio`, `tallas`, `CATEGORIA_id_categoria`) VALUES ('3', 'https://res.cloudinary.com/dtcyppikq/image/upload/v1639016049/gjqqgbcf4h88rcjr2qqi.jpg', 'Lucha libre', 'Playera para hombre', '400', 'Tallas: XS, S, M, L XL', '1');
+INSERT INTO `eladoscuro`.`producto` (`id_producto`, `imagen`, `nombre`, `descripcion`, `precio`, `tallas`, `CATEGORIA_id_categoria`) VALUES ('4', 'https://res.cloudinary.com/dtcyppikq/image/upload/v1639016056/cvuwijdjvrrapoyjrtrz.jpg', 'Lucha libre', 'Playera para mujer', '400', 'Tallas: XS, S, M, L XL', '1');
+INSERT INTO `eladoscuro`.`producto` (`id_producto`, `imagen`, `nombre`, `descripcion`, `precio`, `CATEGORIA_id_categoria`) VALUES ('5', 'https://res.cloudinary.com/dtcyppikq/image/upload/v1639016114/wmcivssriqf43bmsndw5.jpg', 'Logo', 'Juego de stickers 1', '100', '2');
+INSERT INTO `eladoscuro`.`producto` (`id_producto`, `imagen`, `nombre`, `descripcion`, `precio`, `CATEGORIA_id_categoria`) VALUES ('6', 'https://res.cloudinary.com/dtcyppikq/image/upload/v1639016122/df6kattmwxk5zu9tyvol.jpg', 'Logo + amor', 'Juego de stickers 2', '100', '2');
+INSERT INTO `eladoscuro`.`producto` (`id_producto`, `imagen`, `nombre`, `descripcion`, `precio`, `CATEGORIA_id_categoria`) VALUES ('7', 'https://res.cloudinary.com/dtcyppikq/image/upload/v1639016129/nowoboxiyepcgdarjoc8.jpg', 'Lucha libre', 'Juego de stickers 3', '100', '2');
+INSERT INTO `eladoscuro`.`producto` (`id_producto`, `imagen`, `nombre`, `descripcion`, `precio`, `CATEGORIA_id_categoria`) VALUES ('8', 'https://res.cloudinary.com/dtcyppikq/image/upload/v1639016137/imrvz5p1kftj7pqmch2k.jpg', 'Amor a la mexicana', 'Juego de stickers 4', '100', '2');
+INSERT INTO `eladoscuro`.`producto` (`id_producto`, `imagen`, `nombre`, `descripcion`, `precio`, `CATEGORIA_id_categoria`) VALUES ('9', 'https://res.cloudinary.com/dtcyppikq/image/upload/v1639016063/cuklech1igygijcar59r.jpg', 'Lucha libre', 'Poster tamaño carta', '50', '3');
+INSERT INTO `eladoscuro`.`producto` (`id_producto`, `imagen`, `nombre`, `descripcion`, `precio`, `CATEGORIA_id_categoria`) VALUES ('10', 'https://res.cloudinary.com/dtcyppikq/image/upload/v1639016073/yx8xczbfzychpuvm45xz.jpg', 'Lucha libre + amor', 'Poster decorativo', '75', '3');
+INSERT INTO `eladoscuro`.`producto` (`id_producto`, `imagen`, `nombre`, `descripcion`, `precio`, `CATEGORIA_id_categoria`) VALUES ('11', 'https://res.cloudinary.com/dtcyppikq/image/upload/v1639016082/dxwgki4incbqzu0zun8x.jpg', 'Lucha libre', 'Poster decorativo', '75', '3');
+INSERT INTO `eladoscuro`.`producto` (`id_producto`, `imagen`, `nombre`, `descripcion`, `precio`, `CATEGORIA_id_categoria`) VALUES ('12', 'https://res.cloudinary.com/dtcyppikq/image/upload/v1639016092/smmdahwyip0coyxbj3vn.jpg', 'Amor a la mexicana', 'Poster decorativo', '75', '3');
+
 
 
 -- Datos CLIENTE
 
-INSERT INTO `eladoscuro`.`cliente` (`id_cliente`, `nombre`, `telefono`, `email`, `contrasenia`) VALUES ('1', 'Jesús Treji', '557223492', 'jsrd1@gmail.com', 'Jes932');
-INSERT INTO `eladoscuro`.`cliente` (`id_cliente`, `nombre`, `telefono`, `email`, `contrasenia`) VALUES ('2', 'Hillary Navarro', '55312452', 'hillaryd@gmail.com', 'h_23illa');
-INSERT INTO `eladoscuro`.`cliente` (`id_cliente`, `nombre`, `telefono`, `email`, `contrasenia`) VALUES ('3', 'Mafer Navarro', '5593421573', 'mafer@gmail.com', 'm1fwer3');
-INSERT INTO `eladoscuro`.`cliente` (`id_cliente`, `nombre`, `telefono`, `email`, `contrasenia`) VALUES ('4', 'David Santiago', '55322363', 'davids23@gmail.com', 'davidis35');
-INSERT INTO `eladoscuro`.`cliente` (`id_cliente`, `nombre`, `telefono`, `email`, `contrasenia`) VALUES ('5', 'Mirta Lopez', '5532257894', 'mirtdf23@gmail.com', 'm245urtkd');
+INSERT INTO `eladoscuro`.`cliente` (`id_cliente`, `nombre`, `telefono`, `email`, `contrasenia`) VALUES ('1', 'Cristian Iram Monarres', '5522658909', 'cristian.monarres.mtz@gmail.com', '6bb2cebe073027c4560442abb90624f8564faf6d80882a9a5dfb17a814eb2b30');
+INSERT INTO `eladoscuro`.`cliente` (`id_cliente`, `nombre`, `telefono`, `email`, `contrasenia`) VALUES ('2', 'Abigail Muñoz', '5589032710', 'abigail.mrodriguez21@gmail.com', '6bb2cebe073027c4560442abb90624f8564faf6d80882a9a5dfb17a814eb2b30');
+INSERT INTO `eladoscuro`.`cliente` (`id_cliente`, `nombre`, `telefono`, `email`, `contrasenia`) VALUES ('3', 'Arturo Islas', '5558173902', 'arturo.islas95@gmail.com', '6bb2cebe073027c4560442abb90624f8564faf6d80882a9a5dfb17a814eb2b30');
+INSERT INTO `eladoscuro`.`cliente` (`id_cliente`, `nombre`, `telefono`, `email`, `contrasenia`) VALUES ('4', 'Bernardo Fernandez', '5567890323', 'bernardo.fersan@gmail.com', '6bb2cebe073027c4560442abb90624f8564faf6d80882a9a5dfb17a814eb2b30');
+
 
 
 -- Datos VENTA
@@ -44,8 +53,6 @@ INSERT INTO `eladoscuro`.`cliente` (`id_cliente`, `nombre`, `telefono`, `email`,
 INSERT INTO `eladoscuro`.`venta` (`id_venta`, `fecha`, `CLIENTE_id_cliente`) VALUES ('1', '2021-12-03', '1');
 INSERT INTO `eladoscuro`.`venta` (`id_venta`, `fecha`, `CLIENTE_id_cliente`) VALUES ('2', '2021-12-04', '2');
 INSERT INTO `eladoscuro`.`venta` (`id_venta`, `fecha`, `CLIENTE_id_cliente`) VALUES ('3', '2021-12-02', '3');
-INSERT INTO `eladoscuro`.`venta` (`id_venta`, `fecha`, `CLIENTE_id_cliente`) VALUES ('4', '2021-12-03', '4');
-INSERT INTO `eladoscuro`.`venta` (`id_venta`, `fecha`, `CLIENTE_id_cliente`) VALUES ('5', '2021-12-10', '5');
 
 
 -- Datos DETALLE_VENTA
@@ -53,6 +60,4 @@ INSERT INTO `eladoscuro`.`venta` (`id_venta`, `fecha`, `CLIENTE_id_cliente`) VAL
 INSERT INTO `eladoscuro`.`detalle_venta` (`id_detalle_venta`, `direccion`, `cantidad`, `total`, `PRODUCTO_id_producto`, `PRODUCTO_CATEGORIA_id_categoria`, `VENTA_id_venta`, `VENTA_CLIENTE_id_cliente`) VALUES ('1', 'siempre viva #12', '1', '800', '1', '1', '1', '1');
 INSERT INTO `eladoscuro`.`detalle_venta` (`id_detalle_venta`, `direccion`, `cantidad`, `total`, `PRODUCTO_id_producto`, `PRODUCTO_CATEGORIA_id_categoria`, `VENTA_id_venta`, `VENTA_CLIENTE_id_cliente`) VALUES ('2', 'tulipanes #21', '2', '800', '2', '1', '2', '2');
 INSERT INTO `eladoscuro`.`detalle_venta` (`id_detalle_venta`, `direccion`, `cantidad`, `total`, `PRODUCTO_id_producto`, `PRODUCTO_CATEGORIA_id_categoria`, `VENTA_id_venta`, `VENTA_CLIENTE_id_cliente`) VALUES ('3', 'jalisco #12', '2', '800', '3', '1', '3', '3');
-INSERT INTO `eladoscuro`.`detalle_venta` (`id_detalle_venta`, `direccion`, `cantidad`, `total`, `PRODUCTO_id_producto`, `PRODUCTO_CATEGORIA_id_categoria`, `VENTA_id_venta`, `VENTA_CLIENTE_id_cliente`) VALUES ('4', 'la roma # 45', '1', '100', '4', '2', '4', '4');
-INSERT INTO `eladoscuro`.`detalle_venta` (`id_detalle_venta`, `direccion`, `cantidad`, `total`, `PRODUCTO_id_producto`, `PRODUCTO_CATEGORIA_id_categoria`, `VENTA_id_venta`, `VENTA_CLIENTE_id_cliente`) VALUES ('5', 'juares #54', '1', '75', '5', '3', '5', '5');
 

@@ -69,4 +69,8 @@ public class usuario { //POJO
     public void setPassword(String password) {
         this.password = SHAUtil.createHash(password);
     }//setPassword
+
+    public void setClearPassword(String password) {
+        this.password = password;
+    }//setClearPassword
 }//class usuario
