@@ -302,12 +302,12 @@ formulario.addEventListener('submit', (e) => {
         console.info("Save");
         formulario.reset();
 
-        new Swal({ //sweetAlert
-                icon: 'success',
-                title: '1,2,3 ¡Estás registrado! Para entrar al cuadrilatero inicia sesión',
-                text: '¡Enviado exitosamente!',
-            }) //sweetAlert
-        setTimeout(function() { window.location.href = "./../index.html" }, 5000); // timeout
+        // new Swal({ //sweetAlert
+        //         icon: 'success',
+        //         title: '1,2,3 ¡Estás registrado! Para entrar al cuadrilatero inicia sesión',
+        //         text: '¡Enviado exitosamente!',
+        //     }) //sweetAlert
+        // setTimeout(function() { window.location.href = "./../index.html" }, 5000); // timeout
 
 
     } else {
